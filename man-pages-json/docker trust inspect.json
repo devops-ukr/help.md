@@ -1,0 +1,1 @@
+{"Command":"docker trust inspect","Description":"Return low-level information about keys and signatures","Usage":"\tdocker trust inspect IMAGE[:TAG] [IMAGE[:TAG]...]","options":{"indent":16,"data":[{"cmd":"      --pretty  ","dcr":" Print the information in a human friendly format"}]}}

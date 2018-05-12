@@ -1,0 +1,1 @@
+{"Command":"docker network disconnect","Description":"Disconnect a container from a network","Usage":"\tdocker network disconnect [OPTIONS] NETWORK CONTAINER","options":{"indent":15,"data":[{"cmd":"  -f, --force  ","dcr":" Force the container to disconnect from a network"}]}}

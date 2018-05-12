@@ -1,0 +1,1 @@
+{"Command":"docker version","Description":"Show the Docker version information","Usage":"\tdocker version [OPTIONS]","options":{"indent":23,"data":[{"cmd":"  -f, --format string  ","dcr":" Format the output using the given Go template"}]}}

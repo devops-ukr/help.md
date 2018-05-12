@@ -1,0 +1,1 @@
+{"Command":"docker container inspect","Description":"Display detailed information on one or more containers","Usage":"\tdocker container inspect [OPTIONS] CONTAINER [CONTAINER...]","options":{"indent":23,"data":[{"cmd":"  -f, --format string  ","dcr":" Format the output using the given Go template"},{"cmd":"  -s, --size           ","dcr":" Display total file sizes"}]}}

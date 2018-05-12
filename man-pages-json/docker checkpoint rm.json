@@ -1,0 +1,1 @@
+{"Command":"docker checkpoint rm","Description":"Remove a checkpoint","Usage":"\tdocker checkpoint rm [OPTIONS] CONTAINER CHECKPOINT","options":{"indent":31,"data":[{"cmd":"      --checkpoint-dir string  ","dcr":" Use a custom checkpoint storage directory"}]}}

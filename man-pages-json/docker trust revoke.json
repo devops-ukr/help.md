@@ -1,0 +1,1 @@
+{"Command":"docker trust revoke","Description":"Remove trust for an image","Usage":"\tdocker trust revoke [OPTIONS] IMAGE[:TAG]","options":{"indent":13,"data":[{"cmd":"  -y, --yes  ","dcr":" Do not prompt for confirmation"}]}}

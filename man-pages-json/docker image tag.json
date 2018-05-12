@@ -1,0 +1,1 @@
+{"Command":"docker image tag","Description":"Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE","Usage":"\tdocker image tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]"}

@@ -1,0 +1,1 @@
+{"Command":"docker export","Description":"Export a container's filesystem as a tar archive","Usage":"\tdocker export [OPTIONS] CONTAINER","options":{"indent":23,"data":[{"cmd":"  -o, --output string  ","dcr":" Write to a file, instead of STDOUT"}]}}

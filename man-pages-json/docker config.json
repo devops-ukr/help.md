@@ -1,0 +1,1 @@
+{"Command":"docker config","Description":"Manage Docker configs","Usage":"\tdocker config COMMAND","commands":{"docker config create":"Create a config from a file or STDIN","docker config inspect":"Display detailed information on one or more configs","docker config ls":"List configs","docker config rm":"Remove one or more configs"}}

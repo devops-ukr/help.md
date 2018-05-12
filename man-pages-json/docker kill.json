@@ -1,0 +1,1 @@
+{"Command":"docker kill","Description":"Kill one or more running containers","Usage":"\tdocker kill [OPTIONS] CONTAINER [CONTAINER...]","options":{"indent":23,"data":[{"cmd":"  -s, --signal string  ","dcr":" Signal to send to the container (default \"KILL\")"}]}}

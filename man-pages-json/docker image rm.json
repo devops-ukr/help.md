@@ -1,0 +1,1 @@
+{"Command":"docker image rm","Description":"Remove one or more images","Usage":"\tdocker image rm [OPTIONS] IMAGE [IMAGE...]","options":{"indent":18,"data":[{"cmd":"  -f, --force     ","dcr":" Force removal of the image"},{"cmd":"      --no-prune  ","dcr":" Do not delete untagged parents"}]}}

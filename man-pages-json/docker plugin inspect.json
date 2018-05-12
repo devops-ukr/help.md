@@ -1,0 +1,1 @@
+{"Command":"docker plugin inspect","Description":"Display detailed information on one or more plugins","Usage":"\tdocker plugin inspect [OPTIONS] PLUGIN [PLUGIN...]","options":{"indent":23,"data":[{"cmd":"  -f, --format string  ","dcr":" Format the output using the given Go template"}]}}

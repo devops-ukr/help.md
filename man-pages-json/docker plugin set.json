@@ -1,0 +1,1 @@
+{"Command":"docker plugin set","Description":"Change settings for a plugin","Usage":"\tdocker plugin set PLUGIN KEY=VALUE [KEY=VALUE...]"}

@@ -1,0 +1,1 @@
+{"Command":"docker image push","Description":"Push an image or a repository to a registry","Usage":"\tdocker image push [OPTIONS] NAME[:TAG]","options":{"indent":31,"data":[{"cmd":"      --disable-content-trust  ","dcr":" Skip image signing (default true)"}]}}
