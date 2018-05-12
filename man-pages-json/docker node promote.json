@@ -1,1 +1,0 @@
-{"Command":"docker node promote","Description":"Promote one or more nodes to manager in the swarm","Usage":"\tdocker node promote NODE [NODE...]"}

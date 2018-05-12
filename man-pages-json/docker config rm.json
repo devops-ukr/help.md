@@ -1,1 +1,0 @@
-{"Command":"docker config rm","Description":"Remove one or more configs","Usage":"\tdocker config rm CONFIG [CONFIG...]"}

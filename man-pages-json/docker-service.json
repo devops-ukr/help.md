@@ -1,0 +1,16 @@
+{
+    "Command": "docker service",
+    "Description": "Manage services",
+    "Usage": "\tdocker service COMMAND",
+    "commands": {
+        "docker service create": "Create a new service",
+        "docker service inspect": "Display detailed information on one or more services",
+        "docker service logs": "Fetch the logs of a service or task",
+        "docker service ls": "List services",
+        "docker service ps": "List the tasks of one or more services",
+        "docker service rm": "Remove one or more services",
+        "docker service rollback": "Revert changes to a service's configuration",
+        "docker service scale": "Scale one or multiple replicated services",
+        "docker service update": "Update a service"
+    }
+}

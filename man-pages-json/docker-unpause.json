@@ -1,0 +1,5 @@
+{
+    "Command": "docker unpause",
+    "Description": "Unpause all processes within one or more containers",
+    "Usage": "\tdocker unpause CONTAINER [CONTAINER...]"
+}

@@ -1,0 +1,22 @@
+{
+    "Command": "docker plugin upgrade",
+    "Description": "Upgrade an existing plugin",
+    "Usage": "\tdocker plugin upgrade [OPTIONS] PLUGIN [REMOTE]",
+    "options": {
+        "indent": 31,
+        "data": [
+            {
+                "cmd": "      --disable-content-trust  ",
+                "dcr": " Skip image verification (default true)"
+            },
+            {
+                "cmd": "      --grant-all-permissions  ",
+                "dcr": " Grant all permissions necessary to run the plugin"
+            },
+            {
+                "cmd": "      --skip-remote-check      ",
+                "dcr": " Do not check if specified remote plugin matches existing plugin image"
+            }
+        ]
+    }
+}

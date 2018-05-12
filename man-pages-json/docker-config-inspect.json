@@ -1,0 +1,18 @@
+{
+    "Command": "docker config inspect",
+    "Description": "Display detailed information on one or more configs",
+    "Usage": "\tdocker config inspect [OPTIONS] CONFIG [CONFIG...]",
+    "options": {
+        "indent": 23,
+        "data": [
+            {
+                "cmd": "  -f, --format string  ",
+                "dcr": " Format the output using the given Go template"
+            },
+            {
+                "cmd": "      --pretty         ",
+                "dcr": " Print the information in a human friendly format"
+            }
+        ]
+    }
+}

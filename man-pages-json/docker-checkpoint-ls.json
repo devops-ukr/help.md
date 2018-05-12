@@ -1,0 +1,14 @@
+{
+    "Command": "docker checkpoint ls",
+    "Description": "List checkpoints for a container",
+    "Usage": "\tdocker checkpoint ls [OPTIONS] CONTAINER",
+    "options": {
+        "indent": 31,
+        "data": [
+            {
+                "cmd": "      --checkpoint-dir string  ",
+                "dcr": " Use a custom checkpoint storage directory"
+            }
+        ]
+    }
+}

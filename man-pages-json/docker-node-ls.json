@@ -1,0 +1,22 @@
+{
+    "Command": "docker node ls",
+    "Description": "List nodes in the swarm",
+    "Usage": "\tdocker node ls [OPTIONS]",
+    "options": {
+        "indent": 23,
+        "data": [
+            {
+                "cmd": "  -f, --filter filter  ",
+                "dcr": " Filter output based on conditions provided"
+            },
+            {
+                "cmd": "      --format string  ",
+                "dcr": " Pretty-print nodes using a Go template"
+            },
+            {
+                "cmd": "  -q, --quiet          ",
+                "dcr": " Only display IDs"
+            }
+        ]
+    }
+}

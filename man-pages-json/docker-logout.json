@@ -1,0 +1,5 @@
+{
+    "Command": "docker logout",
+    "Description": "Log out from a Docker registry",
+    "Usage": "\tdocker logout [SERVER]"
+}

@@ -1,0 +1,5 @@
+{
+    "Command": "docker port",
+    "Description": "List port mappings or a specific mapping for the container",
+    "Usage": "\tdocker port CONTAINER [PRIVATE_PORT[\/PROTO]]"
+}

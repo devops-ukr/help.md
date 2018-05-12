@@ -1,1 +1,0 @@
-{"Command":"docker service scale","Description":"Scale one or multiple replicated services","Usage":"\tdocker service scale SERVICE=REPLICAS [SERVICE=REPLICAS...]","options":{"indent":16,"data":[{"cmd":"  -d, --detach  ","dcr":" Exit immediately instead of waiting for the service to converge"}]}}

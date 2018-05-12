@@ -1,0 +1,22 @@
+{
+    "Command": "docker rm",
+    "Description": "Remove one or more containers",
+    "Usage": "\tdocker rm [OPTIONS] CONTAINER [CONTAINER...]",
+    "options": {
+        "indent": 17,
+        "data": [
+            {
+                "cmd": "  -f, --force    ",
+                "dcr": " Force the removal of a running container (uses SIGKILL)"
+            },
+            {
+                "cmd": "  -l, --link     ",
+                "dcr": " Remove the specified link"
+            },
+            {
+                "cmd": "  -v, --volumes  ",
+                "dcr": " Remove the volumes associated with the container"
+            }
+        ]
+    }
+}

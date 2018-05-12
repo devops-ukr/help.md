@@ -1,1 +1,0 @@
-{"Command":"docker container diff","Description":"Inspect changes to files or directories on a container's filesystem","Usage":"\tdocker container diff CONTAINER"}

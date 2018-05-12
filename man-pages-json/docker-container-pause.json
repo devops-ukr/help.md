@@ -1,0 +1,5 @@
+{
+    "Command": "docker container pause",
+    "Description": "Pause all processes within one or more containers",
+    "Usage": "\tdocker container pause CONTAINER [CONTAINER...]"
+}

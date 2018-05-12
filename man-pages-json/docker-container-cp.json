@@ -1,0 +1,18 @@
+{
+    "Command": "docker container cp",
+    "Description": "Copy files\/folders between a container and the local filesystem",
+    "Usage": "\tdocker container cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-",
+    "options": {
+        "indent": 21,
+        "data": [
+            {
+                "cmd": "  -a, --archive      ",
+                "dcr": " Archive mode (copy all uid\/gid information)"
+            },
+            {
+                "cmd": "  -L, --follow-link  ",
+                "dcr": " Always follow symbol link in SRC_PATH"
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "Command": "docker stop",
+    "Description": "Stop one or more running containers",
+    "Usage": "\tdocker stop [OPTIONS] CONTAINER [CONTAINER...]",
+    "options": {
+        "indent": 18,
+        "data": [
+            {
+                "cmd": "  -t, --time int  ",
+                "dcr": " Seconds to wait for stop before killing it (default 10)"
+            }
+        ]
+    }
+}

@@ -1,1 +1,0 @@
-{"Command":"docker image inspect","Description":"Display detailed information on one or more images","Usage":"\tdocker image inspect [OPTIONS] IMAGE [IMAGE...]","options":{"indent":23,"data":[{"cmd":"  -f, --format string  ","dcr":" Format the output using the given Go template"}]}}

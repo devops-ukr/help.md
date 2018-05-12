@@ -1,0 +1,18 @@
+{
+    "Command": "docker swarm unlock-key",
+    "Description": "Manage the unlock key",
+    "Usage": "\tdocker swarm unlock-key [OPTIONS]",
+    "options": {
+        "indent": 16,
+        "data": [
+            {
+                "cmd": "  -q, --quiet   ",
+                "dcr": " Only display token"
+            },
+            {
+                "cmd": "      --rotate  ",
+                "dcr": " Rotate unlock key"
+            }
+        ]
+    }
+}

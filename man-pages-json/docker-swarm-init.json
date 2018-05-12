@@ -1,0 +1,58 @@
+{
+    "Command": "docker swarm init",
+    "Description": "Initialize a swarm",
+    "Usage": "\tdocker swarm init [OPTIONS]",
+    "options": {
+        "indent": 39,
+        "data": [
+            {
+                "cmd": "      --advertise-addr string          ",
+                "dcr": " Advertised address (format: <ip|interface>[:port])"
+            },
+            {
+                "cmd": "      --autolock                       ",
+                "dcr": " Enable manager autolocking (requiring an unlock key to start a stopped manager)"
+            },
+            {
+                "cmd": "      --availability string            ",
+                "dcr": " Availability of the node (\"active\"|\"pause\"|\"drain\") (default \"active\")"
+            },
+            {
+                "cmd": "      --cert-expiry duration           ",
+                "dcr": " Validity period for node certificates (ns|us|ms|s|m|h) (default 2160h0m0s)"
+            },
+            {
+                "cmd": "      --data-path-addr string          ",
+                "dcr": " Address or interface to use for data path traffic (format: <ip|interface>)"
+            },
+            {
+                "cmd": "      --dispatcher-heartbeat duration  ",
+                "dcr": " Dispatcher heartbeat period (ns|us|ms|s|m|h) (default 5s)"
+            },
+            {
+                "cmd": "      --external-ca external-ca        ",
+                "dcr": " Specifications of one or more certificate signing endpoints"
+            },
+            {
+                "cmd": "      --force-new-cluster              ",
+                "dcr": " Force create a new cluster from current state"
+            },
+            {
+                "cmd": "      --listen-addr node-addr          ",
+                "dcr": " Listen address (format: <ip|interface>[:port]) (default 0.0.0.0:2377)"
+            },
+            {
+                "cmd": "      --max-snapshots uint             ",
+                "dcr": " Number of additional Raft snapshots to retain"
+            },
+            {
+                "cmd": "      --snapshot-interval uint         ",
+                "dcr": " Number of log entries between Raft snapshots (default 10000)"
+            },
+            {
+                "cmd": "      --task-history-limit int         ",
+                "dcr": " Task history retention limit (default 5)"
+            }
+        ]
+    }
+}

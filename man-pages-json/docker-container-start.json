@@ -1,0 +1,30 @@
+{
+    "Command": "docker container start",
+    "Description": "Start one or more stopped containers",
+    "Usage": "\tdocker container start [OPTIONS] CONTAINER [CONTAINER...]",
+    "options": {
+        "indent": 31,
+        "data": [
+            {
+                "cmd": "  -a, --attach                 ",
+                "dcr": " Attach STDOUT\/STDERR and forward signals"
+            },
+            {
+                "cmd": "      --checkpoint string      ",
+                "dcr": " Restore from this checkpoint"
+            },
+            {
+                "cmd": "      --checkpoint-dir string  ",
+                "dcr": " Use a custom checkpoint storage directory"
+            },
+            {
+                "cmd": "      --detach-keys string     ",
+                "dcr": " Override the key sequence for detaching a container"
+            },
+            {
+                "cmd": "  -i, --interactive            ",
+                "dcr": " Attach container's STDIN"
+            }
+        ]
+    }
+}

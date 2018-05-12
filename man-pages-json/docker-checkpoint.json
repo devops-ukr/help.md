@@ -1,0 +1,10 @@
+{
+    "Command": "docker checkpoint",
+    "Description": "Manage checkpoints",
+    "Usage": "\tdocker checkpoint COMMAND",
+    "commands": {
+        "docker checkpoint create": "Create a checkpoint from a running container",
+        "docker checkpoint ls": "List checkpoints for a container",
+        "docker checkpoint rm": "Remove a checkpoint"
+    }
+}

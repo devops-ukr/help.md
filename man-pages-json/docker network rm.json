@@ -1,1 +1,0 @@
-{"Command":"docker network rm","Description":"Remove one or more networks","Usage":"\tdocker network rm NETWORK [NETWORK...]"}

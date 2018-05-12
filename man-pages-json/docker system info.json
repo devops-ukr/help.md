@@ -1,1 +1,0 @@
-{"Command":"docker system info","Description":"Display system-wide information","Usage":"\tdocker system info [OPTIONS]","options":{"indent":23,"data":[{"cmd":"  -f, --format string  ","dcr":" Format the output using the given Go template"}]}}

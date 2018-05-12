@@ -1,1 +1,0 @@
-{"Command":"docker swarm unlock","Description":"Unlock swarm","Usage":"\tdocker swarm unlock"}

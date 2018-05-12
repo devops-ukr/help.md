@@ -1,0 +1,18 @@
+{
+    "Command": "docker service inspect",
+    "Description": "Display detailed information on one or more services",
+    "Usage": "\tdocker service inspect [OPTIONS] SERVICE [SERVICE...]",
+    "options": {
+        "indent": 23,
+        "data": [
+            {
+                "cmd": "  -f, --format string  ",
+                "dcr": " Format the output using the given Go template"
+            },
+            {
+                "cmd": "      --pretty         ",
+                "dcr": " Print the information in a human friendly format"
+            }
+        ]
+    }
+}

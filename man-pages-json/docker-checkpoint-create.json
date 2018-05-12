@@ -1,0 +1,18 @@
+{
+    "Command": "docker checkpoint create",
+    "Description": "Create a checkpoint from a running container",
+    "Usage": "\tdocker checkpoint create [OPTIONS] CONTAINER CHECKPOINT",
+    "options": {
+        "indent": 31,
+        "data": [
+            {
+                "cmd": "      --checkpoint-dir string  ",
+                "dcr": " Use a custom checkpoint storage directory"
+            },
+            {
+                "cmd": "      --leave-running          ",
+                "dcr": " Leave the container running after checkpoint"
+            }
+        ]
+    }
+}

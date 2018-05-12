@@ -1,1 +1,0 @@
-{"Command":"docker volume prune","Description":"Remove all unused local volumes","Usage":"\tdocker volume prune [OPTIONS]","options":{"indent":23,"data":[{"cmd":"      --filter filter  ","dcr":" Provide filter values (e.g. 'label=<label>')"},{"cmd":"  -f, --force          ","dcr":" Do not prompt for confirmation"}]}}

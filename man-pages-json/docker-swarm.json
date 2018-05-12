@@ -1,0 +1,15 @@
+{
+    "Command": "docker swarm",
+    "Description": "Manage Swarm",
+    "Usage": "\tdocker swarm COMMAND",
+    "commands": {
+        "docker swarm ca": "Display and rotate the root CA",
+        "docker swarm init": "Initialize a swarm",
+        "docker swarm join": "Join a swarm as a node and\/or manager",
+        "docker swarm join-token": "Manage join tokens",
+        "docker swarm leave": "Leave the swarm",
+        "docker swarm unlock": "Unlock swarm",
+        "docker swarm unlock-key": "Manage the unlock key",
+        "docker swarm update": "Update the swarm"
+    }
+}
