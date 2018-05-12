@@ -25,66 +25,66 @@ Options | Description
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker checkpoint`       | Manage checkpoints 
- `docker config`           | Manage Docker configs 
- `docker container`        | Manage containers 
- `docker image`            | Manage images 
- `docker network`          | Manage networks 
- `docker node`             | Manage Swarm nodes 
- `docker plugin`           | Manage plugins 
- `docker secret`           | Manage Docker secrets 
- `docker service`          | Manage services 
- `docker swarm`            | Manage Swarm 
- `docker system`           | Manage Docker 
- `docker trust`            | Manage trust on Docker images 
- `docker volume`           | Manage volumes 
+ [`docker checkpoint`](#docker-checkpoint) | Manage checkpoints 
+ [`docker config`](#docker-config) | Manage Docker configs 
+ [`docker container`](#docker-container) | Manage containers 
+ [`docker image`](#docker-image) | Manage images 
+ [`docker network`](#docker-network) | Manage networks 
+ [`docker node`](#docker-node) | Manage Swarm nodes 
+ [`docker plugin`](#docker-plugin) | Manage plugins 
+ [`docker secret`](#docker-secret) | Manage Docker secrets 
+ [`docker service`](#docker-service) | Manage services 
+ [`docker swarm`](#docker-swarm) | Manage Swarm 
+ [`docker system`](#docker-system) | Manage Docker 
+ [`docker trust`](#docker-trust) | Manage trust on Docker images 
+ [`docker volume`](#docker-volume) | Manage volumes 
 
 
 ### Commands: 
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker attach`           | Attach local standard input, output, and error streams to a running container 
- `docker build`            | Build an image from a Dockerfile 
- `docker commit`           | Create a new image from a container's changes 
- `docker cp`               | Copy files/folders between a container and the local filesystem 
- `docker create`           | Create a new container 
- `docker deploy`           | Deploy a new stack or update an existing stack 
- `docker diff`             | Inspect changes to files or directories on a container's filesystem 
- `docker events`           | Get real time events from the server 
- `docker exec`             | Run a command in a running container 
- `docker export`           | Export a container's filesystem as a tar archive 
- `docker history`          | Show the history of an image 
- `docker images`           | List images 
- `docker import`           | Import the contents from a tarball to create a filesystem image 
- `docker info`             | Display system-wide information 
- `docker inspect`          | Return low-level information on Docker objects 
- `docker kill`             | Kill one or more running containers 
- `docker load`             | Load an image from a tar archive or STDIN 
- `docker login`            | Log in to a Docker registry 
- `docker logout`           | Log out from a Docker registry 
- `docker logs`             | Fetch the logs of a container 
- `docker pause`            | Pause all processes within one or more containers 
- `docker port`             | List port mappings or a specific mapping for the container 
- `docker ps`               | List containers 
- `docker pull`             | Pull an image or a repository from a registry 
- `docker push`             | Push an image or a repository to a registry 
- `docker rename`           | Rename a container 
- `docker restart`          | Restart one or more containers 
- `docker rm`               | Remove one or more containers 
- `docker rmi`              | Remove one or more images 
- `docker run`              | Run a command in a new container 
- `docker save`             | Save one or more images to a tar archive (streamed to STDOUT by default) 
- `docker search`           | Search the Docker Hub for images 
- `docker start`            | Start one or more stopped containers 
- `docker stats`            | Display a live stream of container(s) resource usage statistics 
- `docker stop`             | Stop one or more running containers 
- `docker tag`              | Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE 
- `docker top`              | Display the running processes of a container 
- `docker unpause`          | Unpause all processes within one or more containers 
- `docker update`           | Update configuration of one or more containers 
- `docker version`          | Show the Docker version information 
- `docker wait`             | Block until one or more containers stop, then print their exit codes 
+ [`docker attach`](#docker-attach) | Attach local standard input, output, and error streams to a running container 
+ [`docker build`](#docker-build) | Build an image from a Dockerfile 
+ [`docker commit`](#docker-commit) | Create a new image from a container's changes 
+ [`docker cp`](#docker-cp) | Copy files/folders between a container and the local filesystem 
+ [`docker create`](#docker-create) | Create a new container 
+ [`docker deploy`](#docker-deploy) | Deploy a new stack or update an existing stack 
+ [`docker diff`](#docker-diff) | Inspect changes to files or directories on a container's filesystem 
+ [`docker events`](#docker-events) | Get real time events from the server 
+ [`docker exec`](#docker-exec) | Run a command in a running container 
+ [`docker export`](#docker-export) | Export a container's filesystem as a tar archive 
+ [`docker history`](#docker-history) | Show the history of an image 
+ [`docker images`](#docker-images) | List images 
+ [`docker import`](#docker-import) | Import the contents from a tarball to create a filesystem image 
+ [`docker info`](#docker-info) | Display system-wide information 
+ [`docker inspect`](#docker-inspect) | Return low-level information on Docker objects 
+ [`docker kill`](#docker-kill) | Kill one or more running containers 
+ [`docker load`](#docker-load) | Load an image from a tar archive or STDIN 
+ [`docker login`](#docker-login) | Log in to a Docker registry 
+ [`docker logout`](#docker-logout) | Log out from a Docker registry 
+ [`docker logs`](#docker-logs) | Fetch the logs of a container 
+ [`docker pause`](#docker-pause) | Pause all processes within one or more containers 
+ [`docker port`](#docker-port) | List port mappings or a specific mapping for the container 
+ [`docker ps`](#docker-ps) | List containers 
+ [`docker pull`](#docker-pull) | Pull an image or a repository from a registry 
+ [`docker push`](#docker-push) | Push an image or a repository to a registry 
+ [`docker rename`](#docker-rename) | Rename a container 
+ [`docker restart`](#docker-restart) | Restart one or more containers 
+ [`docker rm`](#docker-rm) | Remove one or more containers 
+ [`docker rmi`](#docker-rmi) | Remove one or more images 
+ [`docker run`](#docker-run) | Run a command in a new container 
+ [`docker save`](#docker-save) | Save one or more images to a tar archive (streamed to STDOUT by default) 
+ [`docker search`](#docker-search) | Search the Docker Hub for images 
+ [`docker start`](#docker-start) | Start one or more stopped containers 
+ [`docker stats`](#docker-stats) | Display a live stream of container(s) resource usage statistics 
+ [`docker stop`](#docker-stop) | Stop one or more running containers 
+ [`docker tag`](#docker-tag) | Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE 
+ [`docker top`](#docker-top) | Display the running processes of a container 
+ [`docker unpause`](#docker-unpause) | Unpause all processes within one or more containers 
+ [`docker update`](#docker-update) | Update configuration of one or more containers 
+ [`docker version`](#docker-version) | Show the Docker version information 
+ [`docker wait`](#docker-wait) | Block until one or more containers stop, then print their exit codes 
 
 
 ## docker checkpoint
@@ -98,9 +98,9 @@ docker checkpoint COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker checkpoint create` | Create a checkpoint from a running container 
- `docker checkpoint ls`    | List checkpoints for a container 
- `docker checkpoint rm`    | Remove a checkpoint 
+ [`docker checkpoint create`](#docker-checkpoint-create) | Create a checkpoint from a running container 
+ [`docker checkpoint ls`](#docker-checkpoint-ls) | List checkpoints for a container 
+ [`docker checkpoint rm`](#docker-checkpoint-rm) | Remove a checkpoint 
 
 
 ### docker checkpoint create
@@ -163,10 +163,10 @@ docker config COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker config create`    | Create a config from a file or STDIN 
- `docker config inspect`   | Display detailed information on one or more configs 
- `docker config ls`        | List configs 
- `docker config rm`        | Remove one or more configs 
+ [`docker config create`](#docker-config-create) | Create a config from a file or STDIN 
+ [`docker config inspect`](#docker-config-inspect) | Display detailed information on one or more configs 
+ [`docker config ls`](#docker-config-ls) | List configs 
+ [`docker config rm`](#docker-config-rm) | Remove one or more configs 
 
 
 ### docker config create
@@ -241,31 +241,31 @@ docker container COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker container attach` | Attach local standard input, output, and error streams to a running container 
- `docker container commit` | Create a new image from a container's changes 
- `docker container cp`     | Copy files/folders between a container and the local filesystem 
- `docker container create` | Create a new container 
- `docker container diff`   | Inspect changes to files or directories on a container's filesystem 
- `docker container exec`   | Run a command in a running container 
- `docker container export` | Export a container's filesystem as a tar archive 
- `docker container inspect` | Display detailed information on one or more containers 
- `docker container kill`   | Kill one or more running containers 
- `docker container logs`   | Fetch the logs of a container 
- `docker container ls`     | List containers 
- `docker container pause`  | Pause all processes within one or more containers 
- `docker container port`   | List port mappings or a specific mapping for the container 
- `docker container prune`  | Remove all stopped containers 
- `docker container rename` | Rename a container 
- `docker container restart` | Restart one or more containers 
- `docker container rm`     | Remove one or more containers 
- `docker container run`    | Run a command in a new container 
- `docker container start`  | Start one or more stopped containers 
- `docker container stats`  | Display a live stream of container(s) resource usage statistics 
- `docker container stop`   | Stop one or more running containers 
- `docker container top`    | Display the running processes of a container 
- `docker container unpause` | Unpause all processes within one or more containers 
- `docker container update` | Update configuration of one or more containers 
- `docker container wait`   | Block until one or more containers stop, then print their exit codes 
+ [`docker container attach`](#docker-container-attach) | Attach local standard input, output, and error streams to a running container 
+ [`docker container commit`](#docker-container-commit) | Create a new image from a container's changes 
+ [`docker container cp`](#docker-container-cp) | Copy files/folders between a container and the local filesystem 
+ [`docker container create`](#docker-container-create) | Create a new container 
+ [`docker container diff`](#docker-container-diff) | Inspect changes to files or directories on a container's filesystem 
+ [`docker container exec`](#docker-container-exec) | Run a command in a running container 
+ [`docker container export`](#docker-container-export) | Export a container's filesystem as a tar archive 
+ [`docker container inspect`](#docker-container-inspect) | Display detailed information on one or more containers 
+ [`docker container kill`](#docker-container-kill) | Kill one or more running containers 
+ [`docker container logs`](#docker-container-logs) | Fetch the logs of a container 
+ [`docker container ls`](#docker-container-ls) | List containers 
+ [`docker container pause`](#docker-container-pause) | Pause all processes within one or more containers 
+ [`docker container port`](#docker-container-port) | List port mappings or a specific mapping for the container 
+ [`docker container prune`](#docker-container-prune) | Remove all stopped containers 
+ [`docker container rename`](#docker-container-rename) | Rename a container 
+ [`docker container restart`](#docker-container-restart) | Restart one or more containers 
+ [`docker container rm`](#docker-container-rm) | Remove one or more containers 
+ [`docker container run`](#docker-container-run) | Run a command in a new container 
+ [`docker container start`](#docker-container-start) | Start one or more stopped containers 
+ [`docker container stats`](#docker-container-stats) | Display a live stream of container(s) resource usage statistics 
+ [`docker container stop`](#docker-container-stop) | Stop one or more running containers 
+ [`docker container top`](#docker-container-top) | Display the running processes of a container 
+ [`docker container unpause`](#docker-container-unpause) | Unpause all processes within one or more containers 
+ [`docker container update`](#docker-container-update) | Update configuration of one or more containers 
+ [`docker container wait`](#docker-container-wait) | Block until one or more containers stop, then print their exit codes 
 
 
 ### docker container attach
@@ -858,18 +858,18 @@ docker image COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker image build`      | Build an image from a Dockerfile 
- `docker image history`    | Show the history of an image 
- `docker image import`     | Import the contents from a tarball to create a filesystem image 
- `docker image inspect`    | Display detailed information on one or more images 
- `docker image load`       | Load an image from a tar archive or STDIN 
- `docker image ls`         | List images 
- `docker image prune`      | Remove unused images 
- `docker image pull`       | Pull an image or a repository from a registry 
- `docker image push`       | Push an image or a repository to a registry 
- `docker image rm`         | Remove one or more images 
- `docker image save`       | Save one or more images to a tar archive (streamed to STDOUT by default) 
- `docker image tag`        | Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE 
+ [`docker image build`](#docker-image-build) | Build an image from a Dockerfile 
+ [`docker image history`](#docker-image-history) | Show the history of an image 
+ [`docker image import`](#docker-image-import) | Import the contents from a tarball to create a filesystem image 
+ [`docker image inspect`](#docker-image-inspect) | Display detailed information on one or more images 
+ [`docker image load`](#docker-image-load) | Load an image from a tar archive or STDIN 
+ [`docker image ls`](#docker-image-ls) | List images 
+ [`docker image prune`](#docker-image-prune) | Remove unused images 
+ [`docker image pull`](#docker-image-pull) | Pull an image or a repository from a registry 
+ [`docker image push`](#docker-image-push) | Push an image or a repository to a registry 
+ [`docker image rm`](#docker-image-rm) | Remove one or more images 
+ [`docker image save`](#docker-image-save) | Save one or more images to a tar archive (streamed to STDOUT by default) 
+ [`docker image tag`](#docker-image-tag) | Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE 
 
 
 ### docker image build
@@ -1113,13 +1113,13 @@ docker network COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker network connect`  | Connect a container to a network 
- `docker network create`   | Create a network 
- `docker network disconnect` | Disconnect a container from a network 
- `docker network inspect`  | Display detailed information on one or more networks 
- `docker network ls`       | List networks 
- `docker network prune`    | Remove all unused networks 
- `docker network rm`       | Remove one or more networks 
+ [`docker network connect`](#docker-network-connect) | Connect a container to a network 
+ [`docker network create`](#docker-network-create) | Create a network 
+ [`docker network disconnect`](#docker-network-disconnect) | Disconnect a container from a network 
+ [`docker network inspect`](#docker-network-inspect) | Display detailed information on one or more networks 
+ [`docker network ls`](#docker-network-ls) | List networks 
+ [`docker network prune`](#docker-network-prune) | Remove all unused networks 
+ [`docker network rm`](#docker-network-rm) | Remove one or more networks 
 
 
 ### docker network connect
@@ -1262,13 +1262,13 @@ docker node COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker node demote`      | Demote one or more nodes from manager in the swarm 
- `docker node inspect`     | Display detailed information on one or more nodes 
- `docker node ls`          | List nodes in the swarm 
- `docker node promote`     | Promote one or more nodes to manager in the swarm 
- `docker node ps`          | List tasks running on one or more nodes, defaults to current node 
- `docker node rm`          | Remove one or more nodes from the swarm 
- `docker node update`      | Update a node 
+ [`docker node demote`](#docker-node-demote) | Demote one or more nodes from manager in the swarm 
+ [`docker node inspect`](#docker-node-inspect) | Display detailed information on one or more nodes 
+ [`docker node ls`](#docker-node-ls) | List nodes in the swarm 
+ [`docker node promote`](#docker-node-promote) | Promote one or more nodes to manager in the swarm 
+ [`docker node ps`](#docker-node-ps) | List tasks running on one or more nodes, defaults to current node 
+ [`docker node rm`](#docker-node-rm) | Remove one or more nodes from the swarm 
+ [`docker node update`](#docker-node-update) | Update a node 
 
 
 ### docker node demote
@@ -1390,16 +1390,16 @@ docker plugin COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker plugin create`    | Create a plugin from a rootfs and configuration. Plugin data directory must contain config.json and rootfs directory. 
- `docker plugin disable`   | Disable a plugin 
- `docker plugin enable`    | Enable a plugin 
- `docker plugin inspect`   | Display detailed information on one or more plugins 
- `docker plugin install`   | Install a plugin 
- `docker plugin ls`        | List plugins 
- `docker plugin push`      | Push a plugin to a registry 
- `docker plugin rm`        | Remove one or more plugins 
- `docker plugin set`       | Change settings for a plugin 
- `docker plugin upgrade`   | Upgrade an existing plugin 
+ [`docker plugin create`](#docker-plugin-create) | Create a plugin from a rootfs and configuration. Plugin data directory must contain config.json and rootfs directory. 
+ [`docker plugin disable`](#docker-plugin-disable) | Disable a plugin 
+ [`docker plugin enable`](#docker-plugin-enable) | Enable a plugin 
+ [`docker plugin inspect`](#docker-plugin-inspect) | Display detailed information on one or more plugins 
+ [`docker plugin install`](#docker-plugin-install) | Install a plugin 
+ [`docker plugin ls`](#docker-plugin-ls) | List plugins 
+ [`docker plugin push`](#docker-plugin-push) | Push a plugin to a registry 
+ [`docker plugin rm`](#docker-plugin-rm) | Remove one or more plugins 
+ [`docker plugin set`](#docker-plugin-set) | Change settings for a plugin 
+ [`docker plugin upgrade`](#docker-plugin-upgrade) | Upgrade an existing plugin 
 
 
 ### docker plugin create
@@ -1574,10 +1574,10 @@ docker secret COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker secret create`    | Create a secret from a file or STDIN as content 
- `docker secret inspect`   | Display detailed information on one or more secrets 
- `docker secret ls`        | List secrets 
- `docker secret rm`        | Remove one or more secrets 
+ [`docker secret create`](#docker-secret-create) | Create a secret from a file or STDIN as content 
+ [`docker secret inspect`](#docker-secret-inspect) | Display detailed information on one or more secrets 
+ [`docker secret ls`](#docker-secret-ls) | List secrets 
+ [`docker secret rm`](#docker-secret-rm) | Remove one or more secrets 
 
 
 ### docker secret create
@@ -1653,15 +1653,15 @@ docker service COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker service create`   | Create a new service 
- `docker service inspect`  | Display detailed information on one or more services 
- `docker service logs`     | Fetch the logs of a service or task 
- `docker service ls`       | List services 
- `docker service ps`       | List the tasks of one or more services 
- `docker service rm`       | Remove one or more services 
- `docker service rollback` | Revert changes to a service's configuration 
- `docker service scale`    | Scale one or multiple replicated services 
- `docker service update`   | Update a service 
+ [`docker service create`](#docker-service-create) | Create a new service 
+ [`docker service inspect`](#docker-service-inspect) | Display detailed information on one or more services 
+ [`docker service logs`](#docker-service-logs) | Fetch the logs of a service or task 
+ [`docker service ls`](#docker-service-ls) | List services 
+ [`docker service ps`](#docker-service-ps) | List the tasks of one or more services 
+ [`docker service rm`](#docker-service-rm) | Remove one or more services 
+ [`docker service rollback`](#docker-service-rollback) | Revert changes to a service's configuration 
+ [`docker service scale`](#docker-service-scale) | Scale one or multiple replicated services 
+ [`docker service update`](#docker-service-update) | Update a service 
 
 
 ### docker service create
@@ -1969,14 +1969,14 @@ docker swarm COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker swarm ca`         | Display and rotate the root CA 
- `docker swarm init`       | Initialize a swarm 
- `docker swarm join`       | Join a swarm as a node and/or manager 
- `docker swarm join-token` | Manage join tokens 
- `docker swarm leave`      | Leave the swarm 
- `docker swarm unlock`     | Unlock swarm 
- `docker swarm unlock-key` | Manage the unlock key 
- `docker swarm update`     | Update the swarm 
+ [`docker swarm ca`](#docker-swarm-ca) | Display and rotate the root CA 
+ [`docker swarm init`](#docker-swarm-init) | Initialize a swarm 
+ [`docker swarm join`](#docker-swarm-join) | Join a swarm as a node and/or manager 
+ [`docker swarm join-token`](#docker-swarm-join-token) | Manage join tokens 
+ [`docker swarm leave`](#docker-swarm-leave) | Leave the swarm 
+ [`docker swarm unlock`](#docker-swarm-unlock) | Unlock swarm 
+ [`docker swarm unlock-key`](#docker-swarm-unlock-key) | Manage the unlock key 
+ [`docker swarm update`](#docker-swarm-update) | Update the swarm 
 
 
 ### docker swarm ca
@@ -2140,10 +2140,10 @@ docker system COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker system df`        | Show docker disk usage 
- `docker system events`    | Get real time events from the server 
- `docker system info`      | Display system-wide information 
- `docker system prune`     | Remove unused data 
+ [`docker system df`](#docker-system-df) | Show docker disk usage 
+ [`docker system events`](#docker-system-events) | Get real time events from the server 
+ [`docker system info`](#docker-system-info) | Display system-wide information 
+ [`docker system prune`](#docker-system-prune) | Remove unused data 
 
 
 ### docker system df
@@ -2228,17 +2228,17 @@ docker trust COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker trust key`        | Manage keys for signing Docker images 
- `docker trust signer`     | Manage entities who can sign Docker images 
+ [`docker trust key`](#docker-trust-key) | Manage keys for signing Docker images 
+ [`docker trust signer`](#docker-trust-signer) | Manage entities who can sign Docker images 
 
 
 ### Commands: 
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker trust inspect`    | Return low-level information about keys and signatures 
- `docker trust revoke`     | Remove trust for an image 
- `docker trust sign`       | Sign an image 
+ [`docker trust inspect`](#docker-trust-inspect) | Return low-level information about keys and signatures 
+ [`docker trust revoke`](#docker-trust-revoke) | Remove trust for an image 
+ [`docker trust sign`](#docker-trust-sign) | Sign an image 
 
 
 ### docker trust key
@@ -2252,8 +2252,8 @@ docker trust key COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker trust key generate` | Generate and load a signing key-pair 
- `docker trust key load`   | Load a private key file for signing 
+ [`docker trust key generate`](#docker-trust-key-generate) | Generate and load a signing key-pair 
+ [`docker trust key load`](#docker-trust-key-load) | Load a private key file for signing 
 
 
 #### docker trust key generate
@@ -2299,8 +2299,8 @@ docker trust signer COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker trust signer add` | Add a signer 
- `docker trust signer remove` | Remove a signer 
+ [`docker trust signer add`](#docker-trust-signer-add) | Add a signer 
+ [`docker trust signer remove`](#docker-trust-signer-remove) | Remove a signer 
 
 
 #### docker trust signer add
@@ -2394,11 +2394,11 @@ docker volume COMMAND
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- `docker volume create`    | Create a volume 
- `docker volume inspect`   | Display detailed information on one or more volumes 
- `docker volume ls`        | List volumes 
- `docker volume prune`     | Remove all unused local volumes 
- `docker volume rm`        | Remove one or more volumes 
+ [`docker volume create`](#docker-volume-create) | Create a volume 
+ [`docker volume inspect`](#docker-volume-inspect) | Display detailed information on one or more volumes 
+ [`docker volume ls`](#docker-volume-ls) | List volumes 
+ [`docker volume prune`](#docker-volume-prune) | Remove all unused local volumes 
+ [`docker volume rm`](#docker-volume-rm) | Remove one or more volumes 
 
 
 ### docker volume create
