@@ -1,0 +1,22 @@
+{
+    "Command": "docker image pull",
+    "Description": "Pull an image or a repository from a registry",
+    "Usage": "\tdocker image pull [OPTIONS] NAME[:TAG|@DIGEST]",
+    "options": {
+        "indent": 31,
+        "data": [
+            {
+                "cmd": "-a, --all-tags",
+                "dcr": " Download all tagged images in the repository"
+            },
+            {
+                "cmd": "--disable-content-trust",
+                "dcr": " Skip image verification (default true)"
+            },
+            {
+                "cmd": "--platform string",
+                "dcr": " Set platform if server is multi-platformcapable"
+            }
+        ]
+    }
+}

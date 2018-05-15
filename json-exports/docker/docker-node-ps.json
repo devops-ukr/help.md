@@ -1,0 +1,30 @@
+{
+    "Command": "docker node ps",
+    "Description": "List tasks running on one or more nodes, defaults to current node",
+    "Usage": "\tdocker node ps [OPTIONS] [NODE...]",
+    "options": {
+        "indent": 23,
+        "data": [
+            {
+                "cmd": "-f, --filter filter",
+                "dcr": " Filter output based on conditions provided"
+            },
+            {
+                "cmd": "--format string",
+                "dcr": " Pretty-print tasks using a Go template"
+            },
+            {
+                "cmd": "--no-resolve",
+                "dcr": " Do not map IDs to Names"
+            },
+            {
+                "cmd": "--no-trunc",
+                "dcr": " Do not truncate output"
+            },
+            {
+                "cmd": "-q, --quiet",
+                "dcr": " Only display task IDs"
+            }
+        ]
+    }
+}

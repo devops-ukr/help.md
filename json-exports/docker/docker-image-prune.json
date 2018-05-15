@@ -1,0 +1,22 @@
+{
+    "Command": "docker image prune",
+    "Description": "Remove unused images",
+    "Usage": "\tdocker image prune [OPTIONS]",
+    "options": {
+        "indent": 23,
+        "data": [
+            {
+                "cmd": "-a, --all",
+                "dcr": " Remove all unused images, not just dangling ones"
+            },
+            {
+                "cmd": "--filter filter",
+                "dcr": " Provide filter values (e.g. 'until=<timestamp>')"
+            },
+            {
+                "cmd": "-f, --force",
+                "dcr": " Do not prompt for confirmation"
+            }
+        ]
+    }
+}

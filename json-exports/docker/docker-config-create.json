@@ -1,0 +1,18 @@
+{
+    "Command": "docker config create",
+    "Description": "Create a config from a file or STDIN",
+    "Usage": "\tdocker config create [OPTIONS] CONFIG file|-",
+    "options": {
+        "indent": 32,
+        "data": [
+            {
+                "cmd": "-l, --label list",
+                "dcr": " Config labels"
+            },
+            {
+                "cmd": "--template-driver string",
+                "dcr": " Template driver"
+            }
+        ]
+    }
+}

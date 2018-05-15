@@ -1,0 +1,22 @@
+{
+    "Command": "docker attach",
+    "Description": "Attach local standard input, output, and error streams to a running container",
+    "Usage": "\tdocker attach [OPTIONS] CONTAINER",
+    "options": {
+        "indent": 28,
+        "data": [
+            {
+                "cmd": "--detach-keys string",
+                "dcr": " Override the key sequence for detaching acontainer"
+            },
+            {
+                "cmd": "--no-stdin",
+                "dcr": " Do not attach STDIN"
+            },
+            {
+                "cmd": "--sig-proxy",
+                "dcr": " Proxy all received signals to the process(default true)"
+            }
+        ]
+    }
+}

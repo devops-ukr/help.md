@@ -1,0 +1,18 @@
+{
+    "Command": "docker node inspect",
+    "Description": "Display detailed information on one or more nodes",
+    "Usage": "\tdocker node inspect [OPTIONS] self|NODE [NODE...]",
+    "options": {
+        "indent": 23,
+        "data": [
+            {
+                "cmd": "-f, --format string",
+                "dcr": " Format the output using the given Go template"
+            },
+            {
+                "cmd": "--pretty",
+                "dcr": " Print the information in a human friendly format"
+            }
+        ]
+    }
+}

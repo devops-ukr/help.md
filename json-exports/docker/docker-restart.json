@@ -1,0 +1,14 @@
+{
+    "Command": "docker restart",
+    "Description": "Restart one or more containers",
+    "Usage": "\tdocker restart [OPTIONS] CONTAINER [CONTAINER...]",
+    "options": {
+        "indent": 18,
+        "data": [
+            {
+                "cmd": "-t, --time int",
+                "dcr": " Seconds to wait for stop before killing the container(default 10)"
+            }
+        ]
+    }
+}

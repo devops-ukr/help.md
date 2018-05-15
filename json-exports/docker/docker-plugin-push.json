@@ -1,0 +1,14 @@
+{
+    "Command": "docker plugin push",
+    "Description": "Push a plugin to a registry",
+    "Usage": "\tdocker plugin push [OPTIONS] PLUGIN[:TAG]",
+    "options": {
+        "indent": 31,
+        "data": [
+            {
+                "cmd": "--disable-content-trust",
+                "dcr": " Skip image signing (default true)"
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "Command": "docker trust sign",
+    "Description": "Sign an image",
+    "Usage": "\tdocker trust sign IMAGE:TAG",
+    "options": {
+        "indent": 15,
+        "data": [
+            {
+                "cmd": "--local",
+                "dcr": " Sign a locally tagged image"
+            }
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "Command": "docker node update",
+    "Description": "Update a node",
+    "Usage": "\tdocker node update [OPTIONS] NODE",
+    "options": {
+        "indent": 29,
+        "data": [
+            {
+                "cmd": "--availability string",
+                "dcr": " Availability of the node(\"active\"|\"pause\"|\"drain\")"
+            },
+            {
+                "cmd": "--label-add list",
+                "dcr": " Add or update a node label (key=value)"
+            },
+            {
+                "cmd": "--label-rm list",
+                "dcr": " Remove a node label if exists"
+            },
+            {
+                "cmd": "--role string",
+                "dcr": " Role of the node (\"worker\"|\"manager\")"
+            }
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "Command": "docker plugin install",
+    "Description": "Install a plugin",
+    "Usage": "\tdocker plugin install [OPTIONS] PLUGIN [KEY=VALUE...]",
+    "options": {
+        "indent": 31,
+        "data": [
+            {
+                "cmd": "--alias string",
+                "dcr": " Local name for plugin"
+            },
+            {
+                "cmd": "--disable",
+                "dcr": " Do not enable the plugin on install"
+            },
+            {
+                "cmd": "--disable-content-trust",
+                "dcr": " Skip image verification (default true)"
+            },
+            {
+                "cmd": "--grant-all-permissions",
+                "dcr": " Grant all permissions necessary to runthe plugin"
+            }
+        ]
+    }
+}

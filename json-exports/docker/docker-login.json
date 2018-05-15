@@ -1,0 +1,22 @@
+{
+    "Command": "docker login",
+    "Description": "Log in to a Docker registry",
+    "Usage": "\tdocker login [OPTIONS] [SERVER]",
+    "options": {
+        "indent": 25,
+        "data": [
+            {
+                "cmd": "-p, --password string",
+                "dcr": " Password"
+            },
+            {
+                "cmd": "--password-stdin",
+                "dcr": " Take the password from stdin"
+            },
+            {
+                "cmd": "-u, --username string",
+                "dcr": " Username"
+            }
+        ]
+    }
+}

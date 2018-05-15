@@ -1,0 +1,22 @@
+{
+    "Command": "docker volume ls",
+    "Description": "List volumes",
+    "Usage": "\tdocker volume ls [OPTIONS]",
+    "options": {
+        "indent": 23,
+        "data": [
+            {
+                "cmd": "-f, --filter filter",
+                "dcr": " Provide filter values (e.g. 'dangling=true')"
+            },
+            {
+                "cmd": "--format string",
+                "dcr": " Pretty-print volumes using a Go template"
+            },
+            {
+                "cmd": "-q, --quiet",
+                "dcr": " Only display volume names"
+            }
+        ]
+    }
+}
