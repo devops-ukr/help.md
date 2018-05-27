@@ -1,30 +1,15 @@
 {
     "Command": "docker network connect",
     "Description": "Connect a container to a network",
-    "Usage": "\tdocker network connect [OPTIONS] NETWORK CONTAINER",
-    "options": {
+    "Usage": "docker network connect [OPTIONS] NETWORK CONTAINER",
+    "Options": {
         "indent": 31,
-        "data": [
-            {
-                "cmd": "--alias strings",
-                "dcr": " Add network-scoped alias for the container"
-            },
-            {
-                "cmd": "--ip string",
-                "dcr": " IPv4 address (e.g., 172.30.100.104)"
-            },
-            {
-                "cmd": "--ip6 string",
-                "dcr": " IPv6 address (e.g., 2001:db8::33)"
-            },
-            {
-                "cmd": "--link list",
-                "dcr": " Add link to another container"
-            },
-            {
-                "cmd": "--link-local-ip strings",
-                "dcr": " Add a link-local address for the container"
-            }
-        ]
+        "data": {
+            "--alias strings": "Add network-scoped alias for the container",
+            "--ip string": "IPv4 address (e.g., 172.30.100.104)",
+            "--ip6 string": "IPv6 address (e.g., 2001:db8::33)",
+            "--link list": "Add link to another container",
+            "--link-local-ip strings": "Add a link-local address for the container"
+        }
     }
 }

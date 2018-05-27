@@ -1,26 +1,17 @@
 {
     "Command": "docker network ls",
     "Description": "List networks",
-    "Usage": "\tdocker network ls [OPTIONS]",
-    "options": {
+    "Usage": "docker network ls [OPTIONS]",
+    "Aliases": [
+        "  ls, list"
+    ],
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-f, --filter filter",
-                "dcr": " Provide filter values (e.g. 'driver=bridge')"
-            },
-            {
-                "cmd": "--format string",
-                "dcr": " Pretty-print networks using a Go template"
-            },
-            {
-                "cmd": "--no-trunc",
-                "dcr": " Do not truncate the output"
-            },
-            {
-                "cmd": "-q, --quiet",
-                "dcr": " Only display network IDs"
-            }
-        ]
+        "data": {
+            "-f, --filter filter": "Provide filter values (e.g. 'driver=bridge')",
+            "--format string": "Pretty-print networks using a Go template",
+            "--no-trunc": "Do not truncate the output",
+            "-q, --quiet": "Only display network IDs"
+        }
     }
 }

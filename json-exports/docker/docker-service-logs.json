@@ -1,46 +1,19 @@
 {
     "Command": "docker service logs",
     "Description": "Fetch the logs of a service or task",
-    "Usage": "\tdocker service logs [OPTIONS] SERVICE|TASK",
-    "options": {
+    "Usage": "docker service logs [OPTIONS] SERVICE|TASK",
+    "Options": {
         "indent": 22,
-        "data": [
-            {
-                "cmd": "--details",
-                "dcr": " Show extra details provided to logs"
-            },
-            {
-                "cmd": "-f, --follow",
-                "dcr": " Follow log output"
-            },
-            {
-                "cmd": "--no-resolve",
-                "dcr": " Do not map IDs to Names in output"
-            },
-            {
-                "cmd": "--no-task-ids",
-                "dcr": " Do not include task IDs in output"
-            },
-            {
-                "cmd": "--no-trunc",
-                "dcr": " Do not truncate output"
-            },
-            {
-                "cmd": "--raw",
-                "dcr": " Do not neatly format logs"
-            },
-            {
-                "cmd": "--since string",
-                "dcr": " Show logs since timestamp (e.g.2013-01-02T13:23:37) or relative (e.g. 42m for 42minutes)"
-            },
-            {
-                "cmd": "--tail string",
-                "dcr": " Number of lines to show from the end of the logs(default \"all\")"
-            },
-            {
-                "cmd": "-t, --timestamps",
-                "dcr": " Show timestamps"
-            }
-        ]
+        "data": {
+            "--details": "Show extra details provided to logs",
+            "-f, --follow": "Follow log output",
+            "--no-resolve": "Do not map IDs to Names in output",
+            "--no-task-ids": "Do not include task IDs in output",
+            "--no-trunc": "Do not truncate output",
+            "--raw": "Do not neatly format logs",
+            "--since string": "Show logs since timestamp (e.g. 2013-01-02T13:23:37) or relative (e.g. 42m for 42 minutes)",
+            "--tail string": "Number of lines to show from the end of the logs (default \"all\")",
+            "-t, --timestamps": "Show timestamps"
+        }
     }
 }

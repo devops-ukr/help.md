@@ -1,9 +1,12 @@
 {
     "Command": "docker trust signer",
     "Description": "Manage entities who can sign Docker images",
-    "Usage": "\tdocker trust signer COMMAND",
-    "commands": {
-        "docker trust signer add": "Add a signer",
-        "docker trust signer remove": "Remove a signer"
+    "Usage": "docker trust signer COMMAND",
+    "Commands": {
+        "indent": 13,
+        "data": {
+            "docker trust signer add": "Add a signer",
+            "docker trust signer remove": "Remove a signer"
+        }
     }
 }

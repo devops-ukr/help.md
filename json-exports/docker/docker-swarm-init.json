@@ -1,58 +1,22 @@
 {
     "Command": "docker swarm init",
     "Description": "Initialize a swarm",
-    "Usage": "\tdocker swarm init [OPTIONS]",
-    "options": {
+    "Usage": "docker swarm init [OPTIONS]",
+    "Options": {
         "indent": 39,
-        "data": [
-            {
-                "cmd": "--advertise-addr string",
-                "dcr": " Advertised address (format:<ip|interface>[:port])"
-            },
-            {
-                "cmd": "--autolock",
-                "dcr": " Enable manager autolocking(requiring an unlock key to starta stopped manager)"
-            },
-            {
-                "cmd": "--availability string",
-                "dcr": " Availability of the node(\"active\"|\"pause\"|\"drain\")(default \"active\")"
-            },
-            {
-                "cmd": "--cert-expiry duration",
-                "dcr": " Validity period for nodecertificates (ns|us|ms|s|m|h)(default 2160h0m0s)"
-            },
-            {
-                "cmd": "--data-path-addr string",
-                "dcr": " Address or interface to use fordata path traffic (format:<ip|interface>)"
-            },
-            {
-                "cmd": "--dispatcher-heartbeat duration",
-                "dcr": " Dispatcher heartbeat period(ns|us|ms|s|m|h) (default 5s)"
-            },
-            {
-                "cmd": "--external-ca external-ca",
-                "dcr": " Specifications of one or morecertificate signing endpoints"
-            },
-            {
-                "cmd": "--force-new-cluster",
-                "dcr": " Force create a new cluster fromcurrent state"
-            },
-            {
-                "cmd": "--listen-addr node-addr",
-                "dcr": " Listen address (format:<ip|interface>[:port]) (default0.0.0.0:2377)"
-            },
-            {
-                "cmd": "--max-snapshots uint",
-                "dcr": " Number of additional Raftsnapshots to retain"
-            },
-            {
-                "cmd": "--snapshot-interval uint",
-                "dcr": " Number of log entries betweenRaft snapshots (default 10000)"
-            },
-            {
-                "cmd": "--task-history-limit int",
-                "dcr": " Task history retention limit(default 5)"
-            }
-        ]
+        "data": {
+            "--advertise-addr string": "Advertised address (format: <ip|interface>[:port])",
+            "--autolock": "Enable manager autolocking (requiring an unlock key to start a stopped manager)",
+            "--availability string": "Availability of the node (\"active\"|\"pause\"|\"drain\") (default \"active\")",
+            "--cert-expiry duration": "Validity period for node certificates (ns|us|ms|s|m|h) (default 2160h0m0s)",
+            "--data-path-addr string": "Address or interface to use for data path traffic (format: <ip|interface>)",
+            "--dispatcher-heartbeat duration": "Dispatcher heartbeat period (ns|us|ms|s|m|h) (default 5s)",
+            "--external-ca external-ca": "Specifications of one or more certificate signing endpoints",
+            "--force-new-cluster": "Force create a new cluster from current state",
+            "--listen-addr node-addr": "Listen address (format: <ip|interface>[:port]) (default 0.0.0.0:2377)",
+            "--max-snapshots uint": "Number of additional Raft snapshots to retain",
+            "--snapshot-interval uint": "Number of log entries between Raft snapshots (default 10000)",
+            "--task-history-limit int": "Task history retention limit (default 5)"
+        }
     }
 }

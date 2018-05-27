@@ -1,5 +1,5 @@
 {
     "Command": "docker container wait",
     "Description": "Block until one or more containers stop, then print their exit codes",
-    "Usage": "\tdocker container wait CONTAINER [CONTAINER...]"
+    "Usage": "docker container wait CONTAINER [CONTAINER...]"
 }

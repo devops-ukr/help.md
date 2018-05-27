@@ -1,14 +1,11 @@
 {
     "Command": "docker swarm leave",
     "Description": "Leave the swarm",
-    "Usage": "\tdocker swarm leave [OPTIONS]",
-    "options": {
+    "Usage": "docker swarm leave [OPTIONS]",
+    "Options": {
         "indent": 15,
-        "data": [
-            {
-                "cmd": "-f, --force",
-                "dcr": " Force this node to leave the swarm, ignoring warnings"
-            }
-        ]
+        "data": {
+            "-f, --force": "Force this node to leave the swarm, ignoring warnings"
+        }
     }
 }

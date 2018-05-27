@@ -1,30 +1,15 @@
 {
     "Command": "docker deploy",
     "Description": "Deploy a new stack or update an existing stack",
-    "Usage": "\tdocker deploy [OPTIONS] STACK",
-    "options": {
+    "Usage": "docker deploy [OPTIONS] STACK",
+    "Options": {
         "indent": 30,
-        "data": [
-            {
-                "cmd": "--bundle-file string",
-                "dcr": " Path to a Distributed Application Bundle file"
-            },
-            {
-                "cmd": "-c, --compose-file strings",
-                "dcr": " Path to a Compose file"
-            },
-            {
-                "cmd": "--prune",
-                "dcr": " Prune services that are no longer referenced"
-            },
-            {
-                "cmd": "--resolve-image string",
-                "dcr": " Query the registry to resolve image digestand supported platforms(\"always\"|\"changed\"|\"never\") (default \"always\")"
-            },
-            {
-                "cmd": "--with-registry-auth",
-                "dcr": " Send registry authentication details toSwarm agents"
-            }
-        ]
+        "data": {
+            "--bundle-file string": "Path to a Distributed Application Bundle file",
+            "-c, --compose-file strings": "Path to a Compose file",
+            "--prune": "Prune services that are no longer referenced",
+            "--resolve-image string": "Query the registry to resolve image digest and supported platforms (\"always\"|\"changed\"|\"never\") (default \"always\")",
+            "--with-registry-auth": "Send registry authentication details to Swarm agents"
+        }
     }
 }

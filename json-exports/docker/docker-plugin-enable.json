@@ -1,14 +1,11 @@
 {
     "Command": "docker plugin enable",
     "Description": "Enable a plugin",
-    "Usage": "\tdocker plugin enable [OPTIONS] PLUGIN",
-    "options": {
+    "Usage": "docker plugin enable [OPTIONS] PLUGIN",
+    "Options": {
         "indent": 21,
-        "data": [
-            {
-                "cmd": "--timeout int",
-                "dcr": " HTTP client timeout (in seconds) (default 30)"
-            }
-        ]
+        "data": {
+            "--timeout int": "HTTP client timeout (in seconds) (default 30)"
+        }
     }
 }

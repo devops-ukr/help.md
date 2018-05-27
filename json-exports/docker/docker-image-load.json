@@ -1,18 +1,12 @@
 {
     "Command": "docker image load",
     "Description": "Load an image from a tar archive or STDIN",
-    "Usage": "\tdocker image load [OPTIONS]",
-    "options": {
+    "Usage": "docker image load [OPTIONS]",
+    "Options": {
         "indent": 22,
-        "data": [
-            {
-                "cmd": "-i, --input string",
-                "dcr": " Read from tar archive file, instead of STDIN"
-            },
-            {
-                "cmd": "-q, --quiet",
-                "dcr": " Suppress the load output"
-            }
-        ]
+        "data": {
+            "-i, --input string": "Read from tar archive file, instead of STDIN",
+            "-q, --quiet": "Suppress the load output"
+        }
     }
 }

@@ -1,18 +1,12 @@
 {
     "Command": "docker system df",
     "Description": "Show docker disk usage",
-    "Usage": "\tdocker system df [OPTIONS]",
-    "options": {
+    "Usage": "docker system df [OPTIONS]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "--format string",
-                "dcr": " Pretty-print images using a Go template"
-            },
-            {
-                "cmd": "-v, --verbose",
-                "dcr": " Show detailed information on space usage"
-            }
-        ]
+        "data": {
+            "--format string": "Pretty-print images using a Go template",
+            "-v, --verbose": "Show detailed information on space usage"
+        }
     }
 }

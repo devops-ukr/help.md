@@ -1,22 +1,13 @@
 {
     "Command": "docker inspect",
     "Description": "Return low-level information on Docker objects",
-    "Usage": "\tdocker inspect [OPTIONS] NAME|ID [NAME|ID...]",
-    "options": {
+    "Usage": "docker inspect [OPTIONS] NAME|ID [NAME|ID...]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-f, --format string",
-                "dcr": " Format the output using the given Go template"
-            },
-            {
-                "cmd": "-s, --size",
-                "dcr": " Display total file sizes if the type is container"
-            },
-            {
-                "cmd": "--type string",
-                "dcr": " Return JSON for specified type"
-            }
-        ]
+        "data": {
+            "-f, --format string": "Format the output using the given Go template",
+            "-s, --size": "Display total file sizes if the type is container",
+            "--type string": "Return JSON for specified type"
+        }
     }
 }

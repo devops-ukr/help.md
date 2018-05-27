@@ -1,38 +1,17 @@
 {
     "Command": "docker swarm update",
     "Description": "Update the swarm",
-    "Usage": "\tdocker swarm update [OPTIONS]",
-    "options": {
+    "Usage": "docker swarm update [OPTIONS]",
+    "Options": {
         "indent": 39,
-        "data": [
-            {
-                "cmd": "--autolock",
-                "dcr": " Change manager autolockingsetting (true|false)"
-            },
-            {
-                "cmd": "--cert-expiry duration",
-                "dcr": " Validity period for nodecertificates (ns|us|ms|s|m|h)(default 2160h0m0s)"
-            },
-            {
-                "cmd": "--dispatcher-heartbeat duration",
-                "dcr": " Dispatcher heartbeat period(ns|us|ms|s|m|h) (default 5s)"
-            },
-            {
-                "cmd": "--external-ca external-ca",
-                "dcr": " Specifications of one or morecertificate signing endpoints"
-            },
-            {
-                "cmd": "--max-snapshots uint",
-                "dcr": " Number of additional Raftsnapshots to retain"
-            },
-            {
-                "cmd": "--snapshot-interval uint",
-                "dcr": " Number of log entries betweenRaft snapshots (default 10000)"
-            },
-            {
-                "cmd": "--task-history-limit int",
-                "dcr": " Task history retention limit(default 5)"
-            }
-        ]
+        "data": {
+            "--autolock": "Change manager autolocking setting (true|false)",
+            "--cert-expiry duration": "Validity period for node certificates (ns|us|ms|s|m|h) (default 2160h0m0s)",
+            "--dispatcher-heartbeat duration": "Dispatcher heartbeat period (ns|us|ms|s|m|h) (default 5s)",
+            "--external-ca external-ca": "Specifications of one or more certificate signing endpoints",
+            "--max-snapshots uint": "Number of additional Raft snapshots to retain",
+            "--snapshot-interval uint": "Number of log entries between Raft snapshots (default 10000)",
+            "--task-history-limit int": "Task history retention limit (default 5)"
+        }
     }
 }

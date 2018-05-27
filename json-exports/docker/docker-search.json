@@ -1,26 +1,14 @@
 {
     "Command": "docker search",
     "Description": "Search the Docker Hub for images",
-    "Usage": "\tdocker search [OPTIONS] TERM",
-    "options": {
+    "Usage": "docker search [OPTIONS] TERM",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-f, --filter filter",
-                "dcr": " Filter output based on conditions provided"
-            },
-            {
-                "cmd": "--format string",
-                "dcr": " Pretty-print search using a Go template"
-            },
-            {
-                "cmd": "--limit int",
-                "dcr": " Max number of search results (default 25)"
-            },
-            {
-                "cmd": "--no-trunc",
-                "dcr": " Don't truncate output"
-            }
-        ]
+        "data": {
+            "-f, --filter filter": "Filter output based on conditions provided",
+            "--format string": "Pretty-print search using a Go template",
+            "--limit int": "Max number of search results (default 25)",
+            "--no-trunc": "Don't truncate output"
+        }
     }
 }

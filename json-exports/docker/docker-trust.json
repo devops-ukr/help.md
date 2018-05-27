@@ -1,14 +1,20 @@
 {
     "Command": "docker trust",
     "Description": "Manage trust on Docker images",
-    "Usage": "\tdocker trust COMMAND",
-    "management commands": {
-        "docker trust key": "Manage keys for signing Docker images",
-        "docker trust signer": "Manage entities who can sign Docker images"
+    "Usage": "docker trust COMMAND",
+    "Management Commands": {
+        "indent": 13,
+        "data": {
+            "docker trust key": "Manage keys for signing Docker images",
+            "docker trust signer": "Manage entities who can sign Docker images"
+        }
     },
-    "commands": {
-        "docker trust inspect": "Return low-level information about keys and signatures",
-        "docker trust revoke": "Remove trust for an image",
-        "docker trust sign": "Sign an image"
+    "Commands": {
+        "indent": 13,
+        "data": {
+            "docker trust inspect": "Return low-level information about keys and signatures",
+            "docker trust revoke": "Remove trust for an image",
+            "docker trust sign": "Sign an image"
+        }
     }
 }

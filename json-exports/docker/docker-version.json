@@ -1,14 +1,11 @@
 {
     "Command": "docker version",
     "Description": "Show the Docker version information",
-    "Usage": "\tdocker version [OPTIONS]",
-    "options": {
+    "Usage": "docker version [OPTIONS]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-f, --format string",
-                "dcr": " Format the output using the given Go template"
-            }
-        ]
+        "data": {
+            "-f, --format string": "Format the output using the given Go template"
+        }
     }
 }

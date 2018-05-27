@@ -1,5 +1,5 @@
 {
     "Command": "docker node demote",
     "Description": "Demote one or more nodes from manager in the swarm",
-    "Usage": "\tdocker node demote NODE [NODE...]"
+    "Usage": "docker node demote NODE [NODE...]"
 }

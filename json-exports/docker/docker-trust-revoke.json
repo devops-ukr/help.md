@@ -1,14 +1,11 @@
 {
     "Command": "docker trust revoke",
     "Description": "Remove trust for an image",
-    "Usage": "\tdocker trust revoke [OPTIONS] IMAGE[:TAG]",
-    "options": {
+    "Usage": "docker trust revoke [OPTIONS] IMAGE[:TAG]",
+    "Options": {
         "indent": 13,
-        "data": [
-            {
-                "cmd": "-y, --yes",
-                "dcr": " Do not prompt for confirmation"
-            }
-        ]
+        "data": {
+            "-y, --yes": "Do not prompt for confirmation"
+        }
     }
 }

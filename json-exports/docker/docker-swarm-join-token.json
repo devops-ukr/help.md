@@ -1,18 +1,12 @@
 {
     "Command": "docker swarm join-token",
     "Description": "Manage join tokens",
-    "Usage": "\tdocker swarm join-token [OPTIONS] (worker|manager)",
-    "options": {
+    "Usage": "docker swarm join-token [OPTIONS] (worker|manager)",
+    "Options": {
         "indent": 16,
-        "data": [
-            {
-                "cmd": "-q, --quiet",
-                "dcr": " Only display token"
-            },
-            {
-                "cmd": "--rotate",
-                "dcr": " Rotate join token"
-            }
-        ]
+        "data": {
+            "-q, --quiet": "Only display token",
+            "--rotate": "Rotate join token"
+        }
     }
 }

@@ -1,5 +1,8 @@
 {
     "Command": "docker service rm",
     "Description": "Remove one or more services",
-    "Usage": "\tdocker service rm SERVICE [SERVICE...]"
+    "Usage": "docker service rm SERVICE [SERVICE...]",
+    "Aliases": [
+        "  rm, remove"
+    ]
 }

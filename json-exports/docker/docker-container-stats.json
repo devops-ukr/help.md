@@ -1,26 +1,14 @@
 {
     "Command": "docker container stats",
     "Description": "Display a live stream of container(s) resource usage statistics",
-    "Usage": "\tdocker container stats [OPTIONS] [CONTAINER...]",
-    "options": {
+    "Usage": "docker container stats [OPTIONS] [CONTAINER...]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-a, --all",
-                "dcr": " Show all containers (default shows just running)"
-            },
-            {
-                "cmd": "--format string",
-                "dcr": " Pretty-print images using a Go template"
-            },
-            {
-                "cmd": "--no-stream",
-                "dcr": " Disable streaming stats and only pull the first result"
-            },
-            {
-                "cmd": "--no-trunc",
-                "dcr": " Do not truncate output"
-            }
-        ]
+        "data": {
+            "-a, --all": "Show all containers (default shows just running)",
+            "--format string": "Pretty-print images using a Go template",
+            "--no-stream": "Disable streaming stats and only pull the first result",
+            "--no-trunc": "Do not truncate output"
+        }
     }
 }

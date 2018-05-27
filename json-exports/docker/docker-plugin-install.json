@@ -1,26 +1,14 @@
 {
     "Command": "docker plugin install",
     "Description": "Install a plugin",
-    "Usage": "\tdocker plugin install [OPTIONS] PLUGIN [KEY=VALUE...]",
-    "options": {
+    "Usage": "docker plugin install [OPTIONS] PLUGIN [KEY=VALUE...]",
+    "Options": {
         "indent": 31,
-        "data": [
-            {
-                "cmd": "--alias string",
-                "dcr": " Local name for plugin"
-            },
-            {
-                "cmd": "--disable",
-                "dcr": " Do not enable the plugin on install"
-            },
-            {
-                "cmd": "--disable-content-trust",
-                "dcr": " Skip image verification (default true)"
-            },
-            {
-                "cmd": "--grant-all-permissions",
-                "dcr": " Grant all permissions necessary to runthe plugin"
-            }
-        ]
+        "data": {
+            "--alias string": "Local name for plugin",
+            "--disable": "Do not enable the plugin on install",
+            "--disable-content-trust": "Skip image verification (default true)",
+            "--grant-all-permissions": "Grant all permissions necessary to run the plugin"
+        }
     }
 }

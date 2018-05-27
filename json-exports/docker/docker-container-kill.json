@@ -1,14 +1,11 @@
 {
     "Command": "docker container kill",
     "Description": "Kill one or more running containers",
-    "Usage": "\tdocker container kill [OPTIONS] CONTAINER [CONTAINER...]",
-    "options": {
+    "Usage": "docker container kill [OPTIONS] CONTAINER [CONTAINER...]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-s, --signal string",
-                "dcr": " Signal to send to the container (default \"KILL\")"
-            }
-        ]
+        "data": {
+            "-s, --signal string": "Signal to send to the container (default \"KILL\")"
+        }
     }
 }

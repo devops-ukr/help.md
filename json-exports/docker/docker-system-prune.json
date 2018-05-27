@@ -1,26 +1,14 @@
 {
     "Command": "docker system prune",
     "Description": "Remove unused data",
-    "Usage": "\tdocker system prune [OPTIONS]",
-    "options": {
+    "Usage": "docker system prune [OPTIONS]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-a, --all",
-                "dcr": " Remove all unused images not just dangling ones"
-            },
-            {
-                "cmd": "--filter filter",
-                "dcr": " Provide filter values (e.g. 'label=<key>=<value>')"
-            },
-            {
-                "cmd": "-f, --force",
-                "dcr": " Do not prompt for confirmation"
-            },
-            {
-                "cmd": "--volumes",
-                "dcr": " Prune volumes"
-            }
-        ]
+        "data": {
+            "-a, --all": "Remove all unused images not just dangling ones",
+            "--filter filter": "Provide filter values (e.g. 'label=<key>=<value>')",
+            "-f, --force": "Do not prompt for confirmation",
+            "--volumes": "Prune volumes"
+        }
     }
 }

@@ -1,42 +1,18 @@
 {
     "Command": "docker container exec",
     "Description": "Run a command in a running container",
-    "Usage": "\tdocker container exec [OPTIONS] CONTAINER COMMAND [ARG...]",
-    "options": {
+    "Usage": "docker container exec [OPTIONS] CONTAINER COMMAND [ARG...]",
+    "Options": {
         "indent": 28,
-        "data": [
-            {
-                "cmd": "-d, --detach",
-                "dcr": " Detached mode: run command in the background"
-            },
-            {
-                "cmd": "--detach-keys string",
-                "dcr": " Override the key sequence for detaching acontainer"
-            },
-            {
-                "cmd": "-e, --env list",
-                "dcr": " Set environment variables"
-            },
-            {
-                "cmd": "-i, --interactive",
-                "dcr": " Keep STDIN open even if not attached"
-            },
-            {
-                "cmd": "--privileged",
-                "dcr": " Give extended privileges to the command"
-            },
-            {
-                "cmd": "-t, --tty",
-                "dcr": " Allocate a pseudo-TTY"
-            },
-            {
-                "cmd": "-u, --user string",
-                "dcr": " Username or UID (format:<name|uid>[:<group|gid>])"
-            },
-            {
-                "cmd": "-w, --workdir string",
-                "dcr": " Working directory inside the container"
-            }
-        ]
+        "data": {
+            "-d, --detach": "Detached mode: run command in the background",
+            "--detach-keys string": "Override the key sequence for detaching a container",
+            "-e, --env list": "Set environment variables",
+            "-i, --interactive": "Keep STDIN open even if not attached",
+            "--privileged": "Give extended privileges to the command",
+            "-t, --tty": "Allocate a pseudo-TTY",
+            "-u, --user string": "Username or UID (format: <name|uid>[:<group|gid>])",
+            "-w, --workdir string": "Working directory inside the container"
+        }
     }
 }

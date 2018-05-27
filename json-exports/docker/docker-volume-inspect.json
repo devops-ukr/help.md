@@ -1,14 +1,11 @@
 {
     "Command": "docker volume inspect",
     "Description": "Display detailed information on one or more volumes",
-    "Usage": "\tdocker volume inspect [OPTIONS] VOLUME [VOLUME...]",
-    "options": {
+    "Usage": "docker volume inspect [OPTIONS] VOLUME [VOLUME...]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-f, --format string",
-                "dcr": " Format the output using the given Go template"
-            }
-        ]
+        "data": {
+            "-f, --format string": "Format the output using the given Go template"
+        }
     }
 }

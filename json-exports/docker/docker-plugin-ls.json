@@ -1,26 +1,17 @@
 {
     "Command": "docker plugin ls",
     "Description": "List plugins",
-    "Usage": "\tdocker plugin ls [OPTIONS]",
-    "options": {
+    "Usage": "docker plugin ls [OPTIONS]",
+    "Aliases": [
+        "  ls, list"
+    ],
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-f, --filter filter",
-                "dcr": " Provide filter values (e.g. 'enabled=true')"
-            },
-            {
-                "cmd": "--format string",
-                "dcr": " Pretty-print plugins using a Go template"
-            },
-            {
-                "cmd": "--no-trunc",
-                "dcr": " Don't truncate output"
-            },
-            {
-                "cmd": "-q, --quiet",
-                "dcr": " Only display plugin IDs"
-            }
-        ]
+        "data": {
+            "-f, --filter filter": "Provide filter values (e.g. 'enabled=true')",
+            "--format string": "Pretty-print plugins using a Go template",
+            "--no-trunc": "Don't truncate output",
+            "-q, --quiet": "Only display plugin IDs"
+        }
     }
 }

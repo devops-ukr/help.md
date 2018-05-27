@@ -1,14 +1,11 @@
 {
     "Command": "docker trust key generate",
     "Description": "Generate and load a signing key-pair",
-    "Usage": "\tdocker trust key generate NAME",
-    "options": {
+    "Usage": "docker trust key generate NAME",
+    "Options": {
         "indent": 20,
-        "data": [
-            {
-                "cmd": "--dir string",
-                "dcr": " Directory to generate key in, defaults to currentdirectory"
-            }
-        ]
+        "data": {
+            "--dir string": "Directory to generate key in, defaults to current directory"
+        }
     }
 }

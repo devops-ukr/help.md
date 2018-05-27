@@ -1,18 +1,12 @@
 {
     "Command": "docker service rollback",
     "Description": "Revert changes to a service's configuration",
-    "Usage": "\tdocker service rollback [OPTIONS] SERVICE",
-    "options": {
+    "Usage": "docker service rollback [OPTIONS] SERVICE",
+    "Options": {
         "indent": 16,
-        "data": [
-            {
-                "cmd": "-d, --detach",
-                "dcr": " Exit immediately instead of waiting for the service toconverge"
-            },
-            {
-                "cmd": "-q, --quiet",
-                "dcr": " Suppress progress output"
-            }
-        ]
+        "data": {
+            "-d, --detach": "Exit immediately instead of waiting for the service to converge",
+            "-q, --quiet": "Suppress progress output"
+        }
     }
 }

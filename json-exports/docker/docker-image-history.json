@@ -1,26 +1,14 @@
 {
     "Command": "docker image history",
     "Description": "Show the history of an image",
-    "Usage": "\tdocker image history [OPTIONS] IMAGE",
-    "options": {
+    "Usage": "docker image history [OPTIONS] IMAGE",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "--format string",
-                "dcr": " Pretty-print images using a Go template"
-            },
-            {
-                "cmd": "-H, --human",
-                "dcr": " Print sizes and dates in human readable format(default true)"
-            },
-            {
-                "cmd": "--no-trunc",
-                "dcr": " Don't truncate output"
-            },
-            {
-                "cmd": "-q, --quiet",
-                "dcr": " Only show numeric IDs"
-            }
-        ]
+        "data": {
+            "--format string": "Pretty-print images using a Go template",
+            "-H, --human": "Print sizes and dates in human readable format (default true)",
+            "--no-trunc": "Don't truncate output",
+            "-q, --quiet": "Only show numeric IDs"
+        }
     }
 }

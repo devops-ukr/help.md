@@ -1,18 +1,12 @@
 {
     "Command": "docker network inspect",
     "Description": "Display detailed information on one or more networks",
-    "Usage": "\tdocker network inspect [OPTIONS] NETWORK [NETWORK...]",
-    "options": {
+    "Usage": "docker network inspect [OPTIONS] NETWORK [NETWORK...]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-f, --format string",
-                "dcr": " Format the output using the given Go template"
-            },
-            {
-                "cmd": "-v, --verbose",
-                "dcr": " Verbose output for diagnostics"
-            }
-        ]
+        "data": {
+            "-f, --format string": "Format the output using the given Go template",
+            "-v, --verbose": "Verbose output for diagnostics"
+        }
     }
 }

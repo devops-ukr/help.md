@@ -1,11 +1,14 @@
 {
     "Command": "docker system",
     "Description": "Manage Docker",
-    "Usage": "\tdocker system COMMAND",
-    "commands": {
-        "docker system df": "Show docker disk usage",
-        "docker system events": "Get real time events from the server",
-        "docker system info": "Display system-wide information",
-        "docker system prune": "Remove unused data"
+    "Usage": "docker system COMMAND",
+    "Commands": {
+        "indent": 13,
+        "data": {
+            "docker system df": "Show docker disk usage",
+            "docker system events": "Get real time events from the server",
+            "docker system info": "Display system-wide information",
+            "docker system prune": "Remove unused data"
+        }
     }
 }

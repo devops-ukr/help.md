@@ -1,18 +1,12 @@
 {
     "Command": "docker rmi",
     "Description": "Remove one or more images",
-    "Usage": "\tdocker rmi [OPTIONS] IMAGE [IMAGE...]",
-    "options": {
+    "Usage": "docker rmi [OPTIONS] IMAGE [IMAGE...]",
+    "Options": {
         "indent": 18,
-        "data": [
-            {
-                "cmd": "-f, --force",
-                "dcr": " Force removal of the image"
-            },
-            {
-                "cmd": "--no-prune",
-                "dcr": " Do not delete untagged parents"
-            }
-        ]
+        "data": {
+            "-f, --force": "Force removal of the image",
+            "--no-prune": "Do not delete untagged parents"
+        }
     }
 }

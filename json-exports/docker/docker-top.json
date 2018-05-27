@@ -1,5 +1,5 @@
 {
     "Command": "docker top",
     "Description": "Display the running processes of a container",
-    "Usage": "\tdocker top CONTAINER [ps OPTIONS]"
+    "Usage": "docker top CONTAINER [ps OPTIONS]"
 }

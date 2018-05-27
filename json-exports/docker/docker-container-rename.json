@@ -1,5 +1,5 @@
 {
     "Command": "docker container rename",
     "Description": "Rename a container",
-    "Usage": "\tdocker container rename CONTAINER NEW_NAME"
+    "Usage": "docker container rename CONTAINER NEW_NAME"
 }

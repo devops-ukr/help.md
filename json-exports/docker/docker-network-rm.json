@@ -1,5 +1,8 @@
 {
     "Command": "docker network rm",
     "Description": "Remove one or more networks",
-    "Usage": "\tdocker network rm NETWORK [NETWORK...]"
+    "Usage": "docker network rm NETWORK [NETWORK...]",
+    "Aliases": [
+        "  rm, remove"
+    ]
 }

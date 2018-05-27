@@ -1,38 +1,17 @@
 {
     "Command": "docker swarm ca",
     "Description": "Display and rotate the root CA",
-    "Usage": "\tdocker swarm ca [OPTIONS]",
-    "options": {
+    "Usage": "docker swarm ca [OPTIONS]",
+    "Options": {
         "indent": 33,
-        "data": [
-            {
-                "cmd": "--ca-cert pem-file",
-                "dcr": " Path to the PEM-formatted root CAcertificate to use for the new cluster"
-            },
-            {
-                "cmd": "--ca-key pem-file",
-                "dcr": " Path to the PEM-formatted root CA keyto use for the new cluster"
-            },
-            {
-                "cmd": "--cert-expiry duration",
-                "dcr": " Validity period for node certificates(ns|us|ms|s|m|h) (default 2160h0m0s)"
-            },
-            {
-                "cmd": "-d, --detach",
-                "dcr": " Exit immediately instead of waiting forthe root rotation to converge"
-            },
-            {
-                "cmd": "--external-ca external-ca",
-                "dcr": " Specifications of one or morecertificate signing endpoints"
-            },
-            {
-                "cmd": "-q, --quiet",
-                "dcr": " Suppress progress output"
-            },
-            {
-                "cmd": "--rotate",
-                "dcr": " Rotate the swarm CA - if no certificateor key are provided, new ones will begenerated"
-            }
-        ]
+        "data": {
+            "--ca-cert pem-file": "Path to the PEM-formatted root CA certificate to use for the new cluster",
+            "--ca-key pem-file": "Path to the PEM-formatted root CA key to use for the new cluster",
+            "--cert-expiry duration": "Validity period for node certificates (ns|us|ms|s|m|h) (default 2160h0m0s)",
+            "-d, --detach": "Exit immediately instead of waiting for the root rotation to converge",
+            "--external-ca external-ca": "Specifications of one or more certificate signing endpoints",
+            "-q, --quiet": "Suppress progress output",
+            "--rotate": "Rotate the swarm CA - if no certificate or key are provided, new ones will be generated"
+        }
     }
 }

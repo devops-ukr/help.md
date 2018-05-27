@@ -1,74 +1,26 @@
 {
     "Command": "docker network create",
     "Description": "Create a network",
-    "Usage": "\tdocker network create [OPTIONS] NETWORK",
-    "options": {
+    "Usage": "docker network create [OPTIONS] NETWORK",
+    "Options": {
         "indent": 28,
-        "data": [
-            {
-                "cmd": "--attachable",
-                "dcr": " Enable manual container attachment"
-            },
-            {
-                "cmd": "--aux-address map",
-                "dcr": " Auxiliary IPv4 or IPv6 addresses used byNetwork driver (default map[])"
-            },
-            {
-                "cmd": "--config-from string",
-                "dcr": " The network from which copying the configuration"
-            },
-            {
-                "cmd": "--config-only",
-                "dcr": " Create a configuration only network"
-            },
-            {
-                "cmd": "-d, --driver string",
-                "dcr": " Driver to manage the Network (default \"bridge\")"
-            },
-            {
-                "cmd": "--gateway strings",
-                "dcr": " IPv4 or IPv6 Gateway for the master subnet"
-            },
-            {
-                "cmd": "--ingress",
-                "dcr": " Create swarm routing-mesh network"
-            },
-            {
-                "cmd": "--internal",
-                "dcr": " Restrict external access to the network"
-            },
-            {
-                "cmd": "--ip-range strings",
-                "dcr": " Allocate container ip from a sub-range"
-            },
-            {
-                "cmd": "--ipam-driver string",
-                "dcr": " IP Address Management Driver (default \"default\")"
-            },
-            {
-                "cmd": "--ipam-opt map",
-                "dcr": " Set IPAM driver specific options (default map[])"
-            },
-            {
-                "cmd": "--ipv6",
-                "dcr": " Enable IPv6 networking"
-            },
-            {
-                "cmd": "--label list",
-                "dcr": " Set metadata on a network"
-            },
-            {
-                "cmd": "-o, --opt map",
-                "dcr": " Set driver specific options (default map[])"
-            },
-            {
-                "cmd": "--scope string",
-                "dcr": " Control the network's scope"
-            },
-            {
-                "cmd": "--subnet strings",
-                "dcr": " Subnet in CIDR format that represents anetwork segment"
-            }
-        ]
+        "data": {
+            "--attachable": "Enable manual container attachment",
+            "--aux-address map": "Auxiliary IPv4 or IPv6 addresses used by Network driver (default map[])",
+            "--config-from string": "The network from which copying the configuration",
+            "--config-only": "Create a configuration only network",
+            "-d, --driver string": "Driver to manage the Network (default \"bridge\")",
+            "--gateway strings": "IPv4 or IPv6 Gateway for the master subnet",
+            "--ingress": "Create swarm routing-mesh network",
+            "--internal": "Restrict external access to the network",
+            "--ip-range strings": "Allocate container ip from a sub-range",
+            "--ipam-driver string": "IP Address Management Driver (default \"default\")",
+            "--ipam-opt map": "Set IPAM driver specific options (default map[])",
+            "--ipv6": "Enable IPv6 networking",
+            "--label list": "Set metadata on a network",
+            "-o, --opt map": "Set driver specific options (default map[])",
+            "--scope string": "Control the network's scope",
+            "--subnet strings": "Subnet in CIDR format that represents a network segment"
+        }
     }
 }

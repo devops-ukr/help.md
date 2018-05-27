@@ -1,14 +1,11 @@
 {
     "Command": "docker plugin create",
     "Description": "Create a plugin from a rootfs and configuration. Plugin data directory must contain config.json and rootfs directory.",
-    "Usage": "\tdocker plugin create [OPTIONS] PLUGIN PLUGIN-DATA-DIR",
-    "options": {
+    "Usage": "docker plugin create [OPTIONS] PLUGIN PLUGIN-DATA-DIR",
+    "Options": {
         "indent": 18,
-        "data": [
-            {
-                "cmd": "--compress",
-                "dcr": " Compress the context using gzip"
-            }
-        ]
+        "data": {
+            "--compress": "Compress the context using gzip"
+        }
     }
 }

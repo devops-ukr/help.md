@@ -1,14 +1,14 @@
 {
     "Command": "docker plugin rm",
     "Description": "Remove one or more plugins",
-    "Usage": "\tdocker plugin rm [OPTIONS] PLUGIN [PLUGIN...]",
-    "options": {
+    "Usage": "docker plugin rm [OPTIONS] PLUGIN [PLUGIN...]",
+    "Aliases": [
+        "  rm, remove"
+    ],
+    "Options": {
         "indent": 15,
-        "data": [
-            {
-                "cmd": "-f, --force",
-                "dcr": " Force the removal of an active plugin"
-            }
-        ]
+        "data": {
+            "-f, --force": "Force the removal of an active plugin"
+        }
     }
 }

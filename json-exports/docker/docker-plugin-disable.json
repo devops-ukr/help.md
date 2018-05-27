@@ -1,14 +1,11 @@
 {
     "Command": "docker plugin disable",
     "Description": "Disable a plugin",
-    "Usage": "\tdocker plugin disable [OPTIONS] PLUGIN",
-    "options": {
+    "Usage": "docker plugin disable [OPTIONS] PLUGIN",
+    "Options": {
         "indent": 15,
-        "data": [
-            {
-                "cmd": "-f, --force",
-                "dcr": " Force the disable of an active plugin"
-            }
-        ]
+        "data": {
+            "-f, --force": "Force the disable of an active plugin"
+        }
     }
 }

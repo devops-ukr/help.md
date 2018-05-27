@@ -1,14 +1,11 @@
 {
     "Command": "docker plugin inspect",
     "Description": "Display detailed information on one or more plugins",
-    "Usage": "\tdocker plugin inspect [OPTIONS] PLUGIN [PLUGIN...]",
-    "options": {
+    "Usage": "docker plugin inspect [OPTIONS] PLUGIN [PLUGIN...]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-f, --format string",
-                "dcr": " Format the output using the given Go template"
-            }
-        ]
+        "data": {
+            "-f, --format string": "Format the output using the given Go template"
+        }
     }
 }

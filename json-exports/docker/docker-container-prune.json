@@ -1,18 +1,12 @@
 {
     "Command": "docker container prune",
     "Description": "Remove all stopped containers",
-    "Usage": "\tdocker container prune [OPTIONS]",
-    "options": {
+    "Usage": "docker container prune [OPTIONS]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "--filter filter",
-                "dcr": " Provide filter values (e.g. 'until=<timestamp>')"
-            },
-            {
-                "cmd": "-f, --force",
-                "dcr": " Do not prompt for confirmation"
-            }
-        ]
+        "data": {
+            "--filter filter": "Provide filter values (e.g. 'until=<timestamp>')",
+            "-f, --force": "Do not prompt for confirmation"
+        }
     }
 }

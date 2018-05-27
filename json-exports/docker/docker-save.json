@@ -1,14 +1,11 @@
 {
     "Command": "docker save",
     "Description": "Save one or more images to a tar archive (streamed to STDOUT by default)",
-    "Usage": "\tdocker save [OPTIONS] IMAGE [IMAGE...]",
-    "options": {
+    "Usage": "docker save [OPTIONS] IMAGE [IMAGE...]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-o, --output string",
-                "dcr": " Write to a file, instead of STDOUT"
-            }
-        ]
+        "data": {
+            "-o, --output string": "Write to a file, instead of STDOUT"
+        }
     }
 }

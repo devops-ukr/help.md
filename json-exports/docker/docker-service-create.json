@@ -1,262 +1,73 @@
 {
     "Command": "docker service create",
     "Description": "Create a new service",
-    "Usage": "\tdocker service create [OPTIONS] IMAGE [COMMAND] [ARG...]",
-    "options": {
+    "Usage": "docker service create [OPTIONS] IMAGE [COMMAND] [ARG...]",
+    "Options": {
         "indent": 42,
-        "data": [
-            {
-                "cmd": "--config config",
-                "dcr": " Specify configurations toexpose to the service"
-            },
-            {
-                "cmd": "--constraint list",
-                "dcr": " Placement constraints"
-            },
-            {
-                "cmd": "--container-label list",
-                "dcr": " Container labels"
-            },
-            {
-                "cmd": "--credential-spec credential-spec",
-                "dcr": " Credential spec for managedservice account (Windows only)"
-            },
-            {
-                "cmd": "-d, --detach",
-                "dcr": " Exit immediately instead ofwaiting for the service to converge"
-            },
-            {
-                "cmd": "--dns list",
-                "dcr": " Set custom DNS servers"
-            },
-            {
-                "cmd": "--dns-option list",
-                "dcr": " Set DNS options"
-            },
-            {
-                "cmd": "--dns-search list",
-                "dcr": " Set custom DNS search domains"
-            },
-            {
-                "cmd": "--endpoint-mode string",
-                "dcr": " Endpoint mode (vip or dnsrr)(default \"vip\")"
-            },
-            {
-                "cmd": "--entrypoint command",
-                "dcr": " Overwrite the defaultENTRYPOINT of the image"
-            },
-            {
-                "cmd": "-e, --env list",
-                "dcr": " Set environment variables"
-            },
-            {
-                "cmd": "--env-file list",
-                "dcr": " Read in a file of environmentvariables"
-            },
-            {
-                "cmd": "--generic-resource list",
-                "dcr": " User defined resources"
-            },
-            {
-                "cmd": "--group list",
-                "dcr": " Set one or more supplementaryuser groups for the container"
-            },
-            {
-                "cmd": "--health-cmd string",
-                "dcr": " Command to run to check health"
-            },
-            {
-                "cmd": "--health-interval duration",
-                "dcr": " Time between running the check(ms|s|m|h)"
-            },
-            {
-                "cmd": "--health-retries int",
-                "dcr": " Consecutive failures needed toreport unhealthy"
-            },
-            {
-                "cmd": "--health-start-period duration",
-                "dcr": " Start period for the containerto initialize before countingretries towards unstable (ms|s|m|h)"
-            },
-            {
-                "cmd": "--health-timeout duration",
-                "dcr": " Maximum time to allow onecheck to run (ms|s|m|h)"
-            },
-            {
-                "cmd": "--host list",
-                "dcr": " Set one or more customhost-to-IP mappings (host:ip)"
-            },
-            {
-                "cmd": "--hostname string",
-                "dcr": " Container hostname"
-            },
-            {
-                "cmd": "--isolation string",
-                "dcr": " Service container isolation mode"
-            },
-            {
-                "cmd": "-l, --label list",
-                "dcr": " Service labels"
-            },
-            {
-                "cmd": "--limit-cpu decimal",
-                "dcr": " Limit CPUs"
-            },
-            {
-                "cmd": "--limit-memory bytes",
-                "dcr": " Limit Memory"
-            },
-            {
-                "cmd": "--log-driver string",
-                "dcr": " Logging driver for service"
-            },
-            {
-                "cmd": "--log-opt list",
-                "dcr": " Logging driver options"
-            },
-            {
-                "cmd": "--mode string",
-                "dcr": " Service mode (replicated orglobal) (default \"replicated\")"
-            },
-            {
-                "cmd": "--mount mount",
-                "dcr": " Attach a filesystem mount tothe service"
-            },
-            {
-                "cmd": "--name string",
-                "dcr": " Service name"
-            },
-            {
-                "cmd": "--network network",
-                "dcr": " Network attachments"
-            },
-            {
-                "cmd": "--no-healthcheck",
-                "dcr": " Disable anycontainer-specified HEALTHCHECK"
-            },
-            {
-                "cmd": "--no-resolve-image",
-                "dcr": " Do not query the registry toresolve image digest andsupported platforms"
-            },
-            {
-                "cmd": "--placement-pref pref",
-                "dcr": " Add a placement preference"
-            },
-            {
-                "cmd": "-p, --publish port",
-                "dcr": " Publish a port as a node port"
-            },
-            {
-                "cmd": "-q, --quiet",
-                "dcr": " Suppress progress output"
-            },
-            {
-                "cmd": "--read-only",
-                "dcr": " Mount the container's rootfilesystem as read only"
-            },
-            {
-                "cmd": "--replicas uint",
-                "dcr": " Number of tasks"
-            },
-            {
-                "cmd": "--reserve-cpu decimal",
-                "dcr": " Reserve CPUs"
-            },
-            {
-                "cmd": "--reserve-memory bytes",
-                "dcr": " Reserve Memory"
-            },
-            {
-                "cmd": "--restart-condition string",
-                "dcr": " Restart when condition is met(\"none\"|\"on-failure\"|\"any\")(default \"any\")"
-            },
-            {
-                "cmd": "--restart-delay duration",
-                "dcr": " Delay between restart attempts(ns|us|ms|s|m|h) (default 5s)"
-            },
-            {
-                "cmd": "--restart-max-attempts uint",
-                "dcr": " Maximum number of restartsbefore giving up"
-            },
-            {
-                "cmd": "--restart-window duration",
-                "dcr": " Window used to evaluate therestart policy (ns|us|ms|s|m|h)"
-            },
-            {
-                "cmd": "--rollback-delay duration",
-                "dcr": " Delay between task rollbacks(ns|us|ms|s|m|h) (default 0s)"
-            },
-            {
-                "cmd": "--rollback-failure-action string",
-                "dcr": " Action on rollback failure(\"pause\"|\"continue\") (default\"pause\")"
-            },
-            {
-                "cmd": "--rollback-max-failure-ratio float",
-                "dcr": " Failure rate to tolerateduring a rollback (default 0)"
-            },
-            {
-                "cmd": "--rollback-monitor duration",
-                "dcr": " Duration after each taskrollback to monitor forfailure (ns|us|ms|s|m|h)(default 5s)"
-            },
-            {
-                "cmd": "--rollback-order string",
-                "dcr": " Rollback order(\"start-first\"|\"stop-first\")(default \"stop-first\")"
-            },
-            {
-                "cmd": "--rollback-parallelism uint",
-                "dcr": " Maximum number of tasks rolledback simultaneously (0 to rollback all at once) (default 1)"
-            },
-            {
-                "cmd": "--secret secret",
-                "dcr": " Specify secrets to expose tothe service"
-            },
-            {
-                "cmd": "--stop-grace-period duration",
-                "dcr": " Time to wait before forcekilling a container(ns|us|ms|s|m|h) (default 10s)"
-            },
-            {
-                "cmd": "--stop-signal string",
-                "dcr": " Signal to stop the container"
-            },
-            {
-                "cmd": "-t, --tty",
-                "dcr": " Allocate a pseudo-TTY"
-            },
-            {
-                "cmd": "--update-delay duration",
-                "dcr": " Delay between updates(ns|us|ms|s|m|h) (default 0s)"
-            },
-            {
-                "cmd": "--update-failure-action string",
-                "dcr": " Action on update failure(\"pause\"|\"continue\"|\"rollback\") (default \"pause\")"
-            },
-            {
-                "cmd": "--update-max-failure-ratio float",
-                "dcr": " Failure rate to tolerateduring an update (default 0)"
-            },
-            {
-                "cmd": "--update-monitor duration",
-                "dcr": " Duration after each taskupdate to monitor for failure(ns|us|ms|s|m|h) (default 5s)"
-            },
-            {
-                "cmd": "--update-order string",
-                "dcr": " Update order(\"start-first\"|\"stop-first\")(default \"stop-first\")"
-            },
-            {
-                "cmd": "--update-parallelism uint",
-                "dcr": " Maximum number of tasksupdated simultaneously (0 toupdate all at once) (default 1)"
-            },
-            {
-                "cmd": "-u, --user string",
-                "dcr": " Username or UID (format:<name|uid>[:<group|gid>])"
-            },
-            {
-                "cmd": "--with-registry-auth",
-                "dcr": " Send registry authenticationdetails to swarm agents"
-            },
-            {
-                "cmd": "-w, --workdir string",
-                "dcr": " Working directory inside thecontainer"
-            }
-        ]
+        "data": {
+            "--config config": "Specify configurations to expose to the service",
+            "--constraint list": "Placement constraints",
+            "--container-label list": "Container labels",
+            "--credential-spec credential-spec": "Credential spec for managed service account (Windows only)",
+            "-d, --detach": "Exit immediately instead of waiting for the service to converge",
+            "--dns list": "Set custom DNS servers",
+            "--dns-option list": "Set DNS options",
+            "--dns-search list": "Set custom DNS search domains",
+            "--endpoint-mode string": "Endpoint mode (vip or dnsrr) (default \"vip\")",
+            "--entrypoint command": "Overwrite the default ENTRYPOINT of the image",
+            "-e, --env list": "Set environment variables",
+            "--env-file list": "Read in a file of environment variables",
+            "--generic-resource list": "User defined resources",
+            "--group list": "Set one or more supplementary user groups for the container",
+            "--health-cmd string": "Command to run to check health",
+            "--health-interval duration": "Time between running the check (ms|s|m|h)",
+            "--health-retries int": "Consecutive failures needed to report unhealthy",
+            "--health-start-period duration": "Start period for the container to initialize before counting retries towards unstable (ms|s|m|h)",
+            "--health-timeout duration": "Maximum time to allow one check to run (ms|s|m|h)",
+            "--host list": "Set one or more custom host-to-IP mappings (host:ip)",
+            "--hostname string": "Container hostname",
+            "--isolation string": "Service container isolation mode",
+            "-l, --label list": "Service labels",
+            "--limit-cpu decimal": "Limit CPUs",
+            "--limit-memory bytes": "Limit Memory",
+            "--log-driver string": "Logging driver for service",
+            "--log-opt list": "Logging driver options",
+            "--mode string": "Service mode (replicated or global) (default \"replicated\")",
+            "--mount mount": "Attach a filesystem mount to the service",
+            "--name string": "Service name",
+            "--network network": "Network attachments",
+            "--no-healthcheck": "Disable any container-specified HEALTHCHECK",
+            "--no-resolve-image": "Do not query the registry to resolve image digest and supported platforms",
+            "--placement-pref pref": "Add a placement preference",
+            "-p, --publish port": "Publish a port as a node port",
+            "-q, --quiet": "Suppress progress output",
+            "--read-only": "Mount the container's root filesystem as read only",
+            "--replicas uint": "Number of tasks",
+            "--reserve-cpu decimal": "Reserve CPUs",
+            "--reserve-memory bytes": "Reserve Memory",
+            "--restart-condition string": "Restart when condition is met (\"none\"|\"on-failure\"|\"any\") (default \"any\")",
+            "--restart-delay duration": "Delay between restart attempts (ns|us|ms|s|m|h) (default 5s)",
+            "--restart-max-attempts uint": "Maximum number of restarts before giving up",
+            "--restart-window duration": "Window used to evaluate the restart policy (ns|us|ms|s|m|h)",
+            "--rollback-delay duration": "Delay between task rollbacks (ns|us|ms|s|m|h) (default 0s)",
+            "--rollback-failure-action string": "Action on rollback failure (\"pause\"|\"continue\") (default \"pause\")",
+            "--rollback-max-failure-ratio float": "Failure rate to tolerate during a rollback (default 0)",
+            "--rollback-monitor duration": "Duration after each task rollback to monitor for failure (ns|us|ms|s|m|h) (default 5s)",
+            "--rollback-order string": "Rollback order (\"start-first\"|\"stop-first\") (default \"stop-first\")",
+            "--rollback-parallelism uint": "Maximum number of tasks rolled back simultaneously (0 to roll back all at once) (default 1)",
+            "--secret secret": "Specify secrets to expose to the service",
+            "--stop-grace-period duration": "Time to wait before force killing a container (ns|us|ms|s|m|h) (default 10s)",
+            "--stop-signal string": "Signal to stop the container",
+            "-t, --tty": "Allocate a pseudo-TTY",
+            "--update-delay duration": "Delay between updates (ns|us|ms|s|m|h) (default 0s)",
+            "--update-failure-action string": "Action on update failure (\"pause\"|\"continue\"|\"rollback\") (default \"pause\")",
+            "--update-max-failure-ratio float": "Failure rate to tolerate during an update (default 0)",
+            "--update-monitor duration": "Duration after each task update to monitor for failure (ns|us|ms|s|m|h) (default 5s)",
+            "--update-order string": "Update order (\"start-first\"|\"stop-first\") (default \"stop-first\")",
+            "--update-parallelism uint": "Maximum number of tasks updated simultaneously (0 to update all at once) (default 1)",
+            "-u, --user string": "Username or UID (format: <name|uid>[:<group|gid>])",
+            "--with-registry-auth": "Send registry authentication details to swarm agents",
+            "-w, --workdir string": "Working directory inside the container"
+        }
     }
 }

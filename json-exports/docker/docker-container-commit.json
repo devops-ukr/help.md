@@ -1,26 +1,14 @@
 {
     "Command": "docker container commit",
     "Description": "Create a new image from a container's changes",
-    "Usage": "\tdocker container commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]",
-    "options": {
+    "Usage": "docker container commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]",
+    "Options": {
         "indent": 24,
-        "data": [
-            {
-                "cmd": "-a, --author string",
-                "dcr": " Author (e.g., \"John Hannibal Smith<hannibal@a-team.com>\")"
-            },
-            {
-                "cmd": "-c, --change list",
-                "dcr": " Apply Dockerfile instruction to the created image"
-            },
-            {
-                "cmd": "-m, --message string",
-                "dcr": " Commit message"
-            },
-            {
-                "cmd": "-p, --pause",
-                "dcr": " Pause container during commit (default true)"
-            }
-        ]
+        "data": {
+            "-a, --author string": "Author (e.g., \"John Hannibal Smith <hannibal@a-team.com>\")",
+            "-c, --change list": "Apply Dockerfile instruction to the created image",
+            "-m, --message string": "Commit message",
+            "-p, --pause": "Pause container during commit (default true)"
+        }
     }
 }

@@ -1,14 +1,18 @@
 {
     "Command": "docker volume rm",
     "Description": "Remove one or more volumes",
-    "Usage": "\tdocker volume rm [OPTIONS] VOLUME [VOLUME...]",
-    "options": {
+    "Usage": "docker volume rm [OPTIONS] VOLUME [VOLUME...]",
+    "Aliases": [
+        "  rm, remove"
+    ],
+    "Examples": [
+        "$ docker volume rm hello",
+        "hello"
+    ],
+    "Options": {
         "indent": 15,
-        "data": [
-            {
-                "cmd": "-f, --force",
-                "dcr": " Force the removal of one or more volumes"
-            }
-        ]
+        "data": {
+            "-f, --force": "Force the removal of one or more volumes"
+        }
     }
 }

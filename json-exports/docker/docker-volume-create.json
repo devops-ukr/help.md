@@ -1,22 +1,13 @@
 {
     "Command": "docker volume create",
     "Description": "Create a volume",
-    "Usage": "\tdocker volume create [OPTIONS] [VOLUME]",
-    "options": {
+    "Usage": "docker volume create [OPTIONS] [VOLUME]",
+    "Options": {
         "indent": 23,
-        "data": [
-            {
-                "cmd": "-d, --driver string",
-                "dcr": " Specify volume driver name (default \"local\")"
-            },
-            {
-                "cmd": "--label list",
-                "dcr": " Set metadata for a volume"
-            },
-            {
-                "cmd": "-o, --opt map",
-                "dcr": " Set driver specific options (default map[])"
-            }
-        ]
+        "data": {
+            "-d, --driver string": "Specify volume driver name (default \"local\")",
+            "--label list": "Set metadata for a volume",
+            "-o, --opt map": "Set driver specific options (default map[])"
+        }
     }
 }

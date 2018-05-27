@@ -1,30 +1,15 @@
 {
     "Command": "docker swarm join",
-    "Description": "Join a swarm as a node and\/or manager",
-    "Usage": "\tdocker swarm join [OPTIONS] HOST:PORT",
-    "options": {
+    "Description": "Join a swarm as a node and/or manager",
+    "Usage": "docker swarm join [OPTIONS] HOST:PORT",
+    "Options": {
         "indent": 31,
-        "data": [
-            {
-                "cmd": "--advertise-addr string",
-                "dcr": " Advertised address (format:<ip|interface>[:port])"
-            },
-            {
-                "cmd": "--availability string",
-                "dcr": " Availability of the node(\"active\"|\"pause\"|\"drain\") (default \"active\")"
-            },
-            {
-                "cmd": "--data-path-addr string",
-                "dcr": " Address or interface to use for data pathtraffic (format: <ip|interface>)"
-            },
-            {
-                "cmd": "--listen-addr node-addr",
-                "dcr": " Listen address (format:<ip|interface>[:port]) (default 0.0.0.0:2377)"
-            },
-            {
-                "cmd": "--token string",
-                "dcr": " Token for entry into the swarm"
-            }
-        ]
+        "data": {
+            "--advertise-addr string": "Advertised address (format: <ip|interface>[:port])",
+            "--availability string": "Availability of the node (\"active\"|\"pause\"|\"drain\") (default \"active\")",
+            "--data-path-addr string": "Address or interface to use for data path traffic (format: <ip|interface>)",
+            "--listen-addr node-addr": "Listen address (format: <ip|interface>[:port]) (default 0.0.0.0:2377)",
+            "--token string": "Token for entry into the swarm"
+        }
     }
 }

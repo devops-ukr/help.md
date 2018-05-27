@@ -1,18 +1,12 @@
 {
     "Command": "docker import",
     "Description": "Import the contents from a tarball to create a filesystem image",
-    "Usage": "\tdocker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]",
-    "options": {
+    "Usage": "docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]]",
+    "Options": {
         "indent": 24,
-        "data": [
-            {
-                "cmd": "-c, --change list",
-                "dcr": " Apply Dockerfile instruction to the created image"
-            },
-            {
-                "cmd": "-m, --message string",
-                "dcr": " Set commit message for imported image"
-            }
-        ]
+        "data": {
+            "-c, --change list": "Apply Dockerfile instruction to the created image",
+            "-m, --message string": "Set commit message for imported image"
+        }
     }
 }

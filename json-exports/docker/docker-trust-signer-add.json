@@ -1,14 +1,11 @@
 {
     "Command": "docker trust signer add",
     "Description": "Add a signer",
-    "Usage": "\tdocker trust signer add OPTIONS NAME REPOSITORY [REPOSITORY...]",
-    "options": {
+    "Usage": "docker trust signer add OPTIONS NAME REPOSITORY [REPOSITORY...]",
+    "Options": {
         "indent": 18,
-        "data": [
-            {
-                "cmd": "--key list",
-                "dcr": " Path to the signer's public key file"
-            }
-        ]
+        "data": {
+            "--key list": "Path to the signer's public key file"
+        }
     }
 }
