@@ -1,0 +1,5 @@
+{
+    "Command": "terraform workspace show",
+    "Usage": "terraform workspace show",
+    "Description": "Show the name of the current workspace."
+}

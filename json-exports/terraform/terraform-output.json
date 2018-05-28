@@ -1,0 +1,14 @@
+{
+    "Command": "terraform output",
+    "Usage": "terraform output [options] [NAME]",
+    "Options": {
+        "indent": 18,
+        "data": {
+            "-state=path": "Path to the state file to read. Defaults to \"terraform.tfstate\".",
+            "-no-color": "If specified, output won't contain any color.",
+            "-module=name": "If specified, returns the outputs for a specific module",
+            "-json": "If specified, machine readable output will be printed in JSON format"
+        }
+    },
+    "Description": "Reads an output variable from a Terraform state file and prints\n  the value. With no additional arguments, output will display all\n  the outputs for the root module.  If NAME is not specified, all\n  outputs are printed."
+}

@@ -1,0 +1,16 @@
+{
+    "Command": "terraform state",
+    "Usage": "terraform state <subcommand> [options] [args]",
+    "Subcommands": {
+        "indent": 11,
+        "data": {
+            "terraform state list": "List resources in the state",
+            "terraform state mv": "Move an item in the state",
+            "terraform state pull": "Pull current state and output to stdout",
+            "terraform state push": "Update remote state from a local state file",
+            "terraform state rm": "Remove an item from the state",
+            "terraform state show": "Show a resource in the state"
+        }
+    },
+    "Description": "This command has subcommands for advanced state management.\n  These subcommands can be used to slice and dice the Terraform state.\n  This is sometimes necessary in advanced cases. For your safety, all\n  state management commands that modify the state create a timestamped\n  backup of the state prior to making modifications.\n  The structure and output of the commands is specifically tailored to work\n  well with the common Unix utilities such as grep, awk, etc. We recommend\n  using those tools to perform more advanced state tasks."
+}

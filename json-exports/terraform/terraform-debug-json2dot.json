@@ -1,0 +1,5 @@
+{
+    "Command": "terraform debug json2dot",
+    "Usage": "terraform debug json2dot input.json",
+    "Description": "Translate a graph debug file to dot format.\n  This command takes a single json graph log file and converts it to a single\n  dot graph written to stdout."
+}

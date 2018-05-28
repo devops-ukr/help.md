@@ -1,0 +1,5 @@
+{
+    "Command": "terraform env select",
+    "Usage": "terraform workspace select NAME [DIR]",
+    "Description": "Select a different Terraform workspace."
+}

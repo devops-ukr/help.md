@@ -1,0 +1,12 @@
+{
+    "Command": "terraform get",
+    "Usage": "terraform get [options] PATH",
+    "Options": {
+        "indent": 21,
+        "data": {
+            "-update=false": "If true, modules already downloaded will be checked for updates and updated if necessary.",
+            "-no-color": "If specified, output won't contain any color."
+        }
+    },
+    "Description": "Downloads and installs modules needed for the configuration given by\n  PATH.\n  This recursively downloads all modules needed, such as modules\n  imported by modules imported by the root and so on. If a module is\n  already downloaded, it will not be redownloaded or checked for updates\n  unless the -update flag is specified."
+}

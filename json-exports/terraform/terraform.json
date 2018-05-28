@@ -1,0 +1,38 @@
+{
+    "Command": "terraform",
+    "Usage": "terraform [--version] [--help] <command> [args]",
+    "Common commands": {
+        "indent": 22,
+        "data": {
+            "terraform apply": "Builds or changes infrastructure",
+            "terraform console": "Interactive console for Terraform interpolations",
+            "terraform destroy": "Destroy Terraform-managed infrastructure",
+            "terraform env": "Workspace management",
+            "terraform fmt": "Rewrites config files to canonical format",
+            "terraform get": "Download and install modules for the configuration",
+            "terraform graph": "Create a visual graph of Terraform resources",
+            "terraform import": "Import existing infrastructure into Terraform",
+            "terraform init": "Initialize a Terraform working directory",
+            "terraform output": "Read an output from a state file",
+            "terraform plan": "Generate and show an execution plan",
+            "terraform providers": "Prints a tree of the providers used in the configuration",
+            "terraform push": "Upload this Terraform module to Atlas to run",
+            "terraform refresh": "Update local state file against real resources",
+            "terraform show": "Inspect Terraform state or plan",
+            "terraform taint": "Manually mark a resource for recreation",
+            "terraform untaint": "Manually unmark a resource as tainted",
+            "terraform validate": "Validates the Terraform files",
+            "terraform version": "Prints the Terraform version",
+            "terraform workspace": "Workspace management"
+        }
+    },
+    "All other commands": {
+        "indent": 22,
+        "data": {
+            "terraform debug": "Debug output management (experimental)",
+            "terraform force-unlock": "Manually unlock the terraform state",
+            "terraform state": "Advanced state management"
+        }
+    },
+    "Description": "The available commands for execution are listed below.\nThe most common, useful commands are shown first, followed by\nless common or more advanced commands. If you're just getting\nstarted with Terraform, stick with the common commands. For the\nother commands, please read the help and docs before usage."
+}

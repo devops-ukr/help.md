@@ -1,0 +1,14 @@
+{
+    "Command": "terraform env",
+    "Usage": "terraform workspace",
+    "Subcommands": {
+        "indent": 13,
+        "data": {
+            "terraform env delete": "Delete a workspace",
+            "terraform env list": "List Workspaces",
+            "terraform env new": "Create a new workspace",
+            "terraform env select": "Select a workspace"
+        }
+    },
+    "Description": "Create, change and delete Terraform workspaces."
+}

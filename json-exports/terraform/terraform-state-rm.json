@@ -1,0 +1,12 @@
+{
+    "Command": "terraform state rm",
+    "Usage": "terraform state rm [options] ADDRESS...",
+    "Options": {
+        "indent": 21,
+        "data": {
+            "-backup=PATH": "Path where Terraform should write the backup state. This can't be disabled. If not set, Terraform will write it to the same path as the statefile with a backup extension.",
+            "-state=PATH": "Path to the source state file. Defaults to the configured backend, or \"terraform.tfstate\""
+        }
+    },
+    "Description": "Remove one or more items from the Terraform state.\n  This command removes one or more items from the Terraform state based\n  on the address given. You can view and list the available resources\n  with \"terraform state list\".\n  This command creates a timestamped backup of the state on every invocation.\n  This can't be disabled. Due to the destructive nature of this command,\n  the backup is ensured by Terraform for safety reasons."
+}

@@ -1,0 +1,5 @@
+{
+    "Command": "terraform workspace list",
+    "Usage": "terraform workspace list [DIR]",
+    "Description": "List Terraform workspaces."
+}

@@ -1,0 +1,11 @@
+{
+    "Command": "terraform workspace new",
+    "Usage": "terraform workspace new [OPTIONS] NAME [DIR]",
+    "Options": {
+        "indent": 18,
+        "data": {
+            "-state=path": "Copy an existing state file into the new workspace."
+        }
+    },
+    "Description": "Create a new Terraform workspace."
+}

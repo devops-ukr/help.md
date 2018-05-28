@@ -1,0 +1,11 @@
+{
+    "Command": "terraform force-unlock",
+    "Usage": "terraform force-unlock LOCK_ID [DIR]",
+    "Options": {
+        "indent": 24,
+        "data": {
+            "-force": "Don't ask for input for unlock confirmation."
+        }
+    },
+    "Description": "Manually unlock the state for the defined configuration.\n  This will not modify your infrastructure. This command removes the lock on the\n  state for the current configuration. The behavior of this lock is dependent\n  on the backend being used. Local state files cannot be unlocked by another\n  process."
+}

@@ -1,0 +1,14 @@
+{
+    "Command": "terraform state mv",
+    "Usage": "terraform state mv [options] SOURCE DESTINATION",
+    "Options": {
+        "indent": 21,
+        "data": {
+            "-backup=PATH": "Path where Terraform should write the backup for the original state. This can't be disabled. If not set, Terraform will write it to the same path as the statefile with a \".backup\" extension.",
+            "-backup-out=PATH": "Path where Terraform should write the backup for the destination state. This can't be disabled. If not set, Terraform will write it to the same path as the destination state file with a backup extension. This only needs to be specified if -state-out is set to a different path than -state.",
+            "-state=PATH": "Path to the source state file. Defaults to the configured backend, or \"terraform.tfstate\"",
+            "-state-out=PATH": "Path to the destination state file to write to. If this isn't specified, the source state file will be used. This can be a new or existing path."
+        }
+    },
+    "Description": "This command will move an item matched by the address given to the\n destination address. This command can also move to a destination address\n in a completely different state file.\n This can be used for simple resource renaming, moving items to and from\n a module, moving entire modules, and more. And because this command can also\n move data to a completely new state, it can also be used for refactoring\n one configuration into multiple separately managed Terraform configurations.\n This command will output a backup copy of the state prior to saving any\n changes. The backup cannot be disabled. Due to the destructive nature\n of this command, backups are required.\n If you're moving an item to a different state file, a backup will be created\n for each state file."
+}

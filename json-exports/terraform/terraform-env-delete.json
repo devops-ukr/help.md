@@ -1,0 +1,11 @@
+{
+    "Command": "terraform env delete",
+    "Usage": "terraform workspace delete [OPTIONS] NAME [DIR]",
+    "Options": {
+        "indent": 13,
+        "data": {
+            "-force": "remove a non-empty workspace."
+        }
+    },
+    "Description": "Delete a Terraform workspace"
+}

@@ -1,0 +1,22 @@
+{
+    "Command": "terraform import",
+    "Usage": "terraform import [options] ADDR ID",
+    "Options": {
+        "indent": 25,
+        "data": {
+            "-backup=path": "Path to backup the existing state file before modifying. Defaults to the \"-state-out\" path with \".backup\" extension. Set to \"-\" to disable backup.",
+            "-config=path": "Path to a directory of Terraform configuration files to use to configure the provider. Defaults to pwd. If no config files are present, they must be provided via the input prompts or env vars.",
+            "-allow-missing-config": "Allow import when no resource configuration block exists.",
+            "-input=true": "Ask for input for variables if not directly set.",
+            "-lock=true": "Lock the state file when locking is supported.",
+            "-lock-timeout=0s": "Duration to retry a state lock.",
+            "-no-color": "If specified, output won't contain any color.",
+            "-provider=provider": "Specific provider to use for import. This is used for specifying aliases, such as \"aws.eu\". Defaults to the normal provider prefix of the resource being imported.",
+            "-state=PATH": "Path to the source state file. Defaults to the configured backend, or \"terraform.tfstate\"",
+            "-state-out=PATH": "Path to the destination state file to write to. If this isn't specified, the source state file will be used. This can be a new or existing path.",
+            "-var 'foo=bar'": "Set a variable in the Terraform configuration. This flag can be set multiple times. This is only useful with the \"-config\" flag.",
+            "-var-file=foo": "Set variables in the Terraform configuration from a file. If \"terraform.tfvars\" or any \".auto.tfvars\" files are present, they will be automatically loaded."
+        }
+    },
+    "Description": "Import existing infrastructure into your Terraform state.\n  This will find and import the specified resource into your Terraform\n  state, allowing existing infrastructure to come under Terraform\n  management without having to be initially created by Terraform.\n  The ADDR specified is the address to import the resource to. Please\n  see the documentation online for resource addresses. The ID is a\n  resource-specific ID to identify that resource being imported. Please\n  reference the documentation for the resource type you're importing to\n  determine the ID syntax to use. It typically matches directly to the ID\n  that the provider uses.\n  The current implementation of Terraform import can only import resources\n  into the state. It does not generate configuration. A future version of\n  Terraform will also generate configuration.\n  Because of this, prior to running terraform import it is necessary to write\n  a resource configuration block for the resource manually, to which the\n  imported object will be attached.\n  This command will not modify your infrastructure, but it will make\n  network requests to inspect parts of your infrastructure relevant to\n  the resource being imported."
+}

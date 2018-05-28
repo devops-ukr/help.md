@@ -1,0 +1,12 @@
+{
+    "Command": "terraform state list",
+    "Usage": "terraform state list [options] [pattern...]",
+    "Options": {
+        "indent": 21,
+        "data": {
+            "-state=statefile": "Path to a Terraform state file to use to look up Terraform-managed resources. By default it will use the state \"terraform.tfstate\" if it exists.",
+            "-id=ID": "Restricts the output to objects whose id is ID."
+        }
+    },
+    "Description": "List resources in the Terraform state.\n  This command lists resources in the Terraform state. The pattern argument\n  can be used to filter the resources by resource or module. If no pattern\n  is given, all resources are listed.\n  The pattern argument is meant to provide very simple filtering. For\n  advanced filtering, please use tools such as \"grep\". The output of this\n  command is designed to be friendly for this usage.\n  The pattern argument accepts any resource targeting syntax. Please\n  refer to the documentation on resource targeting syntax for more\n  information."
+}

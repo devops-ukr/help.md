@@ -1,0 +1,5 @@
+{
+    "Command": "terraform providers",
+    "Description": "Prints out a tree of modules in the referenced configuration annotated with\n  their provider requirements.\n  This provides an overview of all of the provider requirements across all\n  referenced modules, as an aid to understanding why particular provider\n  plugins are needed and why particular versions are selected.",
+    "Usage": "terraform providers [dir]"
+}

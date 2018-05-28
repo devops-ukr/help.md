@@ -1,0 +1,5 @@
+{
+    "Command": "terraform state pull",
+    "Usage": "terraform state pull [options]",
+    "Description": "Pull the state from its location and output it to stdout.\n  This command \"pulls\" the current state and outputs it to stdout.\n  The primary use of this is for state stored remotely. This command\n  will still work with local state but is less useful for this."
+}

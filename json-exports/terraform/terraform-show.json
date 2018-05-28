@@ -1,0 +1,12 @@
+{
+    "Command": "terraform show",
+    "Usage": "terraform show [options] [path]",
+    "Options": {
+        "indent": 21,
+        "data": {
+            "-module-depth=n": "Specifies the depth of modules to show in the output. By default this is -1, which will expand all.",
+            "-no-color": "If specified, output won't contain any color."
+        }
+    },
+    "Description": "Reads and outputs a Terraform state or plan file in a human-readable\n  form. If no path is specified, the current state will be shown."
+}

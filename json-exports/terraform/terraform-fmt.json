@@ -1,0 +1,14 @@
+{
+    "Command": "terraform fmt",
+    "Usage": "terraform fmt [options] [DIR]",
+    "Options": {
+        "indent": 18,
+        "data": {
+            "-list=true": "List files whose formatting differs (always false if using STDIN)",
+            "-write=true": "Write result to source file instead of STDOUT (always false if using STDIN or -check)",
+            "-diff=false": "Display diffs of formatting changes",
+            "-check=false": "Check if the input is formatted. Exit status will be 0 if all input is properly formatted and non-zero otherwise."
+        }
+    },
+    "Description": "Rewrites all Terraform configuration files to a canonical format.\n\tIf DIR is not specified then the current working directory will be used.\n\tIf DIR is \"-\" then content will be read from STDIN."
+}

@@ -1,0 +1,11 @@
+{
+    "Command": "terraform state push",
+    "Usage": "terraform state push [options] PATH",
+    "Options": {
+        "indent": 21,
+        "data": {
+            "-force": "Write the state even if lineages don't match or the remote serial is higher."
+        }
+    },
+    "Description": "Update remote state from a local state file at PATH.\n  This command \"pushes\" a local state and overwrites remote state\n  with a local state file. The command will protect you against writing\n  an older serial or a different state file lineage unless you specify the\n  \"-force\" flag.\n  This command works with local state (it will overwrite the local\n  state), but is less useful for this use case.\n  If PATH is \"-\", then this command will read the state to push from stdin.\n  Data from stdin is not streamed to the backend: it is loaded completely\n  (until pipe close), verified, and then pushed."
+}

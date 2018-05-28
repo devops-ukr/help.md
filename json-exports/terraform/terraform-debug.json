@@ -1,0 +1,11 @@
+{
+    "Command": "terraform debug",
+    "Usage": "terraform debug <subcommand> [options] [args]",
+    "Subcommands": {
+        "indent": 15,
+        "data": {
+            "terraform debug json2dot": "Convert json graph log to dot"
+        }
+    },
+    "Description": "This command has subcommands for debug output management"
+}
