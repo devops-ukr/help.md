@@ -31,32 +31,32 @@ Options | Description
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- <nobr>[`docker-compose build`](#docker-compose-build)</nobr> | Build or rebuild services. Services are built once and then tagged as `project_service`, e.g. `composetest_db`. If you change a service's `Dockerfile` or the contents of its build directory, you can run `docker-compose build` to rebuild it. 
- <nobr>[`docker-compose bundle`](#docker-compose-bundle)</nobr> | Generate a Distributed Application Bundle (DAB) from the Compose file. Images must have digests stored, which requires interaction with a Docker registry. If digests aren't stored for all images, you can fetch them with `docker-compose pull` or `docker-compose push`. To push images automatically when bundling, pass `--push-images`. Only services with a `build` option specified will have their images pushed. 
- <nobr>[`docker-compose config`](#docker-compose-config)</nobr> | Validate and view the Compose file. 
- <nobr>[`docker-compose create`](#docker-compose-create)</nobr> | Creates containers for a service. This command is deprecated. Use the `up` command with `--no-start` instead. 
- <nobr>[`docker-compose down`](#docker-compose-down)</nobr> | Stops containers and removes containers, networks, volumes, and images created by `up`. By default, the only things removed are: - Containers for services defined in the Compose file - Networks defined in the `networks` section of the Compose file - The default network, if one is used Networks and volumes defined as `external` are never removed. 
- <nobr>[`docker-compose events`](#docker-compose-events)</nobr> | Receive real time events from containers. 
- <nobr>[`docker-compose exec`](#docker-compose-exec)</nobr> | Execute a command in a running container 
- <nobr>[`docker-compose help`](#docker-compose-help)</nobr> | Get help on a command. 
- <nobr>[`docker-compose images`](#docker-compose-images)</nobr> | List images used by the created containers. Usage: images [options] [SERVICE...] 
- <nobr>[`docker-compose kill`](#docker-compose-kill)</nobr> | Force stop service containers. 
- <nobr>[`docker-compose logs`](#docker-compose-logs)</nobr> | View output from containers. 
- <nobr>[`docker-compose pause`](#docker-compose-pause)</nobr> | Pause services. 
- <nobr>[`docker-compose port`](#docker-compose-port)</nobr> | Print the public port for a port binding. 
- <nobr>[`docker-compose ps`](#docker-compose-ps)</nobr> | List containers. 
- <nobr>[`docker-compose pull`](#docker-compose-pull)</nobr> | Pulls images for services defined in a Compose file, but does not start the containers. 
- <nobr>[`docker-compose push`](#docker-compose-push)</nobr> | Pushes images for services. 
- <nobr>[`docker-compose restart`](#docker-compose-restart)</nobr> | Restart running containers. 
- <nobr>[`docker-compose rm`](#docker-compose-rm)</nobr> | Removes stopped service containers. By default, anonymous volumes attached to containers will not be removed. You can override this with `-v`. To list all volumes, use `docker volume ls`. Any data which is not in a volume will be lost. 
- <nobr>[`docker-compose run`](#docker-compose-run)</nobr> | Run a one-off command on a service. 
- <nobr>[`docker-compose scale`](#docker-compose-scale)</nobr> | Set number of containers to run for a service. Numbers are specified in the form `service=num` as arguments. For example:     $ docker-compose scale web=2 worker=3 This command is deprecated. Use the up command with the `--scale` flag instead. 
- <nobr>[`docker-compose start`](#docker-compose-start)</nobr> | Start existing containers. 
- <nobr>[`docker-compose stop`](#docker-compose-stop)</nobr> | Stop running containers without removing them. They can be started again with `docker-compose start`. 
- <nobr>[`docker-compose top`](#docker-compose-top)</nobr> | Display the running processes 
- <nobr>[`docker-compose unpause`](#docker-compose-unpause)</nobr> | Unpause services. 
- <nobr>[`docker-compose up`](#docker-compose-up)</nobr> | Builds, (re)creates, starts, and attaches to containers for a service. Unless they are already running, this command also starts any linked services. The `docker-compose up` command aggregates the output of each container. When the command exits, all containers are stopped. Running `docker-compose up -d` starts the containers in the background and leaves them running. If there are existing containers for a service, and the service's configuration or image was changed after the container's creation, `docker-compose up` picks up the changes by stopping and recreating the containers (preserving mounted volumes). To prevent Compose from picking up changes, use the `--no-recreate` flag. If you want to force Compose to stop and recreate all containers, use the `--force-recreate` flag. 
- <nobr>[`docker-compose version`](#docker-compose-version)</nobr> | Show version informations 
+ [`docker-compose build`](#docker-compose-build) | Build or rebuild services. Services are built once and then tagged as `project_service`, e.g. `composetest_db`. If you change a service's `Dockerfile` or the contents of its build directory, you can run `docker-compose build` to rebuild it. 
+ [`docker-compose bundle`](#docker-compose-bundle) | Generate a Distributed Application Bundle (DAB) from the Compose file. Images must have digests stored, which requires interaction with a Docker registry. If digests aren't stored for all images, you can fetch them with `docker-compose pull` or `docker-compose push`. To push images automatically when bundling, pass `--push-images`. Only services with a `build` option specified will have their images pushed. 
+ [`docker-compose config`](#docker-compose-config) | Validate and view the Compose file. 
+ [`docker-compose create`](#docker-compose-create) | Creates containers for a service. This command is deprecated. Use the `up` command with `--no-start` instead. 
+ [`docker-compose down`](#docker-compose-down) | Stops containers and removes containers, networks, volumes, and images created by `up`. By default, the only things removed are: - Containers for services defined in the Compose file - Networks defined in the `networks` section of the Compose file - The default network, if one is used Networks and volumes defined as `external` are never removed. 
+ [`docker-compose events`](#docker-compose-events) | Receive real time events from containers. 
+ [`docker-compose exec`](#docker-compose-exec) | Execute a command in a running container 
+ [`docker-compose help`](#docker-compose-help) | Get help on a command. 
+ [`docker-compose images`](#docker-compose-images) | List images used by the created containers. Usage: images [options] [SERVICE...] 
+ [`docker-compose kill`](#docker-compose-kill) | Force stop service containers. 
+ [`docker-compose logs`](#docker-compose-logs) | View output from containers. 
+ [`docker-compose pause`](#docker-compose-pause) | Pause services. 
+ [`docker-compose port`](#docker-compose-port) | Print the public port for a port binding. 
+ [`docker-compose ps`](#docker-compose-ps) | List containers. 
+ [`docker-compose pull`](#docker-compose-pull) | Pulls images for services defined in a Compose file, but does not start the containers. 
+ [`docker-compose push`](#docker-compose-push) | Pushes images for services. 
+ [`docker-compose restart`](#docker-compose-restart) | Restart running containers. 
+ [`docker-compose rm`](#docker-compose-rm) | Removes stopped service containers. By default, anonymous volumes attached to containers will not be removed. You can override this with `-v`. To list all volumes, use `docker volume ls`. Any data which is not in a volume will be lost. 
+ [`docker-compose run`](#docker-compose-run) | Run a one-off command on a service. 
+ [`docker-compose scale`](#docker-compose-scale) | Set number of containers to run for a service. Numbers are specified in the form `service=num` as arguments. For example:     $ docker-compose scale web=2 worker=3 This command is deprecated. Use the up command with the `--scale` flag instead. 
+ [`docker-compose start`](#docker-compose-start) | Start existing containers. 
+ [`docker-compose stop`](#docker-compose-stop) | Stop running containers without removing them. They can be started again with `docker-compose start`. 
+ [`docker-compose top`](#docker-compose-top) | Display the running processes 
+ [`docker-compose unpause`](#docker-compose-unpause) | Unpause services. 
+ [`docker-compose up`](#docker-compose-up) | Builds, (re)creates, starts, and attaches to containers for a service. Unless they are already running, this command also starts any linked services. The `docker-compose up` command aggregates the output of each container. When the command exits, all containers are stopped. Running `docker-compose up -d` starts the containers in the background and leaves them running. If there are existing containers for a service, and the service's configuration or image was changed after the container's creation, `docker-compose up` picks up the changes by stopping and recreating the containers (preserving mounted volumes). To prevent Compose from picking up changes, use the `--no-recreate` flag. If you want to force Compose to stop and recreate all containers, use the `--force-recreate` flag. 
+ [`docker-compose version`](#docker-compose-version) | Show version informations 
 
 
 ## docker-compose build

@@ -9,12 +9,12 @@ packer [--version] [--help] <command> [<args>]
 
  Command                   | Description 
  ------------------------- | --------------------------------------------- 
- <nobr>[`packer build`](#packer-build)</nobr> | Will execute multiple builds in parallel as defined in the template.   The various artifacts created by the template will be outputted. 
- <nobr>[`packer fix`](#packer-fix)</nobr> | Reads the JSON template and attempts to fix known backwards   incompatibilities. The fixed template will be outputted to standard out.   If the template cannot be fixed due to an error, the command will exit   with a non-zero exit status. Error messages will appear on standard error. 
- <nobr>[`packer inspect`](#packer-inspect)</nobr> | Inspects a template, parsing and outputting the components a template   defines. This does not validate the contents of a template (other than   basic syntax by necessity). 
- <nobr>[`packer push`](#packer-push)</nobr> | Push the given template and supporting files to a Packer build service such as   Atlas.   If a build configuration for the given template does not exist, it will be   created automatically. If the build configuration already exists, a new   version will be created with this template and the supporting files.   Additional configuration options (such as the Atlas server URL and files to   include) may be specified in the "push" section of the Packer template. Please   see the online documentation for more information about these configurables. 
- <nobr>[`packer validate`](#packer-validate)</nobr> | Checks the template is valid by parsing the template and also   checking the configuration with the various builders, provisioners, etc.   If it is not valid, the errors will be shown and the command will exit   with a non-zero exit status. If it is valid, it will exit with a zero   exit status. 
- <nobr>[`packer version`](#packer-version)</nobr> | Prints the Packer version, and checks for new release. 
+ [`packer build`](#packer-build) | Will execute multiple builds in parallel as defined in the template.   The various artifacts created by the template will be outputted. 
+ [`packer fix`](#packer-fix) | Reads the JSON template and attempts to fix known backwards   incompatibilities. The fixed template will be outputted to standard out.   If the template cannot be fixed due to an error, the command will exit   with a non-zero exit status. Error messages will appear on standard error. 
+ [`packer inspect`](#packer-inspect) | Inspects a template, parsing and outputting the components a template   defines. This does not validate the contents of a template (other than   basic syntax by necessity). 
+ [`packer push`](#packer-push) | Push the given template and supporting files to a Packer build service such as   Atlas.   If a build configuration for the given template does not exist, it will be   created automatically. If the build configuration already exists, a new   version will be created with this template and the supporting files.   Additional configuration options (such as the Atlas server URL and files to   include) may be specified in the "push" section of the Packer template. Please   see the online documentation for more information about these configurables. 
+ [`packer validate`](#packer-validate) | Checks the template is valid by parsing the template and also   checking the configuration with the various builders, provisioners, etc.   If it is not valid, the errors will be shown and the command will exit   with a non-zero exit status. If it is valid, it will exit with a zero   exit status. 
+ [`packer version`](#packer-version) | Prints the Packer version, and checks for new release. 
 
 
 ## packer build
