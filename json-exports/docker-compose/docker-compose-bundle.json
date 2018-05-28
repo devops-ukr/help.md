@@ -1,0 +1,12 @@
+{
+    "Command": "docker-compose bundle",
+    "Description": "Generate a Distributed Application Bundle (DAB) from the Compose file.\nImages must have digests stored, which requires interaction with a\nDocker registry. If digests aren't stored for all images, you can fetch\nthem with `docker-compose pull` or `docker-compose push`. To push images\nautomatically when bundling, pass `--push-images`. Only services with\na `build` option specified will have their images pushed.",
+    "Usage": "bundle [options]",
+    "Options": {
+        "indent": 30,
+        "data": {
+            "--push-images": "Automatically push images for any services which have a `build` option specified.",
+            "-o, --output PATH": "Path to write the bundle file to. Defaults to \"<project name>.dab\"."
+        }
+    }
+}

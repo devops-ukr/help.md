@@ -1,0 +1,14 @@
+{
+    "Command": "docker-compose config",
+    "Description": "Validate and view the Compose file.",
+    "Usage": "config [options]",
+    "Options": {
+        "indent": 28,
+        "data": {
+            "--resolve-image-digests": "Pin image tags to digests.",
+            "-q, --quiet": "Only validate the configuration, don't print anything.",
+            "--services": "Print the service names, one per line.",
+            "--volumes": "Print the volume names, one per line."
+        }
+    }
+}

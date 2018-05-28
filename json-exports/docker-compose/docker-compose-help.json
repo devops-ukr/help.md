@@ -1,0 +1,5 @@
+{
+    "Command": "docker-compose help",
+    "Description": "Get help on a command.",
+    "Usage": "help [COMMAND]"
+}

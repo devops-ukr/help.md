@@ -1,0 +1,14 @@
+{
+    "Command": "docker-compose rm",
+    "Description": "Removes stopped service containers.\nBy default, anonymous volumes attached to containers will not be removed. You\ncan override this with `-v`. To list all volumes, use `docker volume ls`.\nAny data which is not in a volume will be lost.",
+    "Usage": "rm [options] [SERVICE...]",
+    "Options": {
+        "indent": 17,
+        "data": {
+            "-f, --force": "Don't ask to confirm removal",
+            "-s, --stop": "Stop the containers, if required, before removing",
+            "-v": "Remove any anonymous volumes attached to containers",
+            "-a, --all": "Deprecated - no effect."
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "Command": "docker-compose logs",
+    "Description": "View output from containers.",
+    "Usage": "logs [options] [SERVICE...]",
+    "Options": {
+        "indent": 23,
+        "data": {
+            "--no-color": "Produce monochrome output.",
+            "-f, --follow": "Follow log output.",
+            "-t, --timestamps": "Show timestamps.",
+            "--tail=\"all\"": "Number of lines to show from the end of the logs for each container."
+        }
+    }
+}

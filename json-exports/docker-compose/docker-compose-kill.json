@@ -1,0 +1,11 @@
+{
+    "Command": "docker-compose kill",
+    "Description": "Force stop service containers.",
+    "Usage": "kill [options] [SERVICE...]",
+    "Options": {
+        "indent": 21,
+        "data": {
+            "-s SIGNAL": "SIGNAL to send to the container. Default signal is SIGKILL."
+        }
+    }
+}

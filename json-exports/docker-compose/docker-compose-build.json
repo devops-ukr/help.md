@@ -1,0 +1,16 @@
+{
+    "Command": "docker-compose build",
+    "Description": "Build or rebuild services.\nServices are built once and then tagged as `project_service`,\ne.g. `composetest_db`. If you change a service's `Dockerfile` or the\ncontents of its build directory, you can run `docker-compose build` to rebuild it.",
+    "Usage": "build [options] [--build-arg key=val...] [SERVICE...]",
+    "Options": {
+        "indent": 27,
+        "data": {
+            "--compress": "Compress the build context using gzip.",
+            "--force-rm": "Always remove intermediate containers.",
+            "--no-cache": "Do not use cache when building the image.",
+            "--pull": "Always attempt to pull a newer version of the image.",
+            "-m, --memory MEM": "Sets memory limit for the build container.",
+            "--build-arg key=val": "Set build-time variables for services."
+        }
+    }
+}

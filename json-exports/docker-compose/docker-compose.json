@@ -1,0 +1,56 @@
+{
+    "Command": "docker-compose",
+    "Description": "Define and run multi-container applications with Docker.",
+    "Usage": "docker-compose [-f <arg>...] [options] [COMMAND] [ARGS...]\n  docker-compose -h|--help",
+    "Options": {
+        "indent": 29,
+        "data": {
+            "-f, --file FILE": "Specify an alternate compose file (default: docker-compose.yml)",
+            "-p, --project-name NAME": "Specify an alternate project name (default: directory name)",
+            "--verbose": "Show more output",
+            "--log-level LEVEL": "Set log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)",
+            "--no-ansi": "Do not print ANSI control characters",
+            "-v, --version": "Print version and exit",
+            "-H, --host HOST": "Daemon socket to connect to",
+            "--tls": "Use TLS; implied by --tlsverify",
+            "--tlscacert CA_PATH": "Trust certs signed only by this CA",
+            "--tlscert CLIENT_CERT_PATH": "Path to TLS certificate file",
+            "--tlskey TLS_KEY_PATH": "Path to TLS key file",
+            "--tlsverify": "Use TLS and verify the remote",
+            "--skip-hostname-check": "Don't check the daemon's hostname against the name specified in the client certificate",
+            "--project-directory PATH": "Specify an alternate working directory (default: the path of the Compose file)",
+            "--compatibility": "If set, Compose will attempt to convert deploy keys in v3 files to their non-Swarm equivalent"
+        }
+    },
+    "Commands": {
+        "indent": 20,
+        "data": {
+            "docker-compose build": "Build or rebuild services",
+            "docker-compose bundle": "Generate a Docker bundle from the Compose file",
+            "docker-compose config": "Validate and view the Compose file",
+            "docker-compose create": "Create services",
+            "docker-compose down": "Stop and remove containers, networks, images, and volumes",
+            "docker-compose events": "Receive real time events from containers",
+            "docker-compose exec": "Execute a command in a running container",
+            "docker-compose help": "Get help on a command",
+            "docker-compose images": "List images",
+            "docker-compose kill": "Kill containers",
+            "docker-compose logs": "View output from containers",
+            "docker-compose pause": "Pause services",
+            "docker-compose port": "Print the public port for a port binding",
+            "docker-compose ps": "List containers",
+            "docker-compose pull": "Pull service images",
+            "docker-compose push": "Push service images",
+            "docker-compose restart": "Restart services",
+            "docker-compose rm": "Remove stopped containers",
+            "docker-compose run": "Run a one-off command",
+            "docker-compose scale": "Set number of containers for a service",
+            "docker-compose start": "Start services",
+            "docker-compose stop": "Stop services",
+            "docker-compose top": "Display the running processes",
+            "docker-compose unpause": "Unpause services",
+            "docker-compose up": "Create and start containers",
+            "docker-compose version": "Show the Docker-Compose version information"
+        }
+    }
+}

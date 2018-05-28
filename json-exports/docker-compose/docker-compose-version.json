@@ -1,0 +1,11 @@
+{
+    "Command": "docker-compose version",
+    "Description": "Show version informations",
+    "Usage": "version [--short]",
+    "Options": {
+        "indent": 15,
+        "data": {
+            "--short": "Shows only Compose's version number."
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "Command": "docker-compose stop",
+    "Description": "Stop running containers without removing them.\nThey can be started again with `docker-compose start`.",
+    "Usage": "stop [options] [SERVICE...]",
+    "Options": {
+        "indent": 28,
+        "data": {
+            "-t, --timeout TIMEOUT": "Specify a shutdown timeout in seconds. (default: 10)"
+        }
+    }
+}

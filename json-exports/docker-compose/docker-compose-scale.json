@@ -1,0 +1,11 @@
+{
+    "Command": "docker-compose scale",
+    "Description": "Set number of containers to run for a service.\nNumbers are specified in the form `service=num` as arguments.\nFor example:\n    $ docker-compose scale web=2 worker=3\nThis command is deprecated. Use the up command with the `--scale` flag\ninstead.",
+    "Usage": "scale [options] [SERVICE=NUM...]",
+    "Options": {
+        "indent": 28,
+        "data": {
+            "-t, --timeout TIMEOUT": "Specify a shutdown timeout in seconds. (default: 10)"
+        }
+    }
+}

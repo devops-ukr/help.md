@@ -1,0 +1,10 @@
+{
+    "Command": "docker-compose images",
+    "Description": "List images used by the created containers.\nUsage: images [options] [SERVICE...]",
+    "Options": {
+        "indent": 16,
+        "data": {
+            "-q, --quiet": "Only display IDs"
+        }
+    }
+}

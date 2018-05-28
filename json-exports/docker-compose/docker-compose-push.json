@@ -1,0 +1,11 @@
+{
+    "Command": "docker-compose push",
+    "Description": "Pushes images for services.",
+    "Usage": "push [options] [SERVICE...]",
+    "Options": {
+        "indent": 27,
+        "data": {
+            "--ignore-push-failures": "Push what it can and ignores images with push failures."
+        }
+    }
+}

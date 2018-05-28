@@ -1,0 +1,11 @@
+{
+    "Command": "docker-compose restart",
+    "Description": "Restart running containers.",
+    "Usage": "restart [options] [SERVICE...]",
+    "Options": {
+        "indent": 28,
+        "data": {
+            "-t, --timeout TIMEOUT": "Specify a shutdown timeout in seconds. (default: 10)"
+        }
+    }
+}

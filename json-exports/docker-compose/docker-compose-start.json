@@ -1,0 +1,5 @@
+{
+    "Command": "docker-compose start",
+    "Description": "Start existing containers.",
+    "Usage": "start [SERVICE...]"
+}
