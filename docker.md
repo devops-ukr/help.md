@@ -9,14 +9,14 @@ docker COMMAND
 
 Options | Description 
 -------------------------- | -------------------------------------------- 
-`--config string`          | Location of client config files (default"~/.docker") 
+`--config string`          | Location of client config files (default "~/.docker") 
 `-D, --debug`              | Enable debug mode 
 `-H, --host list`          | Daemon socket(s) to connect to 
-`-l, --log-level string`   | Set the logging level("debug"&#124;"info"&#124;"warn"&#124;"error"&#124;"fatal")(default "info") 
+`-l, --log-level string`   | Set the logging level ("debug"&#124;"info"&#124;"warn"&#124;"error"&#124;"fatal") (default "info") 
 `--tls`                    | Use TLS; implied by --tlsverify 
-`--tlscacert string`       | Trust certs signed only by this CA (default"~/.docker/ca.pem") 
-`--tlscert string`         | Path to TLS certificate file (default"~/.docker/cert.pem") 
-`--tlskey string`          | Path to TLS key file (default"~/.docker/key.pem") 
+`--tlscacert string`       | Trust certs signed only by this CA (default "~/.docker/ca.pem") 
+`--tlscert string`         | Path to TLS certificate file (default "~/.docker/cert.pem") 
+`--tlskey string`          | Path to TLS key file (default "~/.docker/key.pem") 
 `--tlsverify`              | Use TLS and verify the remote 
 `-v, --version`            | Print version information and quit 
 
@@ -121,6 +121,7 @@ Options | Description
 
 -----
 ### docker checkpoint ls
+Aliases: `ls, list`
 List checkpoints for a container
 
 ```bash
@@ -137,6 +138,7 @@ Options | Description
 
 -----
 ### docker checkpoint rm
+Aliases: `rm, remove`
 Remove a checkpoint
 
 ```bash
@@ -204,6 +206,7 @@ Options | Description
 
 -----
 ### docker config ls
+Aliases: `ls, list`
 List configs
 
 ```bash
@@ -222,6 +225,7 @@ Options | Description
 
 -----
 ### docker config rm
+Aliases: `rm, remove`
 Remove one or more configs
 
 ```bash
@@ -279,9 +283,9 @@ docker container attach [OPTIONS] CONTAINER
 
 Options | Description 
 ---------------------------- | ------------------------------------------ 
-`--detach-keys string`       | Override the key sequence for detaching acontainer 
+`--detach-keys string`       | Override the key sequence for detaching a container 
 `--no-stdin`                 | Do not attach STDIN 
-`--sig-proxy`                | Proxy all received signals to the process(default true) 
+`--sig-proxy`                | Proxy all received signals to the process (default true) 
 
 
 
@@ -297,7 +301,7 @@ docker container commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
 
 Options | Description 
 ------------------------ | ---------------------------------------------- 
-`-a, --author string`    | Author (e.g., "John Hannibal Smith&#60;hannibal&#64;a-team.com&#62;") 
+`-a, --author string`    | Author (e.g., "John Hannibal Smith &#60;hannibal&#64;a-team.com&#62;") 
 `-c, --change list`      | Apply Dockerfile instruction to the created image 
 `-m, --message string`   | Commit message 
 `-p, --pause`            | Pause container during commit (default true) 
@@ -310,6 +314,7 @@ Copy files/folders between a container and the local filesystem
 
 ```bash
 docker container cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
 ```
 
 #### Options: 
@@ -333,45 +338,45 @@ docker container create [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 Options | Description 
 -------------------------------------- | -------------------------------- 
-`--add-host list`                      | Add a custom host-to-IP mapping(host:ip) 
+`--add-host list`                      | Add a custom host-to-IP mapping (host:ip) 
 `-a, --attach list`                    | Attach to STDIN, STDOUT or STDERR 
-`--blkio-weight uint16`                | Block IO (relative weight),between 10 and 1000, or 0 todisable (default 0) 
-`--blkio-weight-device list`           | Block IO weight (relative deviceweight) (default []) 
+`--blkio-weight uint16`                | Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0) 
+`--blkio-weight-device list`           | Block IO weight (relative device weight) (default []) 
 `--cap-add list`                       | Add Linux capabilities 
 `--cap-drop list`                      | Drop Linux capabilities 
-`--cgroup-parent string`               | Optional parent cgroup for thecontainer 
+`--cgroup-parent string`               | Optional parent cgroup for the container 
 `--cidfile string`                     | Write the container ID to the file 
-`--cpu-period int`                     | Limit CPU CFS (Completely FairScheduler) period 
-`--cpu-quota int`                      | Limit CPU CFS (Completely FairScheduler) quota 
-`--cpu-rt-period int`                  | Limit CPU real-time period inmicroseconds 
-`--cpu-rt-runtime int`                 | Limit CPU real-time runtime inmicroseconds 
+`--cpu-period int`                     | Limit CPU CFS (Completely Fair Scheduler) period 
+`--cpu-quota int`                      | Limit CPU CFS (Completely Fair Scheduler) quota 
+`--cpu-rt-period int`                  | Limit CPU real-time period in microseconds 
+`--cpu-rt-runtime int`                 | Limit CPU real-time runtime in microseconds 
 `-c, --cpu-shares int`                 | CPU shares (relative weight) 
 `--cpus decimal`                       | Number of CPUs 
-`--cpuset-cpus string`                 | CPUs in which to allow execution(0-3, 0,1) 
-`--cpuset-mems string`                 | MEMs in which to allow execution(0-3, 0,1) 
+`--cpuset-cpus string`                 | CPUs in which to allow execution (0-3, 0,1) 
+`--cpuset-mems string`                 | MEMs in which to allow execution (0-3, 0,1) 
 `--device list`                        | Add a host device to the container 
-`--device-cgroup-rule list`            | Add a rule to the cgroup alloweddevices list 
-`--device-read-bps list`               | Limit read rate (bytes per second)from a device (default []) 
-`--device-read-iops list`              | Limit read rate (IO per second)from a device (default []) 
-`--device-write-bps list`              | Limit write rate (bytes persecond) to a device (default []) 
-`--device-write-iops list`             | Limit write rate (IO per second)to a device (default []) 
+`--device-cgroup-rule list`            | Add a rule to the cgroup allowed devices list 
+`--device-read-bps list`               | Limit read rate (bytes per second) from a device (default []) 
+`--device-read-iops list`              | Limit read rate (IO per second) from a device (default []) 
+`--device-write-bps list`              | Limit write rate (bytes per second) to a device (default []) 
+`--device-write-iops list`             | Limit write rate (IO per second) to a device (default []) 
 `--disable-content-trust`              | Skip image verification (default true) 
 `--dns list`                           | Set custom DNS servers 
 `--dns-option list`                    | Set DNS options 
 `--dns-search list`                    | Set custom DNS search domains 
-`--entrypoint string`                  | Overwrite the default ENTRYPOINTof the image 
+`--entrypoint string`                  | Overwrite the default ENTRYPOINT of the image 
 `-e, --env list`                       | Set environment variables 
 `--env-file list`                      | Read in a file of environment variables 
 `--expose list`                        | Expose a port or a range of ports 
 `--group-add list`                     | Add additional groups to join 
 `--health-cmd string`                  | Command to run to check health 
-`--health-interval duration`           | Time between running the check(ms&#124;s&#124;m&#124;h) (default 0s) 
-`--health-retries int`                 | Consecutive failures needed toreport unhealthy 
-`--health-start-period duration`       | Start period for the container toinitialize before startinghealth-retries countdown(ms&#124;s&#124;m&#124;h) (default 0s) 
-`--health-timeout duration`            | Maximum time to allow one check torun (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-interval duration`           | Time between running the check (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-retries int`                 | Consecutive failures needed to report unhealthy 
+`--health-start-period duration`       | Start period for the container to initialize before starting health-retries countdown (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-timeout duration`            | Maximum time to allow one check to run (ms&#124;s&#124;m&#124;h) (default 0s) 
 `--help`                               | Print usage 
 `-h, --hostname string`                | Container host name 
-`--init`                               | Run an init inside the containerthat forwards signals and reapsprocesses 
+`--init`                               | Run an init inside the container that forwards signals and reaps processes 
 `-i, --interactive`                    | Keep STDIN open even if not attached 
 `--ip string`                          | IPv4 address (e.g., 172.30.100.104) 
 `--ip6 string`                         | IPv6 address (e.g., 2001:db8::33) 
@@ -381,46 +386,46 @@ Options | Description
 `-l, --label list`                     | Set meta data on a container 
 `--label-file list`                    | Read in a line delimited file of labels 
 `--link list`                          | Add link to another container 
-`--link-local-ip list`                 | Container IPv4/IPv6 link-localaddresses 
+`--link-local-ip list`                 | Container IPv4/IPv6 link-local addresses 
 `--log-driver string`                  | Logging driver for the container 
 `--log-opt list`                       | Log driver options 
-`--mac-address string`                 | Container MAC address (e.g.,92:d0:c6:0a:29:33) 
+`--mac-address string`                 | Container MAC address (e.g., 92:d0:c6:0a:29:33) 
 `-m, --memory bytes`                   | Memory limit 
 `--memory-reservation bytes`           | Memory soft limit 
-`--memory-swap bytes`                  | Swap limit equal to memory plusswap: '-1' to enable unlimited swap 
-`--memory-swappiness int`              | Tune container memory swappiness(0 to 100) (default -1) 
-`--mount mount`                        | Attach a filesystem mount to thecontainer 
+`--memory-swap bytes`                  | Swap limit equal to memory plus swap: '-1' to enable unlimited swap 
+`--memory-swappiness int`              | Tune container memory swappiness (0 to 100) (default -1) 
+`--mount mount`                        | Attach a filesystem mount to the container 
 `--name string`                        | Assign a name to the container 
-`--network string`                     | Connect a container to a network(default "default") 
-`--network-alias list`                 | Add network-scoped alias for thecontainer 
-`--no-healthcheck`                     | Disable any container-specifiedHEALTHCHECK 
+`--network string`                     | Connect a container to a network (default "default") 
+`--network-alias list`                 | Add network-scoped alias for the container 
+`--no-healthcheck`                     | Disable any container-specified HEALTHCHECK 
 `--oom-kill-disable`                   | Disable OOM Killer 
-`--oom-score-adj int`                  | Tune host's OOM preferences (-1000to 1000) 
+`--oom-score-adj int`                  | Tune host's OOM preferences (-1000 to 1000) 
 `--pid string`                         | PID namespace to use 
-`--pids-limit int`                     | Tune container pids limit (set -1for unlimited) 
-`--platform string`                    | Set platform if server ismulti-platform capable 
-`--privileged`                         | Give extended privileges to thiscontainer 
-`-p, --publish list`                   | Publish a container's port(s) tothe host 
-`-P, --publish-all`                    | Publish all exposed ports torandom ports 
-`--read-only`                          | Mount the container's rootfilesystem as read only 
-`--restart string`                     | Restart policy to apply when acontainer exits (default "no") 
-`--rm`                                 | Automatically remove the containerwhen it exits 
+`--pids-limit int`                     | Tune container pids limit (set -1 for unlimited) 
+`--platform string`                    | Set platform if server is multi-platform capable 
+`--privileged`                         | Give extended privileges to this container 
+`-p, --publish list`                   | Publish a container's port(s) to the host 
+`-P, --publish-all`                    | Publish all exposed ports to random ports 
+`--read-only`                          | Mount the container's root filesystem as read only 
+`--restart string`                     | Restart policy to apply when a container exits (default "no") 
+`--rm`                                 | Automatically remove the container when it exits 
 `--runtime string`                     | Runtime to use for this container 
 `--security-opt list`                  | Security Options 
 `--shm-size bytes`                     | Size of /dev/shm 
-`--stop-signal string`                 | Signal to stop a container(default "SIGTERM") 
-`--stop-timeout int`                   | Timeout (in seconds) to stop acontainer 
-`--storage-opt list`                   | Storage driver options for thecontainer 
+`--stop-signal string`                 | Signal to stop a container (default "SIGTERM") 
+`--stop-timeout int`                   | Timeout (in seconds) to stop a container 
+`--storage-opt list`                   | Storage driver options for the container 
 `--sysctl map`                         | Sysctl options (default map[]) 
 `--tmpfs list`                         | Mount a tmpfs directory 
 `-t, --tty`                            | Allocate a pseudo-TTY 
 `--ulimit ulimit`                      | Ulimit options (default []) 
-`-u, --user string`                    | Username or UID (format:&#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
+`-u, --user string`                    | Username or UID (format: &#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
 `--userns string`                      | User namespace to use 
 `--uts string`                         | UTS namespace to use 
 `-v, --volume list`                    | Bind mount a volume 
-`--volume-driver string`               | Optional volume driver for thecontainer 
-`--volumes-from list`                  | Mount volumes from the specifiedcontainer(s) 
+`--volume-driver string`               | Optional volume driver for the container 
+`--volumes-from list`                  | Mount volumes from the specified container(s) 
 `-w, --workdir string`                 | Working directory inside the container 
 
 
@@ -447,12 +452,12 @@ docker container exec [OPTIONS] CONTAINER COMMAND [ARG...]
 Options | Description 
 ---------------------------- | ------------------------------------------ 
 `-d, --detach`               | Detached mode: run command in the background 
-`--detach-keys string`       | Override the key sequence for detaching acontainer 
+`--detach-keys string`       | Override the key sequence for detaching a container 
 `-e, --env list`             | Set environment variables 
 `-i, --interactive`          | Keep STDIN open even if not attached 
 `--privileged`               | Give extended privileges to the command 
 `-t, --tty`                  | Allocate a pseudo-TTY 
-`-u, --user string`          | Username or UID (format:&#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
+`-u, --user string`          | Username or UID (format: &#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
 `-w, --workdir string`       | Working directory inside the container 
 
 
@@ -520,15 +525,16 @@ Options | Description
 ---------------------- | ------------------------------------------------ 
 `--details`            | Show extra details provided to logs 
 `-f, --follow`         | Follow log output 
-`--since string`       | Show logs since timestamp (e.g.2013-01-02T13:23:37) or relative (e.g. 42m for 42minutes) 
-`--tail string`        | Number of lines to show from the end of the logs(default "all") 
+`--since string`       | Show logs since timestamp (e.g. 2013-01-02T13:23:37) or relative (e.g. 42m for 42 minutes) 
+`--tail string`        | Number of lines to show from the end of the logs (default "all") 
 `-t, --timestamps`     | Show timestamps 
-`--until string`       | Show logs before a timestamp (e.g.2013-01-02T13:23:37) or relative (e.g. 42m for 42minutes) 
+`--until string`       | Show logs before a timestamp (e.g. 2013-01-02T13:23:37) or relative (e.g. 42m for 42 minutes) 
 
 
 
 -----
 ### docker container ls
+Aliases: `ls, ps, list`
 List containers
 
 ```bash
@@ -542,8 +548,8 @@ Options | Description
 `-a, --all`             | Show all containers (default shows just running) 
 `-f, --filter filter`   | Filter output based on conditions provided 
 `--format string`       | Pretty-print containers using a Go template 
-`-n, --last int`        | Show n last created containers (includes allstates) (default -1) 
-`-l, --latest`          | Show the latest created container (includes allstates) 
+`-n, --last int`        | Show n last created containers (includes all states) (default -1) 
+`-l, --latest`          | Show the latest created container (includes all states) 
 `--no-trunc`            | Don't truncate output 
 `-q, --quiet`           | Only display numeric IDs 
 `-s, --size`            | Display total file sizes 
@@ -606,7 +612,7 @@ docker container restart [OPTIONS] CONTAINER [CONTAINER...]
 
 Options | Description 
 ------------------ | ---------------------------------------------------- 
-`-t, --time int`   | Seconds to wait for stop before killing the container(default 10) 
+`-t, --time int`   | Seconds to wait for stop before killing the container (default 10) 
 
 
 
@@ -640,47 +646,47 @@ docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 Options | Description 
 -------------------------------------- | -------------------------------- 
-`--add-host list`                      | Add a custom host-to-IP mapping(host:ip) 
+`--add-host list`                      | Add a custom host-to-IP mapping (host:ip) 
 `-a, --attach list`                    | Attach to STDIN, STDOUT or STDERR 
-`--blkio-weight uint16`                | Block IO (relative weight),between 10 and 1000, or 0 todisable (default 0) 
-`--blkio-weight-device list`           | Block IO weight (relative deviceweight) (default []) 
+`--blkio-weight uint16`                | Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0) 
+`--blkio-weight-device list`           | Block IO weight (relative device weight) (default []) 
 `--cap-add list`                       | Add Linux capabilities 
 `--cap-drop list`                      | Drop Linux capabilities 
-`--cgroup-parent string`               | Optional parent cgroup for thecontainer 
+`--cgroup-parent string`               | Optional parent cgroup for the container 
 `--cidfile string`                     | Write the container ID to the file 
-`--cpu-period int`                     | Limit CPU CFS (Completely FairScheduler) period 
-`--cpu-quota int`                      | Limit CPU CFS (Completely FairScheduler) quota 
-`--cpu-rt-period int`                  | Limit CPU real-time period inmicroseconds 
-`--cpu-rt-runtime int`                 | Limit CPU real-time runtime inmicroseconds 
+`--cpu-period int`                     | Limit CPU CFS (Completely Fair Scheduler) period 
+`--cpu-quota int`                      | Limit CPU CFS (Completely Fair Scheduler) quota 
+`--cpu-rt-period int`                  | Limit CPU real-time period in microseconds 
+`--cpu-rt-runtime int`                 | Limit CPU real-time runtime in microseconds 
 `-c, --cpu-shares int`                 | CPU shares (relative weight) 
 `--cpus decimal`                       | Number of CPUs 
-`--cpuset-cpus string`                 | CPUs in which to allow execution(0-3, 0,1) 
-`--cpuset-mems string`                 | MEMs in which to allow execution(0-3, 0,1) 
-`-d, --detach`                         | Run container in background andprint container ID 
-`--detach-keys string`                 | Override the key sequence fordetaching a container 
+`--cpuset-cpus string`                 | CPUs in which to allow execution (0-3, 0,1) 
+`--cpuset-mems string`                 | MEMs in which to allow execution (0-3, 0,1) 
+`-d, --detach`                         | Run container in background and print container ID 
+`--detach-keys string`                 | Override the key sequence for detaching a container 
 `--device list`                        | Add a host device to the container 
-`--device-cgroup-rule list`            | Add a rule to the cgroup alloweddevices list 
-`--device-read-bps list`               | Limit read rate (bytes per second)from a device (default []) 
-`--device-read-iops list`              | Limit read rate (IO per second)from a device (default []) 
-`--device-write-bps list`              | Limit write rate (bytes persecond) to a device (default []) 
-`--device-write-iops list`             | Limit write rate (IO per second)to a device (default []) 
+`--device-cgroup-rule list`            | Add a rule to the cgroup allowed devices list 
+`--device-read-bps list`               | Limit read rate (bytes per second) from a device (default []) 
+`--device-read-iops list`              | Limit read rate (IO per second) from a device (default []) 
+`--device-write-bps list`              | Limit write rate (bytes per second) to a device (default []) 
+`--device-write-iops list`             | Limit write rate (IO per second) to a device (default []) 
 `--disable-content-trust`              | Skip image verification (default true) 
 `--dns list`                           | Set custom DNS servers 
 `--dns-option list`                    | Set DNS options 
 `--dns-search list`                    | Set custom DNS search domains 
-`--entrypoint string`                  | Overwrite the default ENTRYPOINTof the image 
+`--entrypoint string`                  | Overwrite the default ENTRYPOINT of the image 
 `-e, --env list`                       | Set environment variables 
 `--env-file list`                      | Read in a file of environment variables 
 `--expose list`                        | Expose a port or a range of ports 
 `--group-add list`                     | Add additional groups to join 
 `--health-cmd string`                  | Command to run to check health 
-`--health-interval duration`           | Time between running the check(ms&#124;s&#124;m&#124;h) (default 0s) 
-`--health-retries int`                 | Consecutive failures needed toreport unhealthy 
-`--health-start-period duration`       | Start period for the container toinitialize before startinghealth-retries countdown(ms&#124;s&#124;m&#124;h) (default 0s) 
-`--health-timeout duration`            | Maximum time to allow one check torun (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-interval duration`           | Time between running the check (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-retries int`                 | Consecutive failures needed to report unhealthy 
+`--health-start-period duration`       | Start period for the container to initialize before starting health-retries countdown (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-timeout duration`            | Maximum time to allow one check to run (ms&#124;s&#124;m&#124;h) (default 0s) 
 `--help`                               | Print usage 
 `-h, --hostname string`                | Container host name 
-`--init`                               | Run an init inside the containerthat forwards signals and reapsprocesses 
+`--init`                               | Run an init inside the container that forwards signals and reaps processes 
 `-i, --interactive`                    | Keep STDIN open even if not attached 
 `--ip string`                          | IPv4 address (e.g., 172.30.100.104) 
 `--ip6 string`                         | IPv6 address (e.g., 2001:db8::33) 
@@ -690,47 +696,47 @@ Options | Description
 `-l, --label list`                     | Set meta data on a container 
 `--label-file list`                    | Read in a line delimited file of labels 
 `--link list`                          | Add link to another container 
-`--link-local-ip list`                 | Container IPv4/IPv6 link-localaddresses 
+`--link-local-ip list`                 | Container IPv4/IPv6 link-local addresses 
 `--log-driver string`                  | Logging driver for the container 
 `--log-opt list`                       | Log driver options 
-`--mac-address string`                 | Container MAC address (e.g.,92:d0:c6:0a:29:33) 
+`--mac-address string`                 | Container MAC address (e.g., 92:d0:c6:0a:29:33) 
 `-m, --memory bytes`                   | Memory limit 
 `--memory-reservation bytes`           | Memory soft limit 
-`--memory-swap bytes`                  | Swap limit equal to memory plusswap: '-1' to enable unlimited swap 
-`--memory-swappiness int`              | Tune container memory swappiness(0 to 100) (default -1) 
-`--mount mount`                        | Attach a filesystem mount to thecontainer 
+`--memory-swap bytes`                  | Swap limit equal to memory plus swap: '-1' to enable unlimited swap 
+`--memory-swappiness int`              | Tune container memory swappiness (0 to 100) (default -1) 
+`--mount mount`                        | Attach a filesystem mount to the container 
 `--name string`                        | Assign a name to the container 
-`--network string`                     | Connect a container to a network(default "default") 
-`--network-alias list`                 | Add network-scoped alias for thecontainer 
-`--no-healthcheck`                     | Disable any container-specifiedHEALTHCHECK 
+`--network string`                     | Connect a container to a network (default "default") 
+`--network-alias list`                 | Add network-scoped alias for the container 
+`--no-healthcheck`                     | Disable any container-specified HEALTHCHECK 
 `--oom-kill-disable`                   | Disable OOM Killer 
-`--oom-score-adj int`                  | Tune host's OOM preferences (-1000to 1000) 
+`--oom-score-adj int`                  | Tune host's OOM preferences (-1000 to 1000) 
 `--pid string`                         | PID namespace to use 
-`--pids-limit int`                     | Tune container pids limit (set -1for unlimited) 
-`--platform string`                    | Set platform if server ismulti-platform capable 
-`--privileged`                         | Give extended privileges to thiscontainer 
-`-p, --publish list`                   | Publish a container's port(s) tothe host 
-`-P, --publish-all`                    | Publish all exposed ports torandom ports 
-`--read-only`                          | Mount the container's rootfilesystem as read only 
-`--restart string`                     | Restart policy to apply when acontainer exits (default "no") 
-`--rm`                                 | Automatically remove the containerwhen it exits 
+`--pids-limit int`                     | Tune container pids limit (set -1 for unlimited) 
+`--platform string`                    | Set platform if server is multi-platform capable 
+`--privileged`                         | Give extended privileges to this container 
+`-p, --publish list`                   | Publish a container's port(s) to the host 
+`-P, --publish-all`                    | Publish all exposed ports to random ports 
+`--read-only`                          | Mount the container's root filesystem as read only 
+`--restart string`                     | Restart policy to apply when a container exits (default "no") 
+`--rm`                                 | Automatically remove the container when it exits 
 `--runtime string`                     | Runtime to use for this container 
 `--security-opt list`                  | Security Options 
 `--shm-size bytes`                     | Size of /dev/shm 
-`--sig-proxy`                          | Proxy received signals to theprocess (default true) 
-`--stop-signal string`                 | Signal to stop a container(default "SIGTERM") 
-`--stop-timeout int`                   | Timeout (in seconds) to stop acontainer 
-`--storage-opt list`                   | Storage driver options for thecontainer 
+`--sig-proxy`                          | Proxy received signals to the process (default true) 
+`--stop-signal string`                 | Signal to stop a container (default "SIGTERM") 
+`--stop-timeout int`                   | Timeout (in seconds) to stop a container 
+`--storage-opt list`                   | Storage driver options for the container 
 `--sysctl map`                         | Sysctl options (default map[]) 
 `--tmpfs list`                         | Mount a tmpfs directory 
 `-t, --tty`                            | Allocate a pseudo-TTY 
 `--ulimit ulimit`                      | Ulimit options (default []) 
-`-u, --user string`                    | Username or UID (format:&#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
+`-u, --user string`                    | Username or UID (format: &#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
 `--userns string`                      | User namespace to use 
 `--uts string`                         | UTS namespace to use 
 `-v, --volume list`                    | Bind mount a volume 
-`--volume-driver string`               | Optional volume driver for thecontainer 
-`--volumes-from list`                  | Mount volumes from the specifiedcontainer(s) 
+`--volume-driver string`               | Optional volume driver for the container 
+`--volumes-from list`                  | Mount volumes from the specified container(s) 
 `-w, --workdir string`                 | Working directory inside the container 
 
 
@@ -750,7 +756,7 @@ Options | Description
 `-a, --attach`                  | Attach STDOUT/STDERR and forward signals 
 `--checkpoint string`           | Restore from this checkpoint 
 `--checkpoint-dir string`       | Use a custom checkpoint storage directory 
-`--detach-keys string`          | Override the key sequence for detaching acontainer 
+`--detach-keys string`          | Override the key sequence for detaching a container 
 `-i, --interactive`             | Attach container's STDIN 
 
 
@@ -820,11 +826,11 @@ docker container update [OPTIONS] CONTAINER [CONTAINER...]
 
 Options | Description 
 ---------------------------------- | ------------------------------------ 
-`--blkio-weight uint16`            | Block IO (relative weight), between 10and 1000, or 0 to disable (default 0) 
-`--cpu-period int`                 | Limit CPU CFS (Completely FairScheduler) period 
-`--cpu-quota int`                  | Limit CPU CFS (Completely FairScheduler) quota 
-`--cpu-rt-period int`              | Limit the CPU real-time period inmicroseconds 
-`--cpu-rt-runtime int`             | Limit the CPU real-time runtime inmicroseconds 
+`--blkio-weight uint16`            | Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0) 
+`--cpu-period int`                 | Limit CPU CFS (Completely Fair Scheduler) period 
+`--cpu-quota int`                  | Limit CPU CFS (Completely Fair Scheduler) quota 
+`--cpu-rt-period int`              | Limit the CPU real-time period in microseconds 
+`--cpu-rt-runtime int`             | Limit the CPU real-time runtime in microseconds 
 `-c, --cpu-shares int`             | CPU shares (relative weight) 
 `--cpus decimal`                   | Number of CPUs 
 `--cpuset-cpus string`             | CPUs in which to allow execution (0-3, 0,1) 
@@ -832,8 +838,8 @@ Options | Description
 `--kernel-memory bytes`            | Kernel memory limit 
 `-m, --memory bytes`               | Memory limit 
 `--memory-reservation bytes`       | Memory soft limit 
-`--memory-swap bytes`              | Swap limit equal to memory plus swap:'-1' to enable unlimited swap 
-`--restart string`                 | Restart policy to apply when acontainer exits 
+`--memory-swap bytes`              | Swap limit equal to memory plus swap: '-1' to enable unlimited swap 
+`--restart string`                 | Restart policy to apply when a container exits 
 
 
 
@@ -888,30 +894,30 @@ Options | Description
 `--cache-from strings`          | Images to consider as cache sources 
 `--cgroup-parent string`        | Optional parent cgroup for the container 
 `--compress`                    | Compress the build context using gzip 
-`--cpu-period int`              | Limit the CPU CFS (Completely FairScheduler) period 
-`--cpu-quota int`               | Limit the CPU CFS (Completely FairScheduler) quota 
+`--cpu-period int`              | Limit the CPU CFS (Completely Fair Scheduler) period 
+`--cpu-quota int`               | Limit the CPU CFS (Completely Fair Scheduler) quota 
 `-c, --cpu-shares int`          | CPU shares (relative weight) 
 `--cpuset-cpus string`          | CPUs in which to allow execution (0-3, 0,1) 
 `--cpuset-mems string`          | MEMs in which to allow execution (0-3, 0,1) 
 `--disable-content-trust`       | Skip image verification (default true) 
-`-f, --file string`             | Name of the Dockerfile (Default is'PATH/Dockerfile') 
+`-f, --file string`             | Name of the Dockerfile (Default is 'PATH/Dockerfile') 
 `--force-rm`                    | Always remove intermediate containers 
 `--iidfile string`              | Write the image ID to the file 
 `--isolation string`            | Container isolation technology 
 `--label list`                  | Set metadata for an image 
 `-m, --memory bytes`            | Memory limit 
-`--memory-swap bytes`           | Swap limit equal to memory plus swap:'-1' to enable unlimited swap 
-`--network string`              | Set the networking mode for the RUNinstructions during build (default "default") 
+`--memory-swap bytes`           | Swap limit equal to memory plus swap: '-1' to enable unlimited swap 
+`--network string`              | Set the networking mode for the RUN instructions during build (default "default") 
 `--no-cache`                    | Do not use cache when building the image 
-`--platform string`             | Set platform if server is multi-platformcapable 
-`--pull`                        | Always attempt to pull a newer version ofthe image 
-`-q, --quiet`                   | Suppress the build output and print imageID on success 
-`--rm`                          | Remove intermediate containers after asuccessful build (default true) 
+`--platform string`             | Set platform if server is multi-platform capable 
+`--pull`                        | Always attempt to pull a newer version of the image 
+`-q, --quiet`                   | Suppress the build output and print image ID on success 
+`--rm`                          | Remove intermediate containers after a successful build (default true) 
 `--security-opt strings`        | Security options 
 `--shm-size bytes`              | Size of /dev/shm 
-`--squash`                      | Squash newly built layers into a singlenew layer 
-`--stream`                      | Stream attaches to server to negotiatebuild context 
-`-t, --tag list`                | Name and optionally a tag in the'name:tag' format 
+`--squash`                      | Squash newly built layers into a single new layer 
+`--stream`                      | Stream attaches to server to negotiate build context 
+`-t, --tag list`                | Name and optionally a tag in the 'name:tag' format 
 `--target string`               | Set the target build stage to build. 
 `--ulimit ulimit`               | Ulimit options (default []) 
 
@@ -930,7 +936,7 @@ docker image history [OPTIONS] IMAGE
 Options | Description 
 ----------------------- | ----------------------------------------------- 
 `--format string`       | Pretty-print images using a Go template 
-`-H, --human`           | Print sizes and dates in human readable format(default true) 
+`-H, --human`           | Print sizes and dates in human readable format (default true) 
 `--no-trunc`            | Don't truncate output 
 `-q, --quiet`           | Only show numeric IDs 
 
@@ -988,6 +994,7 @@ Options | Description
 
 -----
 ### docker image ls
+Aliases: `ls, images, list`
 List images
 
 ```bash
@@ -1039,7 +1046,7 @@ Options | Description
 ------------------------------- | --------------------------------------- 
 `-a, --all-tags`                | Download all tagged images in the repository 
 `--disable-content-trust`       | Skip image verification (default true) 
-`--platform string`             | Set platform if server is multi-platformcapable 
+`--platform string`             | Set platform if server is multi-platform capable 
 
 
 
@@ -1061,6 +1068,7 @@ Options | Description
 
 -----
 ### docker image rm
+Aliases: `rm, rmi, remove`
 Remove one or more images
 
 ```bash
@@ -1154,7 +1162,7 @@ docker network create [OPTIONS] NETWORK
 Options | Description 
 ---------------------------- | ------------------------------------------ 
 `--attachable`               | Enable manual container attachment 
-`--aux-address map`          | Auxiliary IPv4 or IPv6 addresses used byNetwork driver (default map[]) 
+`--aux-address map`          | Auxiliary IPv4 or IPv6 addresses used by Network driver (default map[]) 
 `--config-from string`       | The network from which copying the configuration 
 `--config-only`              | Create a configuration only network 
 `-d, --driver string`        | Driver to manage the Network (default "bridge") 
@@ -1168,7 +1176,7 @@ Options | Description
 `--label list`               | Set metadata on a network 
 `-o, --opt map`              | Set driver specific options (default map[]) 
 `--scope string`             | Control the network's scope 
-`--subnet strings`           | Subnet in CIDR format that represents anetwork segment 
+`--subnet strings`           | Subnet in CIDR format that represents a network segment 
 
 
 
@@ -1207,6 +1215,7 @@ Options | Description
 
 -----
 ### docker network ls
+Aliases: `ls, list`
 List networks
 
 ```bash
@@ -1243,6 +1252,7 @@ Options | Description
 
 -----
 ### docker network rm
+Aliases: `rm, remove`
 Remove one or more networks
 
 ```bash
@@ -1298,6 +1308,7 @@ Options | Description
 
 -----
 ### docker node ls
+Aliases: `ls, list`
 List nodes in the swarm
 
 ```bash
@@ -1345,6 +1356,7 @@ Options | Description
 
 -----
 ### docker node rm
+Aliases: `rm, remove`
 Remove one or more nodes from the swarm
 
 ```bash
@@ -1371,7 +1383,7 @@ docker node update [OPTIONS] NODE
 
 Options | Description 
 ----------------------------- | ----------------------------------------- 
-`--availability string`       | Availability of the node("active"&#124;"pause"&#124;"drain") 
+`--availability string`       | Availability of the node ("active"&#124;"pause"&#124;"drain") 
 `--label-add list`            | Add or update a node label (key=value) 
 `--label-rm list`             | Remove a node label if exists 
 `--role string`               | Role of the node ("worker"&#124;"manager") 
@@ -1480,12 +1492,13 @@ Options | Description
 `--alias string`                | Local name for plugin 
 `--disable`                     | Do not enable the plugin on install 
 `--disable-content-trust`       | Skip image verification (default true) 
-`--grant-all-permissions`       | Grant all permissions necessary to runthe plugin 
+`--grant-all-permissions`       | Grant all permissions necessary to run the plugin 
 
 
 
 -----
 ### docker plugin ls
+Aliases: `ls, list`
 List plugins
 
 ```bash
@@ -1521,6 +1534,7 @@ Options | Description
 
 -----
 ### docker plugin rm
+Aliases: `rm, remove`
 Remove one or more plugins
 
 ```bash
@@ -1557,8 +1571,8 @@ docker plugin upgrade [OPTIONS] PLUGIN [REMOTE]
 Options | Description 
 ------------------------------- | --------------------------------------- 
 `--disable-content-trust`       | Skip image verification (default true) 
-`--grant-all-permissions`       | Grant all permissions necessary to runthe plugin 
-`--skip-remote-check`           | Do not check if specified remote pluginmatches existing plugin image 
+`--grant-all-permissions`       | Grant all permissions necessary to run the plugin 
+`--skip-remote-check`           | Do not check if specified remote plugin matches existing plugin image 
 
 
 
@@ -1616,6 +1630,7 @@ Options | Description
 
 -----
 ### docker secret ls
+Aliases: `ls, list`
 List secrets
 
 ```bash
@@ -1634,6 +1649,7 @@ Options | Description
 
 -----
 ### docker secret rm
+Aliases: `rm, remove`
 Remove one or more secrets
 
 ```bash
@@ -1675,26 +1691,26 @@ docker service create [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 Options | Description 
 ------------------------------------------ | ---------------------------- 
-`--config config`                          | Specify configurations toexpose to the service 
+`--config config`                          | Specify configurations to expose to the service 
 `--constraint list`                        | Placement constraints 
 `--container-label list`                   | Container labels 
-`--credential-spec credential-spec`        | Credential spec for managedservice account (Windows only) 
-`-d, --detach`                             | Exit immediately instead ofwaiting for the service to converge 
+`--credential-spec credential-spec`        | Credential spec for managed service account (Windows only) 
+`-d, --detach`                             | Exit immediately instead of waiting for the service to converge 
 `--dns list`                               | Set custom DNS servers 
 `--dns-option list`                        | Set DNS options 
 `--dns-search list`                        | Set custom DNS search domains 
-`--endpoint-mode string`                   | Endpoint mode (vip or dnsrr)(default "vip") 
-`--entrypoint command`                     | Overwrite the defaultENTRYPOINT of the image 
+`--endpoint-mode string`                   | Endpoint mode (vip or dnsrr) (default "vip") 
+`--entrypoint command`                     | Overwrite the default ENTRYPOINT of the image 
 `-e, --env list`                           | Set environment variables 
-`--env-file list`                          | Read in a file of environmentvariables 
+`--env-file list`                          | Read in a file of environment variables 
 `--generic-resource list`                  | User defined resources 
-`--group list`                             | Set one or more supplementaryuser groups for the container 
+`--group list`                             | Set one or more supplementary user groups for the container 
 `--health-cmd string`                      | Command to run to check health 
-`--health-interval duration`               | Time between running the check(ms&#124;s&#124;m&#124;h) 
-`--health-retries int`                     | Consecutive failures needed toreport unhealthy 
-`--health-start-period duration`           | Start period for the containerto initialize before countingretries towards unstable (ms&#124;s&#124;m&#124;h) 
-`--health-timeout duration`                | Maximum time to allow onecheck to run (ms&#124;s&#124;m&#124;h) 
-`--host list`                              | Set one or more customhost-to-IP mappings (host:ip) 
+`--health-interval duration`               | Time between running the check (ms&#124;s&#124;m&#124;h) 
+`--health-retries int`                     | Consecutive failures needed to report unhealthy 
+`--health-start-period duration`           | Start period for the container to initialize before counting retries towards unstable (ms&#124;s&#124;m&#124;h) 
+`--health-timeout duration`                | Maximum time to allow one check to run (ms&#124;s&#124;m&#124;h) 
+`--host list`                              | Set one or more custom host-to-IP mappings (host:ip) 
 `--hostname string`                        | Container hostname 
 `--isolation string`                       | Service container isolation mode 
 `-l, --label list`                         | Service labels 
@@ -1702,42 +1718,42 @@ Options | Description
 `--limit-memory bytes`                     | Limit Memory 
 `--log-driver string`                      | Logging driver for service 
 `--log-opt list`                           | Logging driver options 
-`--mode string`                            | Service mode (replicated orglobal) (default "replicated") 
-`--mount mount`                            | Attach a filesystem mount tothe service 
+`--mode string`                            | Service mode (replicated or global) (default "replicated") 
+`--mount mount`                            | Attach a filesystem mount to the service 
 `--name string`                            | Service name 
 `--network network`                        | Network attachments 
-`--no-healthcheck`                         | Disable anycontainer-specified HEALTHCHECK 
-`--no-resolve-image`                       | Do not query the registry toresolve image digest andsupported platforms 
+`--no-healthcheck`                         | Disable any container-specified HEALTHCHECK 
+`--no-resolve-image`                       | Do not query the registry to resolve image digest and supported platforms 
 `--placement-pref pref`                    | Add a placement preference 
 `-p, --publish port`                       | Publish a port as a node port 
 `-q, --quiet`                              | Suppress progress output 
-`--read-only`                              | Mount the container's rootfilesystem as read only 
+`--read-only`                              | Mount the container's root filesystem as read only 
 `--replicas uint`                          | Number of tasks 
 `--reserve-cpu decimal`                    | Reserve CPUs 
 `--reserve-memory bytes`                   | Reserve Memory 
-`--restart-condition string`               | Restart when condition is met("none"&#124;"on-failure"&#124;"any")(default "any") 
-`--restart-delay duration`                 | Delay between restart attempts(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 5s) 
-`--restart-max-attempts uint`              | Maximum number of restartsbefore giving up 
-`--restart-window duration`                | Window used to evaluate therestart policy (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
-`--rollback-delay duration`                | Delay between task rollbacks(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 0s) 
-`--rollback-failure-action string`         | Action on rollback failure("pause"&#124;"continue") (default"pause") 
-`--rollback-max-failure-ratio float`       | Failure rate to tolerateduring a rollback (default 0) 
-`--rollback-monitor duration`              | Duration after each taskrollback to monitor forfailure (ns&#124;us&#124;ms&#124;s&#124;m&#124;h)(default 5s) 
-`--rollback-order string`                  | Rollback order("start-first"&#124;"stop-first")(default "stop-first") 
-`--rollback-parallelism uint`              | Maximum number of tasks rolledback simultaneously (0 to rollback all at once) (default 1) 
-`--secret secret`                          | Specify secrets to expose tothe service 
-`--stop-grace-period duration`             | Time to wait before forcekilling a container(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 10s) 
+`--restart-condition string`               | Restart when condition is met ("none"&#124;"on-failure"&#124;"any") (default "any") 
+`--restart-delay duration`                 | Delay between restart attempts (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 5s) 
+`--restart-max-attempts uint`              | Maximum number of restarts before giving up 
+`--restart-window duration`                | Window used to evaluate the restart policy (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
+`--rollback-delay duration`                | Delay between task rollbacks (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 0s) 
+`--rollback-failure-action string`         | Action on rollback failure ("pause"&#124;"continue") (default "pause") 
+`--rollback-max-failure-ratio float`       | Failure rate to tolerate during a rollback (default 0) 
+`--rollback-monitor duration`              | Duration after each task rollback to monitor for failure (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 5s) 
+`--rollback-order string`                  | Rollback order ("start-first"&#124;"stop-first") (default "stop-first") 
+`--rollback-parallelism uint`              | Maximum number of tasks rolled back simultaneously (0 to roll back all at once) (default 1) 
+`--secret secret`                          | Specify secrets to expose to the service 
+`--stop-grace-period duration`             | Time to wait before force killing a container (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 10s) 
 `--stop-signal string`                     | Signal to stop the container 
 `-t, --tty`                                | Allocate a pseudo-TTY 
-`--update-delay duration`                  | Delay between updates(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 0s) 
-`--update-failure-action string`           | Action on update failure("pause"&#124;"continue"&#124;"rollback") (default "pause") 
-`--update-max-failure-ratio float`         | Failure rate to tolerateduring an update (default 0) 
-`--update-monitor duration`                | Duration after each taskupdate to monitor for failure(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 5s) 
-`--update-order string`                    | Update order("start-first"&#124;"stop-first")(default "stop-first") 
-`--update-parallelism uint`                | Maximum number of tasksupdated simultaneously (0 toupdate all at once) (default 1) 
-`-u, --user string`                        | Username or UID (format:&#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
-`--with-registry-auth`                     | Send registry authenticationdetails to swarm agents 
-`-w, --workdir string`                     | Working directory inside thecontainer 
+`--update-delay duration`                  | Delay between updates (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 0s) 
+`--update-failure-action string`           | Action on update failure ("pause"&#124;"continue"&#124;"rollback") (default "pause") 
+`--update-max-failure-ratio float`         | Failure rate to tolerate during an update (default 0) 
+`--update-monitor duration`                | Duration after each task update to monitor for failure (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 5s) 
+`--update-order string`                    | Update order ("start-first"&#124;"stop-first") (default "stop-first") 
+`--update-parallelism uint`                | Maximum number of tasks updated simultaneously (0 to update all at once) (default 1) 
+`-u, --user string`                        | Username or UID (format: &#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
+`--with-registry-auth`                     | Send registry authentication details to swarm agents 
+`-w, --workdir string`                     | Working directory inside the container 
 
 
 
@@ -1776,14 +1792,15 @@ Options | Description
 `--no-task-ids`        | Do not include task IDs in output 
 `--no-trunc`           | Do not truncate output 
 `--raw`                | Do not neatly format logs 
-`--since string`       | Show logs since timestamp (e.g.2013-01-02T13:23:37) or relative (e.g. 42m for 42minutes) 
-`--tail string`        | Number of lines to show from the end of the logs(default "all") 
+`--since string`       | Show logs since timestamp (e.g. 2013-01-02T13:23:37) or relative (e.g. 42m for 42 minutes) 
+`--tail string`        | Number of lines to show from the end of the logs (default "all") 
 `-t, --timestamps`     | Show timestamps 
 
 
 
 -----
 ### docker service ls
+Aliases: `ls, list`
 List services
 
 ```bash
@@ -1822,6 +1839,7 @@ Options | Description
 
 -----
 ### docker service rm
+Aliases: `rm, remove`
 Remove one or more services
 
 ```bash
@@ -1841,7 +1859,7 @@ docker service rollback [OPTIONS] SERVICE
 
 Options | Description 
 ---------------- | ------------------------------------------------------ 
-`-d, --detach`   | Exit immediately instead of waiting for the service toconverge 
+`-d, --detach`   | Exit immediately instead of waiting for the service to converge 
 `-q, --quiet`    | Suppress progress output 
 
 
@@ -1858,7 +1876,7 @@ docker service scale SERVICE=REPLICAS [SERVICE=REPLICAS...]
 
 Options | Description 
 ---------------- | ------------------------------------------------------ 
-`-d, --detach`   | Exit immediately instead of waiting for the service toconverge 
+`-d, --detach`   | Exit immediately instead of waiting for the service to converge 
 
 
 
@@ -1875,36 +1893,36 @@ docker service update [OPTIONS] SERVICE
 Options | Description 
 ------------------------------------------ | ---------------------------- 
 `--args command`                           | Service command args 
-`--config-add config`                      | Add or update a config file ona service 
+`--config-add config`                      | Add or update a config file on a service 
 `--config-rm list`                         | Remove a configuration file 
-`--constraint-add list`                    | Add or update a placementconstraint 
+`--constraint-add list`                    | Add or update a placement constraint 
 `--constraint-rm list`                     | Remove a constraint 
 `--container-label-add list`               | Add or update a container label 
 `--container-label-rm list`                | Remove a container label by its key 
-`--credential-spec credential-spec`        | Credential spec for managedservice account (Windows only) 
-`-d, --detach`                             | Exit immediately instead ofwaiting for the service to converge 
+`--credential-spec credential-spec`        | Credential spec for managed service account (Windows only) 
+`-d, --detach`                             | Exit immediately instead of waiting for the service to converge 
 `--dns-add list`                           | Add or update a custom DNS server 
 `--dns-option-add list`                    | Add or update a DNS option 
 `--dns-option-rm list`                     | Remove a DNS option 
 `--dns-rm list`                            | Remove a custom DNS server 
-`--dns-search-add list`                    | Add or update a custom DNSsearch domain 
+`--dns-search-add list`                    | Add or update a custom DNS search domain 
 `--dns-search-rm list`                     | Remove a DNS search domain 
 `--endpoint-mode string`                   | Endpoint mode (vip or dnsrr) 
-`--entrypoint command`                     | Overwrite the defaultENTRYPOINT of the image 
-`--env-add list`                           | Add or update an environmentvariable 
+`--entrypoint command`                     | Overwrite the default ENTRYPOINT of the image 
+`--env-add list`                           | Add or update an environment variable 
 `--env-rm list`                            | Remove an environment variable 
-`--force`                                  | Force update even if nochanges require it 
+`--force`                                  | Force update even if no changes require it 
 `--generic-resource-add list`              | Add a Generic resource 
 `--generic-resource-rm list`               | Remove a Generic resource 
-`--group-add list`                         | Add an additionalsupplementary user group tothe container 
-`--group-rm list`                          | Remove a previously addedsupplementary user group fromthe container 
+`--group-add list`                         | Add an additional supplementary user group to the container 
+`--group-rm list`                          | Remove a previously added supplementary user group from the container 
 `--health-cmd string`                      | Command to run to check health 
-`--health-interval duration`               | Time between running the check(ms&#124;s&#124;m&#124;h) 
-`--health-retries int`                     | Consecutive failures needed toreport unhealthy 
-`--health-start-period duration`           | Start period for the containerto initialize before countingretries towards unstable (ms&#124;s&#124;m&#124;h) 
-`--health-timeout duration`                | Maximum time to allow onecheck to run (ms&#124;s&#124;m&#124;h) 
-`--host-add list`                          | Add a custom host-to-IPmapping (host:ip) 
-`--host-rm list`                           | Remove a custom host-to-IPmapping (host:ip) 
+`--health-interval duration`               | Time between running the check (ms&#124;s&#124;m&#124;h) 
+`--health-retries int`                     | Consecutive failures needed to report unhealthy 
+`--health-start-period duration`           | Start period for the container to initialize before counting retries towards unstable (ms&#124;s&#124;m&#124;h) 
+`--health-timeout duration`                | Maximum time to allow one check to run (ms&#124;s&#124;m&#124;h) 
+`--host-add list`                          | Add a custom host-to-IP mapping (host:ip) 
+`--host-rm list`                           | Remove a custom host-to-IP mapping (host:ip) 
 `--hostname string`                        | Container hostname 
 `--image string`                           | Service image tag 
 `--isolation string`                       | Service container isolation mode 
@@ -1918,42 +1936,42 @@ Options | Description
 `--mount-rm list`                          | Remove a mount by its target path 
 `--network-add network`                    | Add a network 
 `--network-rm list`                        | Remove a network 
-`--no-healthcheck`                         | Disable anycontainer-specified HEALTHCHECK 
-`--no-resolve-image`                       | Do not query the registry toresolve image digest andsupported platforms 
+`--no-healthcheck`                         | Disable any container-specified HEALTHCHECK 
+`--no-resolve-image`                       | Do not query the registry to resolve image digest and supported platforms 
 `--placement-pref-add pref`                | Add a placement preference 
 `--placement-pref-rm pref`                 | Remove a placement preference 
 `--publish-add port`                       | Add or update a published port 
-`--publish-rm port`                        | Remove a published port by itstarget port 
+`--publish-rm port`                        | Remove a published port by its target port 
 `-q, --quiet`                              | Suppress progress output 
-`--read-only`                              | Mount the container's rootfilesystem as read only 
+`--read-only`                              | Mount the container's root filesystem as read only 
 `--replicas uint`                          | Number of tasks 
 `--reserve-cpu decimal`                    | Reserve CPUs 
 `--reserve-memory bytes`                   | Reserve Memory 
-`--restart-condition string`               | Restart when condition is met("none"&#124;"on-failure"&#124;"any") 
-`--restart-delay duration`                 | Delay between restart attempts(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
-`--restart-max-attempts uint`              | Maximum number of restartsbefore giving up 
-`--restart-window duration`                | Window used to evaluate therestart policy (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
+`--restart-condition string`               | Restart when condition is met ("none"&#124;"on-failure"&#124;"any") 
+`--restart-delay duration`                 | Delay between restart attempts (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
+`--restart-max-attempts uint`              | Maximum number of restarts before giving up 
+`--restart-window duration`                | Window used to evaluate the restart policy (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
 `--rollback`                               | Rollback to previous specification 
-`--rollback-delay duration`                | Delay between task rollbacks(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
-`--rollback-failure-action string`         | Action on rollback failure("pause"&#124;"continue") 
-`--rollback-max-failure-ratio float`       | Failure rate to tolerateduring a rollback 
-`--rollback-monitor duration`              | Duration after each taskrollback to monitor forfailure (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
-`--rollback-order string`                  | Rollback order("start-first"&#124;"stop-first") 
-`--rollback-parallelism uint`              | Maximum number of tasks rolledback simultaneously (0 to rollback all at once) 
+`--rollback-delay duration`                | Delay between task rollbacks (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
+`--rollback-failure-action string`         | Action on rollback failure ("pause"&#124;"continue") 
+`--rollback-max-failure-ratio float`       | Failure rate to tolerate during a rollback 
+`--rollback-monitor duration`              | Duration after each task rollback to monitor for failure (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
+`--rollback-order string`                  | Rollback order ("start-first"&#124;"stop-first") 
+`--rollback-parallelism uint`              | Maximum number of tasks rolled back simultaneously (0 to roll back all at once) 
 `--secret-add secret`                      | Add or update a secret on a service 
 `--secret-rm list`                         | Remove a secret 
-`--stop-grace-period duration`             | Time to wait before forcekilling a container(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
+`--stop-grace-period duration`             | Time to wait before force killing a container (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
 `--stop-signal string`                     | Signal to stop the container 
 `-t, --tty`                                | Allocate a pseudo-TTY 
-`--update-delay duration`                  | Delay between updates(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
-`--update-failure-action string`           | Action on update failure("pause"&#124;"continue"&#124;"rollback") 
-`--update-max-failure-ratio float`         | Failure rate to tolerateduring an update 
-`--update-monitor duration`                | Duration after each taskupdate to monitor for failure(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
-`--update-order string`                    | Update order("start-first"&#124;"stop-first") 
-`--update-parallelism uint`                | Maximum number of tasksupdated simultaneously (0 toupdate all at once) 
-`-u, --user string`                        | Username or UID (format:&#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
-`--with-registry-auth`                     | Send registry authenticationdetails to swarm agents 
-`-w, --workdir string`                     | Working directory inside thecontainer 
+`--update-delay duration`                  | Delay between updates (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
+`--update-failure-action string`           | Action on update failure ("pause"&#124;"continue"&#124;"rollback") 
+`--update-max-failure-ratio float`         | Failure rate to tolerate during an update 
+`--update-monitor duration`                | Duration after each task update to monitor for failure (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) 
+`--update-order string`                    | Update order ("start-first"&#124;"stop-first") 
+`--update-parallelism uint`                | Maximum number of tasks updated simultaneously (0 to update all at once) 
+`-u, --user string`                        | Username or UID (format: &#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
+`--with-registry-auth`                     | Send registry authentication details to swarm agents 
+`-w, --workdir string`                     | Working directory inside the container 
 
 
 
@@ -1990,13 +2008,13 @@ docker swarm ca [OPTIONS]
 
 Options | Description 
 --------------------------------- | ------------------------------------- 
-`--ca-cert pem-file`              | Path to the PEM-formatted root CAcertificate to use for the new cluster 
-`--ca-key pem-file`               | Path to the PEM-formatted root CA keyto use for the new cluster 
-`--cert-expiry duration`          | Validity period for node certificates(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 2160h0m0s) 
-`-d, --detach`                    | Exit immediately instead of waiting forthe root rotation to converge 
-`--external-ca external-ca`       | Specifications of one or morecertificate signing endpoints 
+`--ca-cert pem-file`              | Path to the PEM-formatted root CA certificate to use for the new cluster 
+`--ca-key pem-file`               | Path to the PEM-formatted root CA key to use for the new cluster 
+`--cert-expiry duration`          | Validity period for node certificates (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 2160h0m0s) 
+`-d, --detach`                    | Exit immediately instead of waiting for the root rotation to converge 
+`--external-ca external-ca`       | Specifications of one or more certificate signing endpoints 
 `-q, --quiet`                     | Suppress progress output 
-`--rotate`                        | Rotate the swarm CA - if no certificateor key are provided, new ones will begenerated 
+`--rotate`                        | Rotate the swarm CA - if no certificate or key are provided, new ones will be generated 
 
 
 
@@ -2012,18 +2030,18 @@ docker swarm init [OPTIONS]
 
 Options | Description 
 --------------------------------------- | ------------------------------- 
-`--advertise-addr string`               | Advertised address (format:&#60;ip&#124;interface&#62;[:port]) 
-`--autolock`                            | Enable manager autolocking(requiring an unlock key to starta stopped manager) 
-`--availability string`                 | Availability of the node("active"&#124;"pause"&#124;"drain")(default "active") 
-`--cert-expiry duration`                | Validity period for nodecertificates (ns&#124;us&#124;ms&#124;s&#124;m&#124;h)(default 2160h0m0s) 
-`--data-path-addr string`               | Address or interface to use fordata path traffic (format:&#60;ip&#124;interface&#62;) 
-`--dispatcher-heartbeat duration`       | Dispatcher heartbeat period(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 5s) 
-`--external-ca external-ca`             | Specifications of one or morecertificate signing endpoints 
-`--force-new-cluster`                   | Force create a new cluster fromcurrent state 
-`--listen-addr node-addr`               | Listen address (format:&#60;ip&#124;interface&#62;[:port]) (default0.0.0.0:2377) 
-`--max-snapshots uint`                  | Number of additional Raftsnapshots to retain 
-`--snapshot-interval uint`              | Number of log entries betweenRaft snapshots (default 10000) 
-`--task-history-limit int`              | Task history retention limit(default 5) 
+`--advertise-addr string`               | Advertised address (format: &#60;ip&#124;interface&#62;[:port]) 
+`--autolock`                            | Enable manager autolocking (requiring an unlock key to start a stopped manager) 
+`--availability string`                 | Availability of the node ("active"&#124;"pause"&#124;"drain") (default "active") 
+`--cert-expiry duration`                | Validity period for node certificates (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 2160h0m0s) 
+`--data-path-addr string`               | Address or interface to use for data path traffic (format: &#60;ip&#124;interface&#62;) 
+`--dispatcher-heartbeat duration`       | Dispatcher heartbeat period (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 5s) 
+`--external-ca external-ca`             | Specifications of one or more certificate signing endpoints 
+`--force-new-cluster`                   | Force create a new cluster from current state 
+`--listen-addr node-addr`               | Listen address (format: &#60;ip&#124;interface&#62;[:port]) (default 0.0.0.0:2377) 
+`--max-snapshots uint`                  | Number of additional Raft snapshots to retain 
+`--snapshot-interval uint`              | Number of log entries between Raft snapshots (default 10000) 
+`--task-history-limit int`              | Task history retention limit (default 5) 
 
 
 
@@ -2039,10 +2057,10 @@ docker swarm join [OPTIONS] HOST:PORT
 
 Options | Description 
 ------------------------------- | --------------------------------------- 
-`--advertise-addr string`       | Advertised address (format:&#60;ip&#124;interface&#62;[:port]) 
-`--availability string`         | Availability of the node("active"&#124;"pause"&#124;"drain") (default "active") 
-`--data-path-addr string`       | Address or interface to use for data pathtraffic (format: &#60;ip&#124;interface&#62;) 
-`--listen-addr node-addr`       | Listen address (format:&#60;ip&#124;interface&#62;[:port]) (default 0.0.0.0:2377) 
+`--advertise-addr string`       | Advertised address (format: &#60;ip&#124;interface&#62;[:port]) 
+`--availability string`         | Availability of the node ("active"&#124;"pause"&#124;"drain") (default "active") 
+`--data-path-addr string`       | Address or interface to use for data path traffic (format: &#60;ip&#124;interface&#62;) 
+`--listen-addr node-addr`       | Listen address (format: &#60;ip&#124;interface&#62;[:port]) (default 0.0.0.0:2377) 
 `--token string`                | Token for entry into the swarm 
 
 
@@ -2118,13 +2136,13 @@ docker swarm update [OPTIONS]
 
 Options | Description 
 --------------------------------------- | ------------------------------- 
-`--autolock`                            | Change manager autolockingsetting (true&#124;false) 
-`--cert-expiry duration`                | Validity period for nodecertificates (ns&#124;us&#124;ms&#124;s&#124;m&#124;h)(default 2160h0m0s) 
-`--dispatcher-heartbeat duration`       | Dispatcher heartbeat period(ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 5s) 
-`--external-ca external-ca`             | Specifications of one or morecertificate signing endpoints 
-`--max-snapshots uint`                  | Number of additional Raftsnapshots to retain 
-`--snapshot-interval uint`              | Number of log entries betweenRaft snapshots (default 10000) 
-`--task-history-limit int`              | Task history retention limit(default 5) 
+`--autolock`                            | Change manager autolocking setting (true&#124;false) 
+`--cert-expiry duration`                | Validity period for node certificates (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 2160h0m0s) 
+`--dispatcher-heartbeat duration`       | Dispatcher heartbeat period (ns&#124;us&#124;ms&#124;s&#124;m&#124;h) (default 5s) 
+`--external-ca external-ca`             | Specifications of one or more certificate signing endpoints 
+`--max-snapshots uint`                  | Number of additional Raft snapshots to retain 
+`--snapshot-interval uint`              | Number of log entries between Raft snapshots (default 10000) 
+`--task-history-limit int`              | Task history retention limit (default 5) 
 
 
 
@@ -2267,7 +2285,7 @@ docker trust key generate NAME
 
 Options | Description 
 -------------------- | -------------------------------------------------- 
-`--dir string`       | Directory to generate key in, defaults to currentdirectory 
+`--dir string`       | Directory to generate key in, defaults to current directory 
 
 
 
@@ -2330,7 +2348,7 @@ docker trust signer remove [OPTIONS] NAME REPOSITORY [REPOSITORY...]
 
 Options | Description 
 --------------- | ------------------------------------------------------- 
-`-f, --force`   | Do not prompt for confirmation before removing the mostrecent signer 
+`-f, --force`   | Do not prompt for confirmation before removing the most recent signer 
 
 
 
@@ -2436,6 +2454,7 @@ Options | Description
 
 -----
 ### docker volume ls
+Aliases: `ls, list`
 List volumes
 
 ```bash
@@ -2471,6 +2490,7 @@ Options | Description
 
 -----
 ### docker volume rm
+Aliases: `rm, remove`
 Remove one or more volumes
 
 ```bash
@@ -2497,9 +2517,9 @@ docker attach [OPTIONS] CONTAINER
 
 Options | Description 
 ---------------------------- | ------------------------------------------ 
-`--detach-keys string`       | Override the key sequence for detaching acontainer 
+`--detach-keys string`       | Override the key sequence for detaching a container 
 `--no-stdin`                 | Do not attach STDIN 
-`--sig-proxy`                | Proxy all received signals to the process(default true) 
+`--sig-proxy`                | Proxy all received signals to the process (default true) 
 
 
 
@@ -2520,30 +2540,30 @@ Options | Description
 `--cache-from strings`          | Images to consider as cache sources 
 `--cgroup-parent string`        | Optional parent cgroup for the container 
 `--compress`                    | Compress the build context using gzip 
-`--cpu-period int`              | Limit the CPU CFS (Completely FairScheduler) period 
-`--cpu-quota int`               | Limit the CPU CFS (Completely FairScheduler) quota 
+`--cpu-period int`              | Limit the CPU CFS (Completely Fair Scheduler) period 
+`--cpu-quota int`               | Limit the CPU CFS (Completely Fair Scheduler) quota 
 `-c, --cpu-shares int`          | CPU shares (relative weight) 
 `--cpuset-cpus string`          | CPUs in which to allow execution (0-3, 0,1) 
 `--cpuset-mems string`          | MEMs in which to allow execution (0-3, 0,1) 
 `--disable-content-trust`       | Skip image verification (default true) 
-`-f, --file string`             | Name of the Dockerfile (Default is'PATH/Dockerfile') 
+`-f, --file string`             | Name of the Dockerfile (Default is 'PATH/Dockerfile') 
 `--force-rm`                    | Always remove intermediate containers 
 `--iidfile string`              | Write the image ID to the file 
 `--isolation string`            | Container isolation technology 
 `--label list`                  | Set metadata for an image 
 `-m, --memory bytes`            | Memory limit 
-`--memory-swap bytes`           | Swap limit equal to memory plus swap:'-1' to enable unlimited swap 
-`--network string`              | Set the networking mode for the RUNinstructions during build (default "default") 
+`--memory-swap bytes`           | Swap limit equal to memory plus swap: '-1' to enable unlimited swap 
+`--network string`              | Set the networking mode for the RUN instructions during build (default "default") 
 `--no-cache`                    | Do not use cache when building the image 
-`--platform string`             | Set platform if server is multi-platformcapable 
-`--pull`                        | Always attempt to pull a newer version ofthe image 
-`-q, --quiet`                   | Suppress the build output and print imageID on success 
-`--rm`                          | Remove intermediate containers after asuccessful build (default true) 
+`--platform string`             | Set platform if server is multi-platform capable 
+`--pull`                        | Always attempt to pull a newer version of the image 
+`-q, --quiet`                   | Suppress the build output and print image ID on success 
+`--rm`                          | Remove intermediate containers after a successful build (default true) 
 `--security-opt strings`        | Security options 
 `--shm-size bytes`              | Size of /dev/shm 
-`--squash`                      | Squash newly built layers into a singlenew layer 
-`--stream`                      | Stream attaches to server to negotiatebuild context 
-`-t, --tag list`                | Name and optionally a tag in the'name:tag' format 
+`--squash`                      | Squash newly built layers into a single new layer 
+`--stream`                      | Stream attaches to server to negotiate build context 
+`-t, --tag list`                | Name and optionally a tag in the 'name:tag' format 
 `--target string`               | Set the target build stage to build. 
 `--ulimit ulimit`               | Ulimit options (default []) 
 
@@ -2561,7 +2581,7 @@ docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
 
 Options | Description 
 ------------------------ | ---------------------------------------------- 
-`-a, --author string`    | Author (e.g., "John Hannibal Smith&#60;hannibal&#64;a-team.com&#62;") 
+`-a, --author string`    | Author (e.g., "John Hannibal Smith &#60;hannibal&#64;a-team.com&#62;") 
 `-c, --change list`      | Apply Dockerfile instruction to the created image 
 `-m, --message string`   | Commit message 
 `-p, --pause`            | Pause container during commit (default true) 
@@ -2574,6 +2594,7 @@ Copy files/folders between a container and the local filesystem
 
 ```bash
 docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
 ```
 
 #### Options: 
@@ -2597,45 +2618,45 @@ docker create [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 Options | Description 
 -------------------------------------- | -------------------------------- 
-`--add-host list`                      | Add a custom host-to-IP mapping(host:ip) 
+`--add-host list`                      | Add a custom host-to-IP mapping (host:ip) 
 `-a, --attach list`                    | Attach to STDIN, STDOUT or STDERR 
-`--blkio-weight uint16`                | Block IO (relative weight),between 10 and 1000, or 0 todisable (default 0) 
-`--blkio-weight-device list`           | Block IO weight (relative deviceweight) (default []) 
+`--blkio-weight uint16`                | Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0) 
+`--blkio-weight-device list`           | Block IO weight (relative device weight) (default []) 
 `--cap-add list`                       | Add Linux capabilities 
 `--cap-drop list`                      | Drop Linux capabilities 
-`--cgroup-parent string`               | Optional parent cgroup for thecontainer 
+`--cgroup-parent string`               | Optional parent cgroup for the container 
 `--cidfile string`                     | Write the container ID to the file 
-`--cpu-period int`                     | Limit CPU CFS (Completely FairScheduler) period 
-`--cpu-quota int`                      | Limit CPU CFS (Completely FairScheduler) quota 
-`--cpu-rt-period int`                  | Limit CPU real-time period inmicroseconds 
-`--cpu-rt-runtime int`                 | Limit CPU real-time runtime inmicroseconds 
+`--cpu-period int`                     | Limit CPU CFS (Completely Fair Scheduler) period 
+`--cpu-quota int`                      | Limit CPU CFS (Completely Fair Scheduler) quota 
+`--cpu-rt-period int`                  | Limit CPU real-time period in microseconds 
+`--cpu-rt-runtime int`                 | Limit CPU real-time runtime in microseconds 
 `-c, --cpu-shares int`                 | CPU shares (relative weight) 
 `--cpus decimal`                       | Number of CPUs 
-`--cpuset-cpus string`                 | CPUs in which to allow execution(0-3, 0,1) 
-`--cpuset-mems string`                 | MEMs in which to allow execution(0-3, 0,1) 
+`--cpuset-cpus string`                 | CPUs in which to allow execution (0-3, 0,1) 
+`--cpuset-mems string`                 | MEMs in which to allow execution (0-3, 0,1) 
 `--device list`                        | Add a host device to the container 
-`--device-cgroup-rule list`            | Add a rule to the cgroup alloweddevices list 
-`--device-read-bps list`               | Limit read rate (bytes per second)from a device (default []) 
-`--device-read-iops list`              | Limit read rate (IO per second)from a device (default []) 
-`--device-write-bps list`              | Limit write rate (bytes persecond) to a device (default []) 
-`--device-write-iops list`             | Limit write rate (IO per second)to a device (default []) 
+`--device-cgroup-rule list`            | Add a rule to the cgroup allowed devices list 
+`--device-read-bps list`               | Limit read rate (bytes per second) from a device (default []) 
+`--device-read-iops list`              | Limit read rate (IO per second) from a device (default []) 
+`--device-write-bps list`              | Limit write rate (bytes per second) to a device (default []) 
+`--device-write-iops list`             | Limit write rate (IO per second) to a device (default []) 
 `--disable-content-trust`              | Skip image verification (default true) 
 `--dns list`                           | Set custom DNS servers 
 `--dns-option list`                    | Set DNS options 
 `--dns-search list`                    | Set custom DNS search domains 
-`--entrypoint string`                  | Overwrite the default ENTRYPOINTof the image 
+`--entrypoint string`                  | Overwrite the default ENTRYPOINT of the image 
 `-e, --env list`                       | Set environment variables 
 `--env-file list`                      | Read in a file of environment variables 
 `--expose list`                        | Expose a port or a range of ports 
 `--group-add list`                     | Add additional groups to join 
 `--health-cmd string`                  | Command to run to check health 
-`--health-interval duration`           | Time between running the check(ms&#124;s&#124;m&#124;h) (default 0s) 
-`--health-retries int`                 | Consecutive failures needed toreport unhealthy 
-`--health-start-period duration`       | Start period for the container toinitialize before startinghealth-retries countdown(ms&#124;s&#124;m&#124;h) (default 0s) 
-`--health-timeout duration`            | Maximum time to allow one check torun (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-interval duration`           | Time between running the check (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-retries int`                 | Consecutive failures needed to report unhealthy 
+`--health-start-period duration`       | Start period for the container to initialize before starting health-retries countdown (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-timeout duration`            | Maximum time to allow one check to run (ms&#124;s&#124;m&#124;h) (default 0s) 
 `--help`                               | Print usage 
 `-h, --hostname string`                | Container host name 
-`--init`                               | Run an init inside the containerthat forwards signals and reapsprocesses 
+`--init`                               | Run an init inside the container that forwards signals and reaps processes 
 `-i, --interactive`                    | Keep STDIN open even if not attached 
 `--ip string`                          | IPv4 address (e.g., 172.30.100.104) 
 `--ip6 string`                         | IPv6 address (e.g., 2001:db8::33) 
@@ -2645,46 +2666,46 @@ Options | Description
 `-l, --label list`                     | Set meta data on a container 
 `--label-file list`                    | Read in a line delimited file of labels 
 `--link list`                          | Add link to another container 
-`--link-local-ip list`                 | Container IPv4/IPv6 link-localaddresses 
+`--link-local-ip list`                 | Container IPv4/IPv6 link-local addresses 
 `--log-driver string`                  | Logging driver for the container 
 `--log-opt list`                       | Log driver options 
-`--mac-address string`                 | Container MAC address (e.g.,92:d0:c6:0a:29:33) 
+`--mac-address string`                 | Container MAC address (e.g., 92:d0:c6:0a:29:33) 
 `-m, --memory bytes`                   | Memory limit 
 `--memory-reservation bytes`           | Memory soft limit 
-`--memory-swap bytes`                  | Swap limit equal to memory plusswap: '-1' to enable unlimited swap 
-`--memory-swappiness int`              | Tune container memory swappiness(0 to 100) (default -1) 
-`--mount mount`                        | Attach a filesystem mount to thecontainer 
+`--memory-swap bytes`                  | Swap limit equal to memory plus swap: '-1' to enable unlimited swap 
+`--memory-swappiness int`              | Tune container memory swappiness (0 to 100) (default -1) 
+`--mount mount`                        | Attach a filesystem mount to the container 
 `--name string`                        | Assign a name to the container 
-`--network string`                     | Connect a container to a network(default "default") 
-`--network-alias list`                 | Add network-scoped alias for thecontainer 
-`--no-healthcheck`                     | Disable any container-specifiedHEALTHCHECK 
+`--network string`                     | Connect a container to a network (default "default") 
+`--network-alias list`                 | Add network-scoped alias for the container 
+`--no-healthcheck`                     | Disable any container-specified HEALTHCHECK 
 `--oom-kill-disable`                   | Disable OOM Killer 
-`--oom-score-adj int`                  | Tune host's OOM preferences (-1000to 1000) 
+`--oom-score-adj int`                  | Tune host's OOM preferences (-1000 to 1000) 
 `--pid string`                         | PID namespace to use 
-`--pids-limit int`                     | Tune container pids limit (set -1for unlimited) 
-`--platform string`                    | Set platform if server ismulti-platform capable 
-`--privileged`                         | Give extended privileges to thiscontainer 
-`-p, --publish list`                   | Publish a container's port(s) tothe host 
-`-P, --publish-all`                    | Publish all exposed ports torandom ports 
-`--read-only`                          | Mount the container's rootfilesystem as read only 
-`--restart string`                     | Restart policy to apply when acontainer exits (default "no") 
-`--rm`                                 | Automatically remove the containerwhen it exits 
+`--pids-limit int`                     | Tune container pids limit (set -1 for unlimited) 
+`--platform string`                    | Set platform if server is multi-platform capable 
+`--privileged`                         | Give extended privileges to this container 
+`-p, --publish list`                   | Publish a container's port(s) to the host 
+`-P, --publish-all`                    | Publish all exposed ports to random ports 
+`--read-only`                          | Mount the container's root filesystem as read only 
+`--restart string`                     | Restart policy to apply when a container exits (default "no") 
+`--rm`                                 | Automatically remove the container when it exits 
 `--runtime string`                     | Runtime to use for this container 
 `--security-opt list`                  | Security Options 
 `--shm-size bytes`                     | Size of /dev/shm 
-`--stop-signal string`                 | Signal to stop a container(default "SIGTERM") 
-`--stop-timeout int`                   | Timeout (in seconds) to stop acontainer 
-`--storage-opt list`                   | Storage driver options for thecontainer 
+`--stop-signal string`                 | Signal to stop a container (default "SIGTERM") 
+`--stop-timeout int`                   | Timeout (in seconds) to stop a container 
+`--storage-opt list`                   | Storage driver options for the container 
 `--sysctl map`                         | Sysctl options (default map[]) 
 `--tmpfs list`                         | Mount a tmpfs directory 
 `-t, --tty`                            | Allocate a pseudo-TTY 
 `--ulimit ulimit`                      | Ulimit options (default []) 
-`-u, --user string`                    | Username or UID (format:&#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
+`-u, --user string`                    | Username or UID (format: &#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
 `--userns string`                      | User namespace to use 
 `--uts string`                         | UTS namespace to use 
 `-v, --volume list`                    | Bind mount a volume 
-`--volume-driver string`               | Optional volume driver for thecontainer 
-`--volumes-from list`                  | Mount volumes from the specifiedcontainer(s) 
+`--volume-driver string`               | Optional volume driver for the container 
+`--volumes-from list`                  | Mount volumes from the specified container(s) 
 `-w, --workdir string`                 | Working directory inside the container 
 
 
@@ -2704,8 +2725,8 @@ Options | Description
 `--bundle-file string`         | Path to a Distributed Application Bundle file 
 `-c, --compose-file strings`   | Path to a Compose file 
 `--prune`                      | Prune services that are no longer referenced 
-`--resolve-image string`       | Query the registry to resolve image digestand supported platforms("always"&#124;"changed"&#124;"never") (default "always") 
-`--with-registry-auth`         | Send registry authentication details toSwarm agents 
+`--resolve-image string`       | Query the registry to resolve image digest and supported platforms ("always"&#124;"changed"&#124;"never") (default "always") 
+`--with-registry-auth`         | Send registry authentication details to Swarm agents 
 
 
 
@@ -2750,12 +2771,12 @@ docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 Options | Description 
 ---------------------------- | ------------------------------------------ 
 `-d, --detach`               | Detached mode: run command in the background 
-`--detach-keys string`       | Override the key sequence for detaching acontainer 
+`--detach-keys string`       | Override the key sequence for detaching a container 
 `-e, --env list`             | Set environment variables 
 `-i, --interactive`          | Keep STDIN open even if not attached 
 `--privileged`               | Give extended privileges to the command 
 `-t, --tty`                  | Allocate a pseudo-TTY 
-`-u, --user string`          | Username or UID (format:&#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
+`-u, --user string`          | Username or UID (format: &#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
 `-w, --workdir string`       | Working directory inside the container 
 
 
@@ -2789,7 +2810,7 @@ docker history [OPTIONS] IMAGE
 Options | Description 
 ----------------------- | ----------------------------------------------- 
 `--format string`       | Pretty-print images using a Go template 
-`-H, --human`           | Print sizes and dates in human readable format(default true) 
+`-H, --human`           | Print sizes and dates in human readable format (default true) 
 `--no-trunc`            | Don't truncate output 
 `-q, --quiet`           | Only show numeric IDs 
 
@@ -2941,10 +2962,10 @@ Options | Description
 ---------------------- | ------------------------------------------------ 
 `--details`            | Show extra details provided to logs 
 `-f, --follow`         | Follow log output 
-`--since string`       | Show logs since timestamp (e.g.2013-01-02T13:23:37) or relative (e.g. 42m for 42minutes) 
-`--tail string`        | Number of lines to show from the end of the logs(default "all") 
+`--since string`       | Show logs since timestamp (e.g. 2013-01-02T13:23:37) or relative (e.g. 42m for 42 minutes) 
+`--tail string`        | Number of lines to show from the end of the logs (default "all") 
 `-t, --timestamps`     | Show timestamps 
-`--until string`       | Show logs before a timestamp (e.g.2013-01-02T13:23:37) or relative (e.g. 42m for 42minutes) 
+`--until string`       | Show logs before a timestamp (e.g. 2013-01-02T13:23:37) or relative (e.g. 42m for 42 minutes) 
 
 
 
@@ -3023,8 +3044,8 @@ Options | Description
 `-a, --all`             | Show all containers (default shows just running) 
 `-f, --filter filter`   | Filter output based on conditions provided 
 `--format string`       | Pretty-print containers using a Go template 
-`-n, --last int`        | Show n last created containers (includes allstates) (default -1) 
-`-l, --latest`          | Show the latest created container (includes allstates) 
+`-n, --last int`        | Show n last created containers (includes all states) (default -1) 
+`-l, --latest`          | Show the latest created container (includes all states) 
 `--no-trunc`            | Don't truncate output 
 `-q, --quiet`           | Only display numeric IDs 
 `-s, --size`            | Display total file sizes 
@@ -3061,7 +3082,7 @@ Options | Description
 ------------------------------- | --------------------------------------- 
 `-a, --all-tags`                | Download all tagged images in the repository 
 `--disable-content-trust`       | Skip image verification (default true) 
-`--platform string`             | Set platform if server is multi-platformcapable 
+`--platform string`             | Set platform if server is multi-platform capable 
 
 
 
@@ -3102,7 +3123,7 @@ docker restart [OPTIONS] CONTAINER [CONTAINER...]
 
 Options | Description 
 ------------------ | ---------------------------------------------------- 
-`-t, --time int`   | Seconds to wait for stop before killing the container(default 10) 
+`-t, --time int`   | Seconds to wait for stop before killing the container (default 10) 
 
 
 
@@ -3153,47 +3174,47 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 Options | Description 
 -------------------------------------- | -------------------------------- 
-`--add-host list`                      | Add a custom host-to-IP mapping(host:ip) 
+`--add-host list`                      | Add a custom host-to-IP mapping (host:ip) 
 `-a, --attach list`                    | Attach to STDIN, STDOUT or STDERR 
-`--blkio-weight uint16`                | Block IO (relative weight),between 10 and 1000, or 0 todisable (default 0) 
-`--blkio-weight-device list`           | Block IO weight (relative deviceweight) (default []) 
+`--blkio-weight uint16`                | Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0) 
+`--blkio-weight-device list`           | Block IO weight (relative device weight) (default []) 
 `--cap-add list`                       | Add Linux capabilities 
 `--cap-drop list`                      | Drop Linux capabilities 
-`--cgroup-parent string`               | Optional parent cgroup for thecontainer 
+`--cgroup-parent string`               | Optional parent cgroup for the container 
 `--cidfile string`                     | Write the container ID to the file 
-`--cpu-period int`                     | Limit CPU CFS (Completely FairScheduler) period 
-`--cpu-quota int`                      | Limit CPU CFS (Completely FairScheduler) quota 
-`--cpu-rt-period int`                  | Limit CPU real-time period inmicroseconds 
-`--cpu-rt-runtime int`                 | Limit CPU real-time runtime inmicroseconds 
+`--cpu-period int`                     | Limit CPU CFS (Completely Fair Scheduler) period 
+`--cpu-quota int`                      | Limit CPU CFS (Completely Fair Scheduler) quota 
+`--cpu-rt-period int`                  | Limit CPU real-time period in microseconds 
+`--cpu-rt-runtime int`                 | Limit CPU real-time runtime in microseconds 
 `-c, --cpu-shares int`                 | CPU shares (relative weight) 
 `--cpus decimal`                       | Number of CPUs 
-`--cpuset-cpus string`                 | CPUs in which to allow execution(0-3, 0,1) 
-`--cpuset-mems string`                 | MEMs in which to allow execution(0-3, 0,1) 
-`-d, --detach`                         | Run container in background andprint container ID 
-`--detach-keys string`                 | Override the key sequence fordetaching a container 
+`--cpuset-cpus string`                 | CPUs in which to allow execution (0-3, 0,1) 
+`--cpuset-mems string`                 | MEMs in which to allow execution (0-3, 0,1) 
+`-d, --detach`                         | Run container in background and print container ID 
+`--detach-keys string`                 | Override the key sequence for detaching a container 
 `--device list`                        | Add a host device to the container 
-`--device-cgroup-rule list`            | Add a rule to the cgroup alloweddevices list 
-`--device-read-bps list`               | Limit read rate (bytes per second)from a device (default []) 
-`--device-read-iops list`              | Limit read rate (IO per second)from a device (default []) 
-`--device-write-bps list`              | Limit write rate (bytes persecond) to a device (default []) 
-`--device-write-iops list`             | Limit write rate (IO per second)to a device (default []) 
+`--device-cgroup-rule list`            | Add a rule to the cgroup allowed devices list 
+`--device-read-bps list`               | Limit read rate (bytes per second) from a device (default []) 
+`--device-read-iops list`              | Limit read rate (IO per second) from a device (default []) 
+`--device-write-bps list`              | Limit write rate (bytes per second) to a device (default []) 
+`--device-write-iops list`             | Limit write rate (IO per second) to a device (default []) 
 `--disable-content-trust`              | Skip image verification (default true) 
 `--dns list`                           | Set custom DNS servers 
 `--dns-option list`                    | Set DNS options 
 `--dns-search list`                    | Set custom DNS search domains 
-`--entrypoint string`                  | Overwrite the default ENTRYPOINTof the image 
+`--entrypoint string`                  | Overwrite the default ENTRYPOINT of the image 
 `-e, --env list`                       | Set environment variables 
 `--env-file list`                      | Read in a file of environment variables 
 `--expose list`                        | Expose a port or a range of ports 
 `--group-add list`                     | Add additional groups to join 
 `--health-cmd string`                  | Command to run to check health 
-`--health-interval duration`           | Time between running the check(ms&#124;s&#124;m&#124;h) (default 0s) 
-`--health-retries int`                 | Consecutive failures needed toreport unhealthy 
-`--health-start-period duration`       | Start period for the container toinitialize before startinghealth-retries countdown(ms&#124;s&#124;m&#124;h) (default 0s) 
-`--health-timeout duration`            | Maximum time to allow one check torun (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-interval duration`           | Time between running the check (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-retries int`                 | Consecutive failures needed to report unhealthy 
+`--health-start-period duration`       | Start period for the container to initialize before starting health-retries countdown (ms&#124;s&#124;m&#124;h) (default 0s) 
+`--health-timeout duration`            | Maximum time to allow one check to run (ms&#124;s&#124;m&#124;h) (default 0s) 
 `--help`                               | Print usage 
 `-h, --hostname string`                | Container host name 
-`--init`                               | Run an init inside the containerthat forwards signals and reapsprocesses 
+`--init`                               | Run an init inside the container that forwards signals and reaps processes 
 `-i, --interactive`                    | Keep STDIN open even if not attached 
 `--ip string`                          | IPv4 address (e.g., 172.30.100.104) 
 `--ip6 string`                         | IPv6 address (e.g., 2001:db8::33) 
@@ -3203,47 +3224,47 @@ Options | Description
 `-l, --label list`                     | Set meta data on a container 
 `--label-file list`                    | Read in a line delimited file of labels 
 `--link list`                          | Add link to another container 
-`--link-local-ip list`                 | Container IPv4/IPv6 link-localaddresses 
+`--link-local-ip list`                 | Container IPv4/IPv6 link-local addresses 
 `--log-driver string`                  | Logging driver for the container 
 `--log-opt list`                       | Log driver options 
-`--mac-address string`                 | Container MAC address (e.g.,92:d0:c6:0a:29:33) 
+`--mac-address string`                 | Container MAC address (e.g., 92:d0:c6:0a:29:33) 
 `-m, --memory bytes`                   | Memory limit 
 `--memory-reservation bytes`           | Memory soft limit 
-`--memory-swap bytes`                  | Swap limit equal to memory plusswap: '-1' to enable unlimited swap 
-`--memory-swappiness int`              | Tune container memory swappiness(0 to 100) (default -1) 
-`--mount mount`                        | Attach a filesystem mount to thecontainer 
+`--memory-swap bytes`                  | Swap limit equal to memory plus swap: '-1' to enable unlimited swap 
+`--memory-swappiness int`              | Tune container memory swappiness (0 to 100) (default -1) 
+`--mount mount`                        | Attach a filesystem mount to the container 
 `--name string`                        | Assign a name to the container 
-`--network string`                     | Connect a container to a network(default "default") 
-`--network-alias list`                 | Add network-scoped alias for thecontainer 
-`--no-healthcheck`                     | Disable any container-specifiedHEALTHCHECK 
+`--network string`                     | Connect a container to a network (default "default") 
+`--network-alias list`                 | Add network-scoped alias for the container 
+`--no-healthcheck`                     | Disable any container-specified HEALTHCHECK 
 `--oom-kill-disable`                   | Disable OOM Killer 
-`--oom-score-adj int`                  | Tune host's OOM preferences (-1000to 1000) 
+`--oom-score-adj int`                  | Tune host's OOM preferences (-1000 to 1000) 
 `--pid string`                         | PID namespace to use 
-`--pids-limit int`                     | Tune container pids limit (set -1for unlimited) 
-`--platform string`                    | Set platform if server ismulti-platform capable 
-`--privileged`                         | Give extended privileges to thiscontainer 
-`-p, --publish list`                   | Publish a container's port(s) tothe host 
-`-P, --publish-all`                    | Publish all exposed ports torandom ports 
-`--read-only`                          | Mount the container's rootfilesystem as read only 
-`--restart string`                     | Restart policy to apply when acontainer exits (default "no") 
-`--rm`                                 | Automatically remove the containerwhen it exits 
+`--pids-limit int`                     | Tune container pids limit (set -1 for unlimited) 
+`--platform string`                    | Set platform if server is multi-platform capable 
+`--privileged`                         | Give extended privileges to this container 
+`-p, --publish list`                   | Publish a container's port(s) to the host 
+`-P, --publish-all`                    | Publish all exposed ports to random ports 
+`--read-only`                          | Mount the container's root filesystem as read only 
+`--restart string`                     | Restart policy to apply when a container exits (default "no") 
+`--rm`                                 | Automatically remove the container when it exits 
 `--runtime string`                     | Runtime to use for this container 
 `--security-opt list`                  | Security Options 
 `--shm-size bytes`                     | Size of /dev/shm 
-`--sig-proxy`                          | Proxy received signals to theprocess (default true) 
-`--stop-signal string`                 | Signal to stop a container(default "SIGTERM") 
-`--stop-timeout int`                   | Timeout (in seconds) to stop acontainer 
-`--storage-opt list`                   | Storage driver options for thecontainer 
+`--sig-proxy`                          | Proxy received signals to the process (default true) 
+`--stop-signal string`                 | Signal to stop a container (default "SIGTERM") 
+`--stop-timeout int`                   | Timeout (in seconds) to stop a container 
+`--storage-opt list`                   | Storage driver options for the container 
 `--sysctl map`                         | Sysctl options (default map[]) 
 `--tmpfs list`                         | Mount a tmpfs directory 
 `-t, --tty`                            | Allocate a pseudo-TTY 
 `--ulimit ulimit`                      | Ulimit options (default []) 
-`-u, --user string`                    | Username or UID (format:&#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
+`-u, --user string`                    | Username or UID (format: &#60;name&#124;uid&#62;[:&#60;group&#124;gid&#62;]) 
 `--userns string`                      | User namespace to use 
 `--uts string`                         | UTS namespace to use 
 `-v, --volume list`                    | Bind mount a volume 
-`--volume-driver string`               | Optional volume driver for thecontainer 
-`--volumes-from list`                  | Mount volumes from the specifiedcontainer(s) 
+`--volume-driver string`               | Optional volume driver for the container 
+`--volumes-from list`                  | Mount volumes from the specified container(s) 
 `-w, --workdir string`                 | Working directory inside the container 
 
 
@@ -3298,7 +3319,7 @@ Options | Description
 `-a, --attach`                  | Attach STDOUT/STDERR and forward signals 
 `--checkpoint string`           | Restore from this checkpoint 
 `--checkpoint-dir string`       | Use a custom checkpoint storage directory 
-`--detach-keys string`          | Override the key sequence for detaching acontainer 
+`--detach-keys string`          | Override the key sequence for detaching a container 
 `-i, --interactive`             | Attach container's STDIN 
 
 
@@ -3377,11 +3398,11 @@ docker update [OPTIONS] CONTAINER [CONTAINER...]
 
 Options | Description 
 ---------------------------------- | ------------------------------------ 
-`--blkio-weight uint16`            | Block IO (relative weight), between 10and 1000, or 0 to disable (default 0) 
-`--cpu-period int`                 | Limit CPU CFS (Completely FairScheduler) period 
-`--cpu-quota int`                  | Limit CPU CFS (Completely FairScheduler) quota 
-`--cpu-rt-period int`              | Limit the CPU real-time period inmicroseconds 
-`--cpu-rt-runtime int`             | Limit the CPU real-time runtime inmicroseconds 
+`--blkio-weight uint16`            | Block IO (relative weight), between 10 and 1000, or 0 to disable (default 0) 
+`--cpu-period int`                 | Limit CPU CFS (Completely Fair Scheduler) period 
+`--cpu-quota int`                  | Limit CPU CFS (Completely Fair Scheduler) quota 
+`--cpu-rt-period int`              | Limit the CPU real-time period in microseconds 
+`--cpu-rt-runtime int`             | Limit the CPU real-time runtime in microseconds 
 `-c, --cpu-shares int`             | CPU shares (relative weight) 
 `--cpus decimal`                   | Number of CPUs 
 `--cpuset-cpus string`             | CPUs in which to allow execution (0-3, 0,1) 
@@ -3389,8 +3410,8 @@ Options | Description
 `--kernel-memory bytes`            | Kernel memory limit 
 `-m, --memory bytes`               | Memory limit 
 `--memory-reservation bytes`       | Memory soft limit 
-`--memory-swap bytes`              | Swap limit equal to memory plus swap:'-1' to enable unlimited swap 
-`--restart string`                 | Restart policy to apply when acontainer exits 
+`--memory-swap bytes`              | Swap limit equal to memory plus swap: '-1' to enable unlimited swap 
+`--restart string`                 | Restart policy to apply when a container exits 
 
 
 
