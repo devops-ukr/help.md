@@ -1,0 +1,315 @@
+#!/usr/bin/env python3
+
+import sys                       # System
+import os                        # System
+import subprocess                # Execution of shell comands
+
+import re                        # Regular expressions
+
+import json                      # Json Export/Import Decode and Encode
+import pathlib                   # Checks if directory exists.
+from typing import Dict, List    # Dictionary
+
+from icecream import ic
+
+from functools import reduce
+
+class Indexation():
+
+	command   = ""
+	commands  = []
+	config    = {}
+
+	def __init__(self, command : str ):
+
+		# Current Command
+		self.command = command
+
+		# Comamnds initiation
+		self.commands = [ self.command ]
+
+		# Directory
+		self.directory = f"json-exports/{self.command}"
+		if pathlib.Path( self.directory ).exists() == False:
+			os.mkdir( self.directory, mode=0o755)
+
+		# Config
+		if pathlib.Path( f".configs/{self.command}.json" ).exists() == False:
+			raise FileNotFoundError( f".configs/{self.command}.json not found" )
+		else :
+			with open( f".configs/{command}.json" ) as cp:
+				self.config = json.load( cp )
+
+		self.indexing()
+
+	def indexing(self):
+		for command in self.commands:
+			alias = command.replace(" ", "-")
+			if pathlib.Path( f"{self.directory}/{alias}.json" ).exists():
+				self.update_commads_list( command )
+				continue
+
+			self.index(command)
+
+	def index(self, command : str ):
+		dictionary = {
+			'Command':command
+		}
+
+		dictionary.update(self.normal(self.parser(command)))
+
+		for title, settings in self.config.get('sections').items():
+
+
+			# Trying section.
+			try:
+				work =  dictionary[ title ]
+			except KeyError:
+				continue
+
+			if len(work) == 0:
+				del dictionary[ title ]
+				continue
+
+			# Actual Key => description splitting
+			indent = 0;
+			split  = "";
+
+			print('key', title)
+			[print(v) for v in work]
+			# exit(2)
+			try:
+				if settings['split'] == "indent":
+					indent = self.indent( work )
+
+				print("ind", indent)
+
+				temporary= dict()
+				_key = ""
+				_value = ""
+				key = ""
+
+				for line in work:
+					if indent > 0:
+						_key   = line[:indent].strip()
+						_value = line[indent:].strip()
+					else :
+						exit(23)
+
+					# Key assignment happens is its not empty line
+					# - in case if its a command we prepending incoming command
+					if settings['type'] == "commands" and _key != "":
+						key = f"{command} {_key}"
+					elif settings['type'] != "commands" and _key != "":
+						key = f"{_key}"
+
+					# temporary dictionary update
+					data = temporary.get(key, [] )
+					data.append(_value)
+					temporary.update({ key : data })
+
+			except KeyError:
+				continue;
+
+			dictionary[ title ] = dict({
+				'indent': indent,
+				'data': {k: " ".join(v) for k, v in temporary.items() }
+			})
+
+
+		for t in [ "Usage", "Description" ]:
+			try :
+				dictionary[t] = ("\n".join(dictionary[t])).strip()
+			except KeyError:
+				pass
+
+		# saving result
+		alias = command.replace(" ", "-")
+
+		# print(json.dumps(dictionary, indent=4))
+
+		with open( f"{self.directory}/{alias}.json", "w") as fp:
+			json.dump(dictionary, fp, indent=4)
+
+		self.update_commads_list(command)
+
+	def parser(self, command : str ):
+		export = {}
+		section = "Description"
+
+
+		# Spliting output by new lines
+		lines = self.execute(command).split("\n")
+
+
+		for k, line in enumerate(lines):
+
+			# ignored lines
+			ignore =[ 1 for ptrn in self.config.get('ignore') if ptrn in line ]
+			if len(ignore) > 0 :
+				continue
+
+			# header like lines
+			ready = True if k == 0 or lines[k-1].strip() == "" else False
+			matches = re.match( "^(?!\s)([a-zA-Z\s()]{1,}):(.*)", line )
+
+
+
+			if ready == True and matches is not None:
+				ready = False
+				section = matches[1]
+
+				if matches[2].strip() != "":
+					line = matches[2].strip()
+				else :
+					continue
+
+
+
+			data = export.get(section, [] )
+			data.append(line)
+			export.update({ section : data })
+
+		return export
+
+	def normal(self, dictionary):
+
+		section = None
+		try:
+			n = 0
+			usage = []
+			for line in dictionary['Usage']:
+				if section == None and n != 0 and line.strip() == "":
+					section = "Description"
+					n += 1
+					continue
+				n += 1
+
+				if section != None:
+
+					if line.strip() == "":
+						line = "\n"
+
+					data = dictionary.get(section, [] )
+					data.append(line)
+					dictionary.update({ section : data })
+
+					usage.append(n)
+
+			if len(usage) > 0 :
+				dictionary['Usage'] = dictionary['Usage'][:min(usage)-2]
+
+
+		except KeyError:
+			pass
+
+		dictionary = { k:self.clean_list(v) for k, v in dictionary.items() }
+
+		return dictionary
+
+	def clean_list(self, lst):
+		n = []
+		for line in lst:
+			if line.strip() != "":
+				n.append(line)
+		return n
+
+	def execute(self, command : str ):
+		helpkey = self.config.get('key', 'help')
+
+		return subprocess.Popen( f"{command} {helpkey}" ,
+			shell=True,
+			stdout=subprocess.PIPE).stdout.read().decode('UTF-8')
+
+	# get indent
+	def indent( self, lst : List ) :
+		lines      = [
+			[ 1 if char is " " else 0 for char in line]
+			for line in lst
+		]
+
+		# getting maximum line length
+		maxlength  = max( [ len(line) for line in lines ] )
+		initial = { i:1 for i in range(0, maxlength)}
+
+		# calcating matches
+		# [print(line) for line in lines]
+
+		for k in initial:
+			for row in range(len(lines)):
+				try:
+					initial[k] *= lines[row][k]
+				except IndexError:
+					initial[k] *= 0
+
+				if initial[k] == 0 :
+					break
+
+		# print([k for k,v in initial.items()])
+		# print([v for k,v in initial.items()])
+
+		initial = [ k for k, v in initial.items() if v == 1 ]
+
+		for i in reversed(initial):
+			reduced = list(set([line[i-1] for line in lst ]))
+
+			if len(reduced) > 1 and " " in reduced:
+				return i
+			elif reduced[0] == " ":
+				return i
+			continue
+
+		return list(reversed(initial))[0]
+
+	def indexer(self, command : str ):
+		export = {}
+		section = True
+		exportKey = ""
+		just_switched = True
+
+		# Spliting output by new lines
+
+		for line in self.execute(command).split("\n"):
+
+			for title in self.config.get('sections'):
+				if re.search( f"^{title}:(.*)", line):
+					m = re.match( f"^{title}:(.*)", line)
+
+					exportKey = title
+					line = m[1] if m[1] != "" else None
+					export.update({ title : [] })
+					break
+
+			if exportKey != "" and line != None:
+				data = export.get(exportKey, [] )
+				data.append(line)
+				export.update({ exportKey : data })
+				continue
+			elif line != None:
+				ignore =[ 1 for ptrn in self.config.get('ignore') if ptrn in line ]
+				if len(ignore) > 0 :
+					continue
+
+				data = export.get( 'Description', [] )
+				data.append(line)
+				export.update({ 'Description' : data })
+				continue
+
+		return export
+
+	def update_commads_list(self, command : str ):
+
+		# print( f"updating {command}" )
+
+		alias = command.replace(" ", "-")
+		with open( f"{self.directory}/{alias}.json" ) as fp:
+			data = json.load(fp)
+			for section, values in data.items():
+				try:
+					if self.config['sections'][section]['type'] == 'commands':
+						self.commands.extend( list( values['data'].keys() ) )
+				except KeyError:
+					continue
+
+if __name__ == "__main__":
+    Indexation( 'packer' )

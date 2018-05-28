@@ -1,0 +1,22 @@
+{
+	"key"         : "--help",
+	"description" : true,
+	"sections"    : {
+		"Usage"   : {
+			"type" : "usage"
+		},
+		"Available commands are": {
+			"type"  : "commands",
+			"split" : "indent"
+		},
+		"Fixes that are run" : {
+			"type"  : "options",
+			"split" : "indent"
+		},
+		"Options"   :   {
+			"type"  : "options",
+			"split" : "indent"
+		}
+	},
+	"ignore"      : [ ]
+}

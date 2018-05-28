@@ -1,0 +1,26 @@
+{
+	"key"         : "--help",
+	"description" : true,
+	"sections"    : {
+		"Usage"   : {
+			"type" : "usage"
+		},
+		"Common commands": {
+			"type"  : "commands",
+			"split" : "indent"
+		},
+		"All other commands" : {
+			"type"  : "commands",
+			"split" : "indent"
+		},
+		"Options"   :   {
+			"type"  : "options",
+			"split" : "indent"
+		},
+		"Subcommands": {
+			"type"  : "commands",
+			"split" : "indent"
+		}
+	},
+	"ignore"      : [ ]
+}

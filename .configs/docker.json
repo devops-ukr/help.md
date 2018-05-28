@@ -1,0 +1,27 @@
+{
+	"key"         : "--help",
+	"description" : true,
+	"sections"    : {
+		"Usage"   : {
+			"type" : "usage"
+		},
+		"Aliases"   : {
+			"type" : "usage"
+		},
+		"Options"   :  {
+			"type"  : "options",
+			"split" : "indent"
+		},
+		"Management Commands" : {
+			"type"  : "commands",
+			"split" : "indent"
+		},
+		"Commands"  :  {
+			"type"  : "commands",
+			"split" : "indent"
+		}
+	},
+	"ignore"      : [
+		"for more information on a command"
+	]
+}
