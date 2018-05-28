@@ -1,0 +1,15 @@
+{
+    "Command": "packer",
+    "Usage": "packer [--version] [--help] <command> [<args>]",
+    "Available commands are": {
+        "indent": 15,
+        "data": {
+            "packer build": "build image(s) from template",
+            "packer fix": "fixes templates from old versions of packer",
+            "packer inspect": "see components of a template",
+            "packer push": "push a template and supporting files to a Packer build service",
+            "packer validate": "check that a template is valid",
+            "packer version": "Prints the Packer version"
+        }
+    }
+}

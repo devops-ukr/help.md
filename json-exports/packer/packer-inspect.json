@@ -1,0 +1,11 @@
+{
+    "Command": "packer inspect",
+    "Usage": "packer inspect TEMPLATE",
+    "Options": {
+        "indent": 20,
+        "data": {
+            "-machine-readable": "Machine-readable output"
+        }
+    },
+    "Description": "Inspects a template, parsing and outputting the components a template\n  defines. This does not validate the contents of a template (other than\n  basic syntax by necessity)."
+}

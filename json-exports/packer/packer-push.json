@@ -1,0 +1,15 @@
+{
+    "Command": "packer push",
+    "Usage": "packer push [options] TEMPLATE",
+    "Options": {
+        "indent": 26,
+        "data": {
+            "-name=<name>": "The destination build in Atlas. This is in a format \"username/name\".",
+            "-token=<token>": "The access token to use to when uploading",
+            "-sensitive='var1,var2'": "List of variables to mark as sensitive in Atlas UI.",
+            "-var 'key=value'": "Variable for templates, can be used multiple times.",
+            "-var-file=path": "JSON file containing user variables."
+        }
+    },
+    "Description": "Push the given template and supporting files to a Packer build service such as\n  Atlas.\n  If a build configuration for the given template does not exist, it will be\n  created automatically. If the build configuration already exists, a new\n  version will be created with this template and the supporting files.\n  Additional configuration options (such as the Atlas server URL and files to\n  include) may be specified in the \"push\" section of the Packer template. Please\n  see the online documentation for more information about these configurables."
+}

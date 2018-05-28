@@ -1,0 +1,4 @@
+{
+    "Command": "packer version",
+    "Description": "Prints the Packer version, and checks for new release."
+}
